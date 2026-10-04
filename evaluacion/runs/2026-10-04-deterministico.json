@@ -1,0 +1,4166 @@
+{
+ "fecha": "2026-10-04",
+ "etiqueta": "deterministico-sin-llm",
+ "semilla_planta": 14224,
+ "semilla_banco": 7,
+ "grafo": {
+  "nodos": 854,
+  "relaciones": 1745,
+  "por_label": {
+   "NivelISO": 9,
+   "ModoFalla": 22,
+   "Mecanismo": 15,
+   "Causa": 5,
+   "Area": 4,
+   "Sistema": 8,
+   "Equipo": 84,
+   "Componente": 225,
+   "Linea": 19,
+   "Documento": 65,
+   "Falla": 199,
+   "Intervencion": 199
+  },
+  "por_relacion": {
+   "NIVEL": 4,
+   "PERTENECE_A": 272,
+   "CONECTA_A": 105,
+   "PRESENTO_FALLA": 199,
+   "MIDE": 6,
+   "AISLA": 89,
+   "DOCUMENTA": 75,
+   "TIENE_MODO": 199,
+   "TIENE_MECANISMO": 199,
+   "TIENE_CAUSA": 199,
+   "AFECTA": 199,
+   "ATENDIDA_POR": 199
+  },
+  "conflictos_tag": 3
+ },
+ "resultados": {
+  "familias": {
+   "identificacion": {
+    "n": 25,
+    "grafo_exactitud": 1,
+    "rag_exactitud_cota": 0.36,
+    "grafo_tokens_mediana": 16,
+    "rag_tokens_mediana": 176,
+    "enrutamiento": 1
+   },
+   "topologia": {
+    "n": 25,
+    "grafo_exactitud": 1,
+    "rag_exactitud_cota": 0,
+    "grafo_tokens_mediana": 17,
+    "rag_tokens_mediana": 152,
+    "enrutamiento": 1
+   },
+   "historial": {
+    "n": 25,
+    "grafo_exactitud": 1,
+    "rag_exactitud_cota": 0.28,
+    "grafo_tokens_mediana": 14,
+    "rag_tokens_mediana": 222,
+    "enrutamiento": 1
+   },
+   "completitud": {
+    "n": 25,
+    "grafo_exactitud": 1,
+    "rag_exactitud_cota": 0,
+    "grafo_tokens_mediana": 14,
+    "rag_tokens_mediana": 216,
+    "enrutamiento": 1
+   }
+  },
+  "global": {
+   "global": {
+    "n": 100,
+    "grafo_exactitud": 1,
+    "rag_exactitud_cota": 0.16,
+    "grafo_tokens_mediana": 15.0,
+    "rag_tokens_mediana": 189.5,
+    "enrutamiento": 1
+   }
+  }
+ },
+ "aislamientos": {
+  "equipos": 21,
+  "precision": 1.0,
+  "exhaustividad": 1.0,
+  "exactos": 21
+ },
+ "aislamientos_detalle": {
+  "1105-V-01": {
+   "predicho": [
+    "1105-HV-01",
+    "1105-HV-02"
+   ],
+   "manual": [
+    "1105-HV-01",
+    "1105-HV-02"
+   ]
+  },
+  "1105-V-02": {
+   "predicho": [
+    "1105-HV-02",
+    "1105-HV-03",
+    "1105-HV-05",
+    "1105-HV-13"
+   ],
+   "manual": [
+    "1105-HV-02",
+    "1105-HV-03",
+    "1105-HV-05",
+    "1105-HV-13"
+   ]
+  },
+  "1105-E-01": {
+   "predicho": [
+    "1105-HV-04",
+    "1105-HV-06",
+    "1105-HV-07",
+    "1105-HV-08"
+   ],
+   "manual": [
+    "1105-HV-04",
+    "1105-HV-06",
+    "1105-HV-07",
+    "1105-HV-08"
+   ]
+  },
+  "1105-V-04": {
+   "predicho": [
+    "1105-HV-07",
+    "1105-HV-08"
+   ],
+   "manual": [
+    "1105-HV-07",
+    "1105-HV-08"
+   ]
+  },
+  "1105-P-01": {
+   "predicho": [
+    "1105-HV-09",
+    "1105-HV-10"
+   ],
+   "manual": [
+    "1105-HV-09",
+    "1105-HV-10"
+   ]
+  },
+  "1105-P-02": {
+   "predicho": [
+    "1105-HV-11",
+    "1105-HV-12"
+   ],
+   "manual": [
+    "1105-HV-11",
+    "1105-HV-12"
+   ]
+  },
+  "1205-V-01": {
+   "predicho": [
+    "1205-HV-01",
+    "1205-HV-02",
+    "1205-HV-04",
+    "1205-HV-07"
+   ],
+   "manual": [
+    "1205-HV-01",
+    "1205-HV-02",
+    "1205-HV-04",
+    "1205-HV-07"
+   ]
+  },
+  "1205-C-01": {
+   "predicho": [
+    "1205-HV-02",
+    "1205-HV-03"
+   ],
+   "manual": [
+    "1205-HV-02",
+    "1205-HV-03"
+   ]
+  },
+  "1205-C-02": {
+   "predicho": [
+    "1205-HV-04",
+    "1205-HV-05"
+   ],
+   "manual": [
+    "1205-HV-04",
+    "1205-HV-05"
+   ]
+  },
+  "1205-E-01": {
+   "predicho": [
+    "1205-HV-03",
+    "1205-HV-05",
+    "1205-HV-06",
+    "1205-HV-07"
+   ],
+   "manual": [
+    "1205-HV-03",
+    "1205-HV-05",
+    "1205-HV-06",
+    "1205-HV-07"
+   ]
+  },
+  "1205-P-01": {
+   "predicho": [
+    "1205-HV-08",
+    "1205-HV-09"
+   ],
+   "manual": [
+    "1205-HV-08",
+    "1205-HV-09"
+   ]
+  },
+  "1205-P-02": {
+   "predicho": [
+    "1205-HV-11",
+    "1205-HV-12"
+   ],
+   "manual": [
+    "1205-HV-11",
+    "1205-HV-12"
+   ]
+  },
+  "1305-C-01": {
+   "predicho": [
+    "1305-HV-01"
+   ],
+   "manual": [
+    "1305-HV-01"
+   ]
+  },
+  "1305-C-02": {
+   "predicho": [
+    "1305-HV-02"
+   ],
+   "manual": [
+    "1305-HV-02"
+   ]
+  },
+  "1305-E-01": {
+   "predicho": [
+    "1305-HV-01",
+    "1305-HV-02",
+    "1305-HV-03"
+   ],
+   "manual": [
+    "1305-HV-01",
+    "1305-HV-02",
+    "1305-HV-03"
+   ]
+  },
+  "1305-V-02": {
+   "predicho": [
+    "1305-HV-04",
+    "1305-HV-05",
+    "1305-HV-10"
+   ],
+   "manual": [
+    "1305-HV-04",
+    "1305-HV-05",
+    "1305-HV-10"
+   ]
+  },
+  "1305-V-03": {
+   "predicho": [
+    "1305-HV-06",
+    "1305-HV-07",
+    "1305-HV-11"
+   ],
+   "manual": [
+    "1305-HV-06",
+    "1305-HV-07",
+    "1305-HV-11"
+   ]
+  },
+  "1405-V-01": {
+   "predicho": [
+    "1405-HV-01",
+    "1405-HV-03",
+    "1405-HV-05",
+    "1405-HV-08",
+    "1405-HV-09"
+   ],
+   "manual": [
+    "1405-HV-01",
+    "1405-HV-03",
+    "1405-HV-05",
+    "1405-HV-08",
+    "1405-HV-09"
+   ]
+  },
+  "1405-P-01": {
+   "predicho": [
+    "1405-HV-01",
+    "1405-HV-02"
+   ],
+   "manual": [
+    "1405-HV-01",
+    "1405-HV-02"
+   ]
+  },
+  "1405-P-02": {
+   "predicho": [
+    "1405-HV-03",
+    "1405-HV-04"
+   ],
+   "manual": [
+    "1405-HV-03",
+    "1405-HV-04"
+   ]
+  },
+  "1405-P-03": {
+   "predicho": [
+    "1405-HV-05",
+    "1405-HV-06"
+   ],
+   "manual": [
+    "1405-HV-05",
+    "1405-HV-06"
+   ]
+  }
+ },
+ "normalizacion": {
+  "mal_escritos": 32,
+  "correcto_mal_escrito": 29,
+  "correcto": 170,
+  "conflicto": 3,
+  "total": 202
+ },
+ "conflictos": [
+  {
+   "orden": "OT-2022-00032",
+   "texto": "1105-E-0",
+   "candidatos": [
+    "1105-E-01",
+    "1105-E-02",
+    "1205-E-01"
+   ],
+   "puntaje": 0.891
+  },
+  {
+   "orden": "OT-2023-00080",
+   "texto": "1205-P-0",
+   "candidatos": [
+    "1205-P-01",
+    "1205-P-02",
+    "1205-PT-01"
+   ],
+   "puntaje": 0.863
+  },
+  {
+   "orden": "OT-2026-00183",
+   "texto": "1205-C-0",
+   "candidatos": [
+    "1205-C-01",
+    "1205-C-02",
+    "1305-C-01"
+   ],
+   "puntaje": 0.886
+  }
+ ],
+ "completitud": {
+  "faltantes_ref": 7,
+  "faltantes_detectados": 7,
+  "falsos_positivos": 0,
+  "sin_hoja_exacto": true
+ },
+ "parafrasis": {
+  "n": 20,
+  "grafo_exactitud": 0.1,
+  "rag_exactitud_cota": 0.2,
+  "enrutamiento": 0.2
+ },
+ "segundos": 0.27,
+ "preguntas": [
+  {
+   "id": "IDE-01",
+   "familia": "identificacion",
+   "intencion": "descripcion",
+   "pregunta": "¿Qué equipo es el 1205-PT-02?",
+   "enrutado": "identificacion",
+   "grafo": {
+    "valor": "Transmisor de presión de descarga",
+    "ok": true,
+    "tokens": 19,
+    "ms": 0.18,
+    "cypher": "MATCH (e:Equipo {tag: $tag}) RETURN e.descripcion, e.clase"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "LISTA-1205-S01"
+    ],
+    "recuperado": [
+     "DS-1205-PT-02#p1",
+     "MAN-BCA-50-200#p2",
+     "MAN-BEN-25#p2",
+     "MAN-PTX-3051#p2",
+     "MAN-SA-75#p2"
+    ],
+    "tokens": 156,
+    "ms": 0.93
+   }
+  },
+  {
+   "id": "IDE-02",
+   "familia": "identificacion",
+   "intencion": "descripcion",
+   "pregunta": "¿Qué equipo es el 1105-V-03?",
+   "enrutado": "identificacion",
+   "grafo": {
+    "valor": "Tanque flash de glicol rico",
+    "ok": true,
+    "tokens": 17,
+    "ms": 0.09,
+    "cypher": "MATCH (e:Equipo {tag: $tag}) RETURN e.descripcion, e.clase"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "LISTA-1105-S03"
+    ],
+    "recuperado": [
+     "DS-1105-V-03#p1",
+     "LINEA-02",
+     "MAN-BCA-50-200#p2",
+     "MAN-PTX-3051#p2",
+     "MAN-RC-2400#p2"
+    ],
+    "tokens": 190,
+    "ms": 0.58
+   }
+  },
+  {
+   "id": "IDE-03",
+   "familia": "identificacion",
+   "intencion": "descripcion",
+   "pregunta": "¿Qué equipo es el 1305C02?",
+   "enrutado": "identificacion",
+   "grafo": {
+    "valor": "Compresor de aire de tornillo B",
+    "ok": true,
+    "tokens": 18,
+    "ms": 0.07,
+    "cypher": "MATCH (e:Equipo {tag: $tag}) RETURN e.descripcion, e.clase"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "LISTA-1305-S01"
+    ],
+    "recuperado": [
+     "MAN-BEN-25#p2",
+     "MAN-PTX-3051#p2",
+     "MAN-RC-2400#p2",
+     "MAN-SA-75#p2",
+     "OT-2026-00198"
+    ],
+    "tokens": 161,
+    "ms": 0.53
+   }
+  },
+  {
+   "id": "IDE-04",
+   "familia": "identificacion",
+   "intencion": "descripcion",
+   "pregunta": "¿Qué equipo es el 1105-P-02?",
+   "enrutado": "identificacion",
+   "grafo": {
+    "valor": "Bomba de glicol pobre B",
+    "ok": true,
+    "tokens": 16,
+    "ms": 0.07,
+    "cypher": "MATCH (e:Equipo {tag: $tag}) RETURN e.descripcion, e.clase"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "LISTA-1105-S03"
+    ],
+    "recuperado": [
+     "DS-1105-P-02#p1",
+     "LINEA-03",
+     "MAN-PTX-3051#p2",
+     "OT-2022-00020",
+     "OT-2025-00170"
+    ],
+    "tokens": 183,
+    "ms": 0.53
+   }
+  },
+  {
+   "id": "IDE-05",
+   "familia": "identificacion",
+   "intencion": "descripcion",
+   "pregunta": "¿Qué equipo es el 1105PCV01?",
+   "enrutado": "identificacion",
+   "grafo": {
+    "valor": "Válvula de control de presión del tanque flash",
+    "ok": true,
+    "tokens": 22,
+    "ms": 0.07,
+    "cypher": "MATCH (e:Equipo {tag: $tag}) RETURN e.descripcion, e.clase"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "LISTA-1105-S03"
+    ],
+    "recuperado": [
+     "MAN-BCA-50-200#p2",
+     "MAN-BEN-25#p2",
+     "MAN-DS-400#p2",
+     "MAN-PTX-3051#p2",
+     "MAN-SA-75#p2"
+    ],
+    "tokens": 152,
+    "ms": 0.97
+   }
+  },
+  {
+   "id": "IDE-06",
+   "familia": "identificacion",
+   "intencion": "descripcion",
+   "pregunta": "¿Qué equipo es el 1105-PT-02?",
+   "enrutado": "identificacion",
+   "grafo": {
+    "valor": "Transmisor de presión de la contactora",
+    "ok": true,
+    "tokens": 20,
+    "ms": 0.13,
+    "cypher": "MATCH (e:Equipo {tag: $tag}) RETURN e.descripcion, e.clase"
+   },
+   "rag": {
+    "ok": true,
+    "evidencia": [
+     "LISTA-1105-S02"
+    ],
+    "recuperado": [
+     "DS-1105-PT-02#p1",
+     "LISTA-1105-S02",
+     "MAN-DS-400#p2",
+     "MAN-PTX-3051#p2",
+     "OT-2025-00152"
+    ],
+    "tokens": 195,
+    "ms": 1.23
+   }
+  },
+  {
+   "id": "IDE-07",
+   "familia": "identificacion",
+   "intencion": "descripcion",
+   "pregunta": "¿Qué equipo es el 1205V03?",
+   "enrutado": "identificacion",
+   "grafo": {
+    "valor": "Tanque de aceite de lubricación",
+    "ok": true,
+    "tokens": 18,
+    "ms": 0.12,
+    "cypher": "MATCH (e:Equipo {tag: $tag}) RETURN e.descripcion, e.clase"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "LISTA-1205-S02"
+    ],
+    "recuperado": [
+     "MAN-BCA-50-200#p2",
+     "MAN-BEN-25#p2",
+     "MAN-DS-400#p2",
+     "MAN-PTX-3051#p2",
+     "MAN-SA-75#p2"
+    ],
+    "tokens": 152,
+    "ms": 1.11
+   }
+  },
+  {
+   "id": "IDE-08",
+   "familia": "identificacion",
+   "intencion": "sistema",
+   "pregunta": "¿En qué sistema está el 1205-e-1?",
+   "enrutado": "identificacion",
+   "grafo": {
+    "valor": "Compresión de gas",
+    "ok": true,
+    "tokens": 15,
+    "ms": 0.13,
+    "cypher": "MATCH (e:Equipo {tag: $tag})-[:PERTENECE_A]->(s:Sistema) RETURN s.nombre"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "LISTA-1205-S01"
+    ],
+    "recuperado": [
+     "MAN-BCA-50-200#p2",
+     "MAN-BEN-25#p2",
+     "MAN-PTX-3051#p2",
+     "MAN-RC-2400#p2",
+     "OT-2021-00001"
+    ],
+    "tokens": 170,
+    "ms": 0.6
+   }
+  },
+  {
+   "id": "IDE-09",
+   "familia": "identificacion",
+   "intencion": "sistema",
+   "pregunta": "¿En qué sistema está el 1405-pt-1?",
+   "enrutado": "identificacion",
+   "grafo": {
+    "valor": "Bombeo contra incendio",
+    "ok": true,
+    "tokens": 16,
+    "ms": 0.07,
+    "cypher": "MATCH (e:Equipo {tag: $tag})-[:PERTENECE_A]->(s:Sistema) RETURN s.nombre"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "LISTA-1405-S01"
+    ],
+    "recuperado": [
+     "MAN-BCA-50-200#p2",
+     "MAN-BEN-25#p2",
+     "MAN-DS-400#p2",
+     "MAN-PTX-3051#p2",
+     "MAN-RC-2400#p2"
+    ],
+    "tokens": 152,
+    "ms": 0.52
+   }
+  },
+  {
+   "id": "IDE-10",
+   "familia": "identificacion",
+   "intencion": "sistema",
+   "pregunta": "¿En qué sistema está el 1105-P-02?",
+   "enrutado": "identificacion",
+   "grafo": {
+    "valor": "Regeneración de glicol",
+    "ok": true,
+    "tokens": 16,
+    "ms": 0.07,
+    "cypher": "MATCH (e:Equipo {tag: $tag})-[:PERTENECE_A]->(s:Sistema) RETURN s.nombre"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "LISTA-1105-S03"
+    ],
+    "recuperado": [
+     "OT-2022-00020",
+     "OT-2022-00036",
+     "OT-2024-00089",
+     "OT-2024-00096",
+     "OT-2025-00145"
+    ],
+    "tokens": 223,
+    "ms": 0.56
+   }
+  },
+  {
+   "id": "IDE-11",
+   "familia": "identificacion",
+   "intencion": "sistema",
+   "pregunta": "¿En qué sistema está el 1305-C-02?",
+   "enrutado": "identificacion",
+   "grafo": {
+    "valor": "Generación de aire",
+    "ok": true,
+    "tokens": 15,
+    "ms": 0.08,
+    "cypher": "MATCH (e:Equipo {tag: $tag})-[:PERTENECE_A]->(s:Sistema) RETURN s.nombre"
+   },
+   "rag": {
+    "ok": true,
+    "evidencia": [
+     "LISTA-1305-S01"
+    ],
+    "recuperado": [
+     "DS-1305-C-02#p1",
+     "LISTA-1305-S01",
+     "OT-2022-00041",
+     "OT-2023-00063",
+     "OT-2026-00182"
+    ],
+    "tokens": 230,
+    "ms": 0.53
+   }
+  },
+  {
+   "id": "IDE-12",
+   "familia": "identificacion",
+   "intencion": "sistema",
+   "pregunta": "¿En qué sistema está el 1405-PCV-01?",
+   "enrutado": "identificacion",
+   "grafo": {
+    "valor": "Bombeo contra incendio",
+    "ok": true,
+    "tokens": 16,
+    "ms": 0.07,
+    "cypher": "MATCH (e:Equipo {tag: $tag})-[:PERTENECE_A]->(s:Sistema) RETURN s.nombre"
+   },
+   "rag": {
+    "ok": true,
+    "evidencia": [
+     "LISTA-1405-S01"
+    ],
+    "recuperado": [
+     "LINEA-17",
+     "LISTA-1405-S01",
+     "MAN-BCA-50-200#p2",
+     "MAN-DS-400#p2",
+     "MAN-PTX-3051#p2"
+    ],
+    "tokens": 196,
+    "ms": 0.57
+   }
+  },
+  {
+   "id": "IDE-13",
+   "familia": "identificacion",
+   "intencion": "sistema",
+   "pregunta": "¿En qué sistema está el 1405-V-01?",
+   "enrutado": "identificacion",
+   "grafo": {
+    "valor": "Bombeo contra incendio",
+    "ok": true,
+    "tokens": 16,
+    "ms": 0.08,
+    "cypher": "MATCH (e:Equipo {tag: $tag})-[:PERTENECE_A]->(s:Sistema) RETURN s.nombre"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "LISTA-1405-S01"
+    ],
+    "recuperado": [
+     "DS-1405-V-01#p1",
+     "LINEA-14",
+     "LINEA-17",
+     "OT-2024-00095",
+     "OT-2025-00169"
+    ],
+    "tokens": 181,
+    "ms": 0.59
+   }
+  },
+  {
+   "id": "IDE-14",
+   "familia": "identificacion",
+   "intencion": "area",
+   "pregunta": "¿A qué área pertenece el 1105-PT-02?",
+   "enrutado": "identificacion",
+   "grafo": {
+    "valor": "Deshidratación con glicol (TEG)",
+    "ok": true,
+    "tokens": 18,
+    "ms": 0.07,
+    "cypher": "MATCH (e:Equipo {tag: $tag})-[:PERTENECE_A]->(:Sistema)-[:PERTENECE_A]->(a:Area) RETURN a.nombre"
+   },
+   "rag": {
+    "ok": true,
+    "evidencia": [
+     "LISTA-1105-S02"
+    ],
+    "recuperado": [
+     "DS-1105-P-01#p1",
+     "DS-1105-PT-02#p1",
+     "DS-1205-P-01#p1",
+     "LISTA-1105-S02",
+     "OT-2025-00152"
+    ],
+    "tokens": 210,
+    "ms": 0.54
+   }
+  },
+  {
+   "id": "IDE-15",
+   "familia": "identificacion",
+   "intencion": "area",
+   "pregunta": "¿A qué área pertenece el 1405PT01?",
+   "enrutado": "identificacion",
+   "grafo": {
+    "valor": "Agua contra incendio",
+    "ok": true,
+    "tokens": 16,
+    "ms": 0.06,
+    "cypher": "MATCH (e:Equipo {tag: $tag})-[:PERTENECE_A]->(:Sistema)-[:PERTENECE_A]->(a:Area) RETURN a.nombre"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "LISTA-1405-S01"
+    ],
+    "recuperado": [
+     "DS-1105-P-01#p1",
+     "DS-1205-P-01#p1",
+     "MAN-BCA-50-200#p1",
+     "MAN-BCI-1500D#p1",
+     "MAN-BEN-25#p1"
+    ],
+    "tokens": 171,
+    "ms": 0.49
+   }
+  },
+  {
+   "id": "IDE-16",
+   "familia": "identificacion",
+   "intencion": "area",
+   "pregunta": "¿A qué área pertenece el 1405-PCV-01?",
+   "enrutado": "identificacion",
+   "grafo": {
+    "valor": "Agua contra incendio",
+    "ok": true,
+    "tokens": 16,
+    "ms": 0.06,
+    "cypher": "MATCH (e:Equipo {tag: $tag})-[:PERTENECE_A]->(:Sistema)-[:PERTENECE_A]->(a:Area) RETURN a.nombre"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "LISTA-1405-S01"
+    ],
+    "recuperado": [
+     "DS-1105-P-01#p1",
+     "DS-1205-P-01#p1",
+     "LINEA-17",
+     "MAN-BCA-50-200#p1",
+     "MAN-BEN-25#p1"
+    ],
+    "tokens": 157,
+    "ms": 0.54
+   }
+  },
+  {
+   "id": "IDE-17",
+   "familia": "identificacion",
+   "intencion": "area",
+   "pregunta": "¿A qué área pertenece el 1205-C-01?",
+   "enrutado": "identificacion",
+   "grafo": {
+    "valor": "Compresión de gas",
+    "ok": true,
+    "tokens": 15,
+    "ms": 0.07,
+    "cypher": "MATCH (e:Equipo {tag: $tag})-[:PERTENECE_A]->(:Sistema)-[:PERTENECE_A]->(a:Area) RETURN a.nombre"
+   },
+   "rag": {
+    "ok": true,
+    "evidencia": [
+     "LISTA-1205-S01"
+    ],
+    "recuperado": [
+     "DS-1105-P-01#p1",
+     "DS-1205-C-01#p1",
+     "DS-1205-P-01#p1",
+     "LINEA-04",
+     "LISTA-1205-S01"
+    ],
+    "tokens": 237,
+    "ms": 0.53
+   }
+  },
+  {
+   "id": "IDE-18",
+   "familia": "identificacion",
+   "intencion": "area",
+   "pregunta": "¿A qué área pertenece el 1205-V-03?",
+   "enrutado": "identificacion",
+   "grafo": {
+    "valor": "Compresión de gas",
+    "ok": true,
+    "tokens": 15,
+    "ms": 0.06,
+    "cypher": "MATCH (e:Equipo {tag: $tag})-[:PERTENECE_A]->(:Sistema)-[:PERTENECE_A]->(a:Area) RETURN a.nombre"
+   },
+   "rag": {
+    "ok": true,
+    "evidencia": [
+     "LISTA-1205-S02"
+    ],
+    "recuperado": [
+     "DS-1105-P-01#p1",
+     "DS-1205-P-01#p1",
+     "LINEA-07",
+     "LINEA-08",
+     "LISTA-1205-S02"
+    ],
+    "tokens": 189,
+    "ms": 0.55
+   }
+  },
+  {
+   "id": "IDE-19",
+   "familia": "identificacion",
+   "intencion": "area",
+   "pregunta": "¿A qué área pertenece el 1405-V-01?",
+   "enrutado": "identificacion",
+   "grafo": {
+    "valor": "Agua contra incendio",
+    "ok": true,
+    "tokens": 15,
+    "ms": 0.07,
+    "cypher": "MATCH (e:Equipo {tag: $tag})-[:PERTENECE_A]->(:Sistema)-[:PERTENECE_A]->(a:Area) RETURN a.nombre"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "LISTA-1405-S01"
+    ],
+    "recuperado": [
+     "DS-1105-P-01#p1",
+     "DS-1205-P-01#p1",
+     "LINEA-14",
+     "LINEA-17",
+     "OT-2025-00169"
+    ],
+    "tokens": 166,
+    "ms": 0.56
+   }
+  },
+  {
+   "id": "IDE-20",
+   "familia": "identificacion",
+   "intencion": "fabricante",
+   "pregunta": "¿Quién es el fabricante del 1305-v-3?",
+   "enrutado": "identificacion",
+   "grafo": {
+    "valor": "Calderería Industrial del Norte",
+    "ok": true,
+    "tokens": 18,
+    "ms": 0.08,
+    "cypher": "MATCH (e:Equipo {tag: $tag})<-[:DOCUMENTA]-(d:Documento {tipo:'hoja_de_datos'}) RETURN d.fabricante"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "DS-1305-V-03#p1"
+    ],
+    "recuperado": [
+     "MAN-DS-400#p1",
+     "MAN-RV-3#p1",
+     "MAN-SEP-H-1800#p1",
+     "MAN-TC-24#p1",
+     "MAN-TK-FW-900#p1"
+    ],
+    "tokens": 173,
+    "ms": 0.55
+   }
+  },
+  {
+   "id": "IDE-21",
+   "familia": "identificacion",
+   "intencion": "fabricante",
+   "pregunta": "¿Quién es el fabricante del 1405 V 01?",
+   "enrutado": "identificacion",
+   "grafo": {
+    "valor": "Calderería Industrial del Norte",
+    "ok": true,
+    "tokens": 18,
+    "ms": 0.07,
+    "cypher": "MATCH (e:Equipo {tag: $tag})<-[:DOCUMENTA]-(d:Documento {tipo:'hoja_de_datos'}) RETURN d.fabricante"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "DS-1405-V-01#p1"
+    ],
+    "recuperado": [
+     "MAN-AC-8#p1",
+     "MAN-DS-400#p1",
+     "OT-2022-00012",
+     "OT-2023-00084",
+     "OT-2025-00164"
+    ],
+    "tokens": 193,
+    "ms": 0.5
+   }
+  },
+  {
+   "id": "IDE-22",
+   "familia": "identificacion",
+   "intencion": "fabricante",
+   "pregunta": "¿Quién es el fabricante del 1305-C-02?",
+   "enrutado": "identificacion",
+   "grafo": {
+    "valor": "Compresores del Valle",
+    "ok": true,
+    "tokens": 16,
+    "ms": 0.06,
+    "cypher": "MATCH (e:Equipo {tag: $tag})<-[:DOCUMENTA]-(d:Documento {tipo:'hoja_de_datos'}) RETURN d.fabricante"
+   },
+   "rag": {
+    "ok": true,
+    "evidencia": [
+     "DS-1305-C-02#p1"
+    ],
+    "recuperado": [
+     "DS-1305-C-02#p1",
+     "MAN-DS-400#p1",
+     "MAN-RB-350#p1",
+     "MAN-RV-3#p1",
+     "MAN-SEP-H-1800#p1"
+    ],
+    "tokens": 176,
+    "ms": 0.5
+   }
+  },
+  {
+   "id": "IDE-23",
+   "familia": "identificacion",
+   "intencion": "fabricante",
+   "pregunta": "¿Quién es el fabricante del 1205-V-01?",
+   "enrutado": "identificacion",
+   "grafo": {
+    "valor": "Calderería Industrial del Norte",
+    "ok": true,
+    "tokens": 18,
+    "ms": 0.06,
+    "cypher": "MATCH (e:Equipo {tag: $tag})<-[:DOCUMENTA]-(d:Documento {tipo:'hoja_de_datos'}) RETURN d.fabricante"
+   },
+   "rag": {
+    "ok": true,
+    "evidencia": [
+     "DS-1205-V-01#p1"
+    ],
+    "recuperado": [
+     "DS-1205-V-01#p1",
+     "LINEA-04",
+     "MAN-DS-400#p1",
+     "OT-2022-00039",
+     "OT-2023-00047"
+    ],
+    "tokens": 191,
+    "ms": 0.49
+   }
+  },
+  {
+   "id": "IDE-24",
+   "familia": "identificacion",
+   "intencion": "fabricante",
+   "pregunta": "¿Quién es el fabricante del 1205-P-02?",
+   "enrutado": "identificacion",
+   "grafo": {
+    "valor": "Bombas Andinas S.A.",
+    "ok": true,
+    "tokens": 15,
+    "ms": 0.06,
+    "cypher": "MATCH (e:Equipo {tag: $tag})<-[:DOCUMENTA]-(d:Documento {tipo:'hoja_de_datos'}) RETURN d.fabricante"
+   },
+   "rag": {
+    "ok": true,
+    "evidencia": [
+     "DS-1205-P-02#p1"
+    ],
+    "recuperado": [
+     "DS-1205-P-02#p1",
+     "MAN-AC-8#p1",
+     "MAN-DS-400#p1",
+     "MAN-RB-350#p1",
+     "MAN-RV-3#p1"
+    ],
+    "tokens": 175,
+    "ms": 0.48
+   }
+  },
+  {
+   "id": "IDE-25",
+   "familia": "identificacion",
+   "intencion": "fabricante",
+   "pregunta": "¿Quién es el fabricante del 1305K01?",
+   "enrutado": "identificacion",
+   "grafo": {
+    "valor": "Ventiladores Sabana",
+    "ok": true,
+    "tokens": 15,
+    "ms": 0.06,
+    "cypher": "MATCH (e:Equipo {tag: $tag})<-[:DOCUMENTA]-(d:Documento {tipo:'hoja_de_datos'}) RETURN d.fabricante"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "DS-1305-K-01#p1"
+    ],
+    "recuperado": [
+     "MAN-DS-400#p1",
+     "MAN-RV-3#p1",
+     "MAN-SEP-H-1800#p1",
+     "MAN-TC-24#p1",
+     "MAN-TK-FW-900#p1"
+    ],
+    "tokens": 173,
+    "ms": 0.48
+   }
+  },
+  {
+   "id": "TOP-01",
+   "familia": "topologia",
+   "intencion": "aislamiento",
+   "pregunta": "¿Qué válvulas de bloqueo aíslan el 1105_V_01?",
+   "enrutado": "topologia",
+   "grafo": {
+    "valor": [
+     "1105-HV-01",
+     "1105-HV-02"
+    ],
+    "ok": true,
+    "tokens": 17,
+    "ms": 0.06,
+    "cypher": "MATCH (v:Equipo {tipo:'HV'})-[:AISLA]->(e:Equipo {tag: $tag}) RETURN v.tag"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "LINEA-01"
+    ],
+    "recuperado": [
+     "MAN-BCA-50-200#p2",
+     "MAN-BEN-25#p2",
+     "MAN-DS-400#p2",
+     "MAN-PTX-3051#p2",
+     "MAN-SA-75#p2"
+    ],
+    "tokens": 152,
+    "ms": 0.52
+   }
+  },
+  {
+   "id": "TOP-02",
+   "familia": "topologia",
+   "intencion": "aislamiento",
+   "pregunta": "¿Qué válvulas de bloqueo aíslan el 1105 V 02?",
+   "enrutado": "topologia",
+   "grafo": {
+    "valor": [
+     "1105-HV-02",
+     "1105-HV-03",
+     "1105-HV-05",
+     "1105-HV-13"
+    ],
+    "ok": true,
+    "tokens": 24,
+    "ms": 0.08,
+    "cypher": "MATCH (v:Equipo {tipo:'HV'})-[:AISLA]->(e:Equipo {tag: $tag}) RETURN v.tag"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "LINEA-01",
+     "LINEA-02",
+     "LINEA-03"
+    ],
+    "recuperado": [
+     "MAN-BCA-50-200#p2",
+     "MAN-DS-400#p2",
+     "MAN-PTX-3051#p2",
+     "MAN-RC-2400#p2",
+     "OT-2023-00084"
+    ],
+    "tokens": 164,
+    "ms": 0.71
+   }
+  },
+  {
+   "id": "TOP-03",
+   "familia": "topologia",
+   "intencion": "aislamiento",
+   "pregunta": "¿Qué válvulas de bloqueo aíslan el 1105_E_01?",
+   "enrutado": "topologia",
+   "grafo": {
+    "valor": [
+     "1105-HV-04",
+     "1105-HV-06",
+     "1105-HV-07",
+     "1105-HV-08"
+    ],
+    "ok": true,
+    "tokens": 24,
+    "ms": 0.13,
+    "cypher": "MATCH (v:Equipo {tipo:'HV'})-[:AISLA]->(e:Equipo {tag: $tag}) RETURN v.tag"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "LINEA-02"
+    ],
+    "recuperado": [
+     "MAN-BCA-50-200#p2",
+     "MAN-BEN-25#p2",
+     "MAN-DS-400#p2",
+     "MAN-PTX-3051#p2",
+     "MAN-RC-2400#p2"
+    ],
+    "tokens": 152,
+    "ms": 1.39
+   }
+  },
+  {
+   "id": "TOP-04",
+   "familia": "topologia",
+   "intencion": "aislamiento",
+   "pregunta": "¿Qué válvulas de bloqueo aíslan el 1105-V-04?",
+   "enrutado": "topologia",
+   "grafo": {
+    "valor": [
+     "1105-HV-07",
+     "1105-HV-08"
+    ],
+    "ok": true,
+    "tokens": 17,
+    "ms": 0.23,
+    "cypher": "MATCH (v:Equipo {tipo:'HV'})-[:AISLA]->(e:Equipo {tag: $tag}) RETURN v.tag"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "LINEA-02"
+    ],
+    "recuperado": [
+     "MAN-BCA-50-200#p2",
+     "MAN-BEN-25#p2",
+     "MAN-DS-400#p2",
+     "MAN-PTX-3051#p2",
+     "MAN-RC-2400#p2"
+    ],
+    "tokens": 152,
+    "ms": 1.51
+   }
+  },
+  {
+   "id": "TOP-05",
+   "familia": "topologia",
+   "intencion": "aislamiento",
+   "pregunta": "¿Qué válvulas de bloqueo aíslan el 1105-P-01?",
+   "enrutado": "topologia",
+   "grafo": {
+    "valor": [
+     "1105-HV-09",
+     "1105-HV-10"
+    ],
+    "ok": true,
+    "tokens": 17,
+    "ms": 0.11,
+    "cypher": "MATCH (v:Equipo {tipo:'HV'})-[:AISLA]->(e:Equipo {tag: $tag}) RETURN v.tag"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "LINEA-02"
+    ],
+    "recuperado": [
+     "MAN-BEN-25#p2",
+     "MAN-DS-400#p2",
+     "MAN-PTX-3051#p2",
+     "MAN-RC-2400#p2",
+     "MAN-SA-75#p2"
+    ],
+    "tokens": 151,
+    "ms": 1.23
+   }
+  },
+  {
+   "id": "TOP-06",
+   "familia": "topologia",
+   "intencion": "aislamiento",
+   "pregunta": "¿Qué válvulas de bloqueo aíslan el 1105 P 02?",
+   "enrutado": "topologia",
+   "grafo": {
+    "valor": [
+     "1105-HV-11",
+     "1105-HV-12"
+    ],
+    "ok": true,
+    "tokens": 17,
+    "ms": 0.14,
+    "cypher": "MATCH (v:Equipo {tipo:'HV'})-[:AISLA]->(e:Equipo {tag: $tag}) RETURN v.tag"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "LINEA-03"
+    ],
+    "recuperado": [
+     "MAN-BEN-25#p2",
+     "MAN-DS-400#p2",
+     "MAN-PTX-3051#p2",
+     "OT-2023-00084",
+     "OT-2026-00174"
+    ],
+    "tokens": 176,
+    "ms": 1.12
+   }
+  },
+  {
+   "id": "TOP-07",
+   "familia": "topologia",
+   "intencion": "aislamiento",
+   "pregunta": "¿Qué válvulas de bloqueo aíslan el 1205-V-01?",
+   "enrutado": "topologia",
+   "grafo": {
+    "valor": [
+     "1205-HV-01",
+     "1205-HV-02",
+     "1205-HV-04",
+     "1205-HV-07"
+    ],
+    "ok": true,
+    "tokens": 24,
+    "ms": 0.12,
+    "cypher": "MATCH (v:Equipo {tipo:'HV'})-[:AISLA]->(e:Equipo {tag: $tag}) RETURN v.tag"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "LINEA-01",
+     "LINEA-04",
+     "LINEA-05",
+     "LINEA-06"
+    ],
+    "recuperado": [
+     "MAN-BCA-50-200#p2",
+     "MAN-BEN-25#p2",
+     "MAN-DS-400#p2",
+     "MAN-PTX-3051#p2",
+     "MAN-RC-2400#p2"
+    ],
+    "tokens": 152,
+    "ms": 1.11
+   }
+  },
+  {
+   "id": "TOP-08",
+   "familia": "topologia",
+   "intencion": "aislamiento",
+   "pregunta": "¿Qué válvulas de bloqueo aíslan el 1205-C-01?",
+   "enrutado": "topologia",
+   "grafo": {
+    "valor": [
+     "1205-HV-02",
+     "1205-HV-03"
+    ],
+    "ok": true,
+    "tokens": 17,
+    "ms": 0.1,
+    "cypher": "MATCH (v:Equipo {tipo:'HV'})-[:AISLA]->(e:Equipo {tag: $tag}) RETURN v.tag"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "LINEA-04"
+    ],
+    "recuperado": [
+     "MAN-BCA-50-200#p2",
+     "MAN-BEN-25#p2",
+     "MAN-DS-400#p2",
+     "MAN-PTX-3051#p2",
+     "MAN-SA-75#p2"
+    ],
+    "tokens": 152,
+    "ms": 0.76
+   }
+  },
+  {
+   "id": "TOP-09",
+   "familia": "topologia",
+   "intencion": "aislamiento",
+   "pregunta": "¿Qué válvulas de bloqueo aíslan el 1205-C-02?",
+   "enrutado": "topologia",
+   "grafo": {
+    "valor": [
+     "1205-HV-04",
+     "1205-HV-05"
+    ],
+    "ok": true,
+    "tokens": 17,
+    "ms": 0.09,
+    "cypher": "MATCH (v:Equipo {tipo:'HV'})-[:AISLA]->(e:Equipo {tag: $tag}) RETURN v.tag"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "LINEA-05"
+    ],
+    "recuperado": [
+     "MAN-BCA-50-200#p2",
+     "MAN-BEN-25#p2",
+     "MAN-DS-400#p2",
+     "MAN-PTX-3051#p2",
+     "MAN-RC-2400#p2"
+    ],
+    "tokens": 152,
+    "ms": 0.67
+   }
+  },
+  {
+   "id": "TOP-10",
+   "familia": "topologia",
+   "intencion": "aislamiento",
+   "pregunta": "¿Qué válvulas de bloqueo aíslan el 1205-E-01?",
+   "enrutado": "topologia",
+   "grafo": {
+    "valor": [
+     "1205-HV-03",
+     "1205-HV-05",
+     "1205-HV-06",
+     "1205-HV-07"
+    ],
+    "ok": true,
+    "tokens": 24,
+    "ms": 0.11,
+    "cypher": "MATCH (v:Equipo {tipo:'HV'})-[:AISLA]->(e:Equipo {tag: $tag}) RETURN v.tag"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "LINEA-04",
+     "LINEA-05",
+     "LINEA-06"
+    ],
+    "recuperado": [
+     "MAN-BEN-25#p2",
+     "MAN-DS-400#p2",
+     "MAN-PTX-3051#p2",
+     "MAN-RC-2400#p2",
+     "MAN-SA-75#p2"
+    ],
+    "tokens": 151,
+    "ms": 0.61
+   }
+  },
+  {
+   "id": "TOP-11",
+   "familia": "topologia",
+   "intencion": "aislamiento",
+   "pregunta": "¿Qué válvulas de bloqueo aíslan el 1205P01?",
+   "enrutado": "topologia",
+   "grafo": {
+    "valor": [
+     "1205-HV-08",
+     "1205-HV-09"
+    ],
+    "ok": true,
+    "tokens": 17,
+    "ms": 0.09,
+    "cypher": "MATCH (v:Equipo {tipo:'HV'})-[:AISLA]->(e:Equipo {tag: $tag}) RETURN v.tag"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "LINEA-07"
+    ],
+    "recuperado": [
+     "MAN-BCA-50-200#p2",
+     "MAN-BEN-25#p2",
+     "MAN-DS-400#p2",
+     "MAN-PTX-3051#p2",
+     "MAN-SA-75#p2"
+    ],
+    "tokens": 152,
+    "ms": 0.63
+   }
+  },
+  {
+   "id": "TOP-12",
+   "familia": "topologia",
+   "intencion": "aislamiento",
+   "pregunta": "¿Qué válvulas de bloqueo aíslan el 1205-P-02?",
+   "enrutado": "topologia",
+   "grafo": {
+    "valor": [
+     "1205-HV-11",
+     "1205-HV-12"
+    ],
+    "ok": true,
+    "tokens": 17,
+    "ms": 0.14,
+    "cypher": "MATCH (v:Equipo {tipo:'HV'})-[:AISLA]->(e:Equipo {tag: $tag}) RETURN v.tag"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "LINEA-08"
+    ],
+    "recuperado": [
+     "MAN-BCA-50-200#p2",
+     "MAN-BEN-25#p2",
+     "MAN-DS-400#p2",
+     "MAN-PTX-3051#p2",
+     "MAN-RC-2400#p2"
+    ],
+    "tokens": 152,
+    "ms": 1.87
+   }
+  },
+  {
+   "id": "TOP-13",
+   "familia": "topologia",
+   "intencion": "aislamiento",
+   "pregunta": "¿Qué válvulas de bloqueo aíslan el 1305-C-01?",
+   "enrutado": "topologia",
+   "grafo": {
+    "valor": [
+     "1305-HV-01"
+    ],
+    "ok": true,
+    "tokens": 13,
+    "ms": 0.13,
+    "cypher": "MATCH (v:Equipo {tipo:'HV'})-[:AISLA]->(e:Equipo {tag: $tag}) RETURN v.tag"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "LINEA-09"
+    ],
+    "recuperado": [
+     "MAN-BEN-25#p2",
+     "MAN-DS-400#p2",
+     "MAN-PTX-3051#p2",
+     "MAN-RC-2400#p2",
+     "MAN-SA-75#p2"
+    ],
+    "tokens": 151,
+    "ms": 1.48
+   }
+  },
+  {
+   "id": "TOP-14",
+   "familia": "topologia",
+   "intencion": "aislamiento",
+   "pregunta": "¿Qué válvulas de bloqueo aíslan el 1305-C-02?",
+   "enrutado": "topologia",
+   "grafo": {
+    "valor": [
+     "1305-HV-02"
+    ],
+    "ok": true,
+    "tokens": 13,
+    "ms": 0.32,
+    "cypher": "MATCH (v:Equipo {tipo:'HV'})-[:AISLA]->(e:Equipo {tag: $tag}) RETURN v.tag"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "LINEA-10"
+    ],
+    "recuperado": [
+     "MAN-BCA-50-200#p2",
+     "MAN-BEN-25#p2",
+     "MAN-DS-400#p2",
+     "MAN-PTX-3051#p2",
+     "MAN-RC-2400#p2"
+    ],
+    "tokens": 152,
+    "ms": 1.14
+   }
+  },
+  {
+   "id": "TOP-15",
+   "familia": "topologia",
+   "intencion": "aislamiento",
+   "pregunta": "¿Qué válvulas de bloqueo aíslan el 1305 E 01?",
+   "enrutado": "topologia",
+   "grafo": {
+    "valor": [
+     "1305-HV-01",
+     "1305-HV-02",
+     "1305-HV-03"
+    ],
+    "ok": true,
+    "tokens": 20,
+    "ms": 0.1,
+    "cypher": "MATCH (v:Equipo {tipo:'HV'})-[:AISLA]->(e:Equipo {tag: $tag}) RETURN v.tag"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "LINEA-09",
+     "LINEA-10"
+    ],
+    "recuperado": [
+     "MAN-BCA-50-200#p2",
+     "MAN-DS-400#p2",
+     "MAN-PTX-3051#p2",
+     "MAN-SA-75#p2",
+     "OT-2022-00017"
+    ],
+    "tokens": 170,
+    "ms": 0.85
+   }
+  },
+  {
+   "id": "TOP-16",
+   "familia": "topologia",
+   "intencion": "aislamiento",
+   "pregunta": "¿Qué válvulas de bloqueo aíslan el 1305-V-02?",
+   "enrutado": "topologia",
+   "grafo": {
+    "valor": [
+     "1305-HV-04",
+     "1305-HV-05",
+     "1305-HV-10"
+    ],
+    "ok": true,
+    "tokens": 20,
+    "ms": 0.09,
+    "cypher": "MATCH (v:Equipo {tipo:'HV'})-[:AISLA]->(e:Equipo {tag: $tag}) RETURN v.tag"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "LINEA-10",
+     "LINEA-12"
+    ],
+    "recuperado": [
+     "MAN-BCA-50-200#p2",
+     "MAN-BEN-25#p2",
+     "MAN-DS-400#p2",
+     "MAN-PTX-3051#p2",
+     "MAN-RC-2400#p2"
+    ],
+    "tokens": 152,
+    "ms": 0.66
+   }
+  },
+  {
+   "id": "TOP-17",
+   "familia": "topologia",
+   "intencion": "aislamiento",
+   "pregunta": "¿Qué válvulas de bloqueo aíslan el 1305-V-03?",
+   "enrutado": "topologia",
+   "grafo": {
+    "valor": [
+     "1305-HV-06",
+     "1305-HV-07",
+     "1305-HV-11"
+    ],
+    "ok": true,
+    "tokens": 20,
+    "ms": 0.08,
+    "cypher": "MATCH (v:Equipo {tipo:'HV'})-[:AISLA]->(e:Equipo {tag: $tag}) RETURN v.tag"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "LINEA-11",
+     "LINEA-13"
+    ],
+    "recuperado": [
+     "MAN-BCA-50-200#p2",
+     "MAN-BEN-25#p2",
+     "MAN-DS-400#p2",
+     "MAN-PTX-3051#p2",
+     "MAN-RC-2400#p2"
+    ],
+    "tokens": 152,
+    "ms": 0.63
+   }
+  },
+  {
+   "id": "TOP-18",
+   "familia": "topologia",
+   "intencion": "aislamiento",
+   "pregunta": "¿Qué válvulas de bloqueo aíslan el 1405-V-01?",
+   "enrutado": "topologia",
+   "grafo": {
+    "valor": [
+     "1405-HV-01",
+     "1405-HV-03",
+     "1405-HV-05",
+     "1405-HV-08",
+     "1405-HV-09"
+    ],
+    "ok": true,
+    "tokens": 27,
+    "ms": 0.11,
+    "cypher": "MATCH (v:Equipo {tipo:'HV'})-[:AISLA]->(e:Equipo {tag: $tag}) RETURN v.tag"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "LINEA-14",
+     "LINEA-15",
+     "LINEA-16",
+     "LINEA-17"
+    ],
+    "recuperado": [
+     "MAN-BCA-50-200#p2",
+     "MAN-BEN-25#p2",
+     "MAN-DS-400#p2",
+     "MAN-PTX-3051#p2",
+     "MAN-SA-75#p2"
+    ],
+    "tokens": 152,
+    "ms": 0.81
+   }
+  },
+  {
+   "id": "TOP-19",
+   "familia": "topologia",
+   "intencion": "aislamiento",
+   "pregunta": "¿Qué válvulas de bloqueo aíslan el 1405_P_01?",
+   "enrutado": "topologia",
+   "grafo": {
+    "valor": [
+     "1405-HV-01",
+     "1405-HV-02"
+    ],
+    "ok": true,
+    "tokens": 17,
+    "ms": 0.13,
+    "cypher": "MATCH (v:Equipo {tipo:'HV'})-[:AISLA]->(e:Equipo {tag: $tag}) RETURN v.tag"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "LINEA-14"
+    ],
+    "recuperado": [
+     "MAN-BCA-50-200#p2",
+     "MAN-BEN-25#p2",
+     "MAN-DS-400#p2",
+     "MAN-PTX-3051#p2",
+     "MAN-SA-75#p2"
+    ],
+    "tokens": 152,
+    "ms": 0.97
+   }
+  },
+  {
+   "id": "TOP-20",
+   "familia": "topologia",
+   "intencion": "aislamiento",
+   "pregunta": "¿Qué válvulas de bloqueo aíslan el 1405-P-02?",
+   "enrutado": "topologia",
+   "grafo": {
+    "valor": [
+     "1405-HV-03",
+     "1405-HV-04"
+    ],
+    "ok": true,
+    "tokens": 17,
+    "ms": 0.16,
+    "cypher": "MATCH (v:Equipo {tipo:'HV'})-[:AISLA]->(e:Equipo {tag: $tag}) RETURN v.tag"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "LINEA-15"
+    ],
+    "recuperado": [
+     "MAN-BCA-50-200#p2",
+     "MAN-BEN-25#p2",
+     "MAN-PTX-3051#p2",
+     "MAN-RC-2400#p2",
+     "MAN-SA-75#p2"
+    ],
+    "tokens": 152,
+    "ms": 1.76
+   }
+  },
+  {
+   "id": "TOP-21",
+   "familia": "topologia",
+   "intencion": "aislamiento",
+   "pregunta": "¿Qué válvulas de bloqueo aíslan el 1405-P-03?",
+   "enrutado": "topologia",
+   "grafo": {
+    "valor": [
+     "1405-HV-05",
+     "1405-HV-06"
+    ],
+    "ok": true,
+    "tokens": 17,
+    "ms": 0.11,
+    "cypher": "MATCH (v:Equipo {tipo:'HV'})-[:AISLA]->(e:Equipo {tag: $tag}) RETURN v.tag"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "LINEA-16"
+    ],
+    "recuperado": [
+     "MAN-BCA-50-200#p2",
+     "MAN-BEN-25#p2",
+     "MAN-DS-400#p2",
+     "MAN-PTX-3051#p2",
+     "MAN-RC-2400#p2"
+    ],
+    "tokens": 152,
+    "ms": 1.03
+   }
+  },
+  {
+   "id": "TOP-22",
+   "familia": "topologia",
+   "intencion": "envolvente",
+   "pregunta": "¿Qué otros equipos quedan fuera de servicio al cerrar las válvulas que aíslan el 1105-V-04?",
+   "enrutado": "topologia",
+   "grafo": {
+    "valor": [
+     "1105-V-05"
+    ],
+    "ok": true,
+    "tokens": 13,
+    "ms": 0.08,
+    "cypher": "MATCH (v)-[:AISLA]->(e:Equipo {tag: $tag}) WITH collect(v) AS vs MATCH p=(e)-[:CONECTA_A*]-(x:Equipo) WHERE NONE(n IN nodes(p)[1..] WHERE n IN vs) RETURN DISTINCT x.tag"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "LINEA-02"
+    ],
+    "recuperado": [
+     "DS-1105-V-04#p1",
+     "MAN-BCA-50-200#p2",
+     "MAN-BEN-25#p2",
+     "MAN-DS-400#p2",
+     "MAN-PTX-3051#p2"
+    ],
+    "tokens": 160,
+    "ms": 0.67
+   }
+  },
+  {
+   "id": "TOP-23",
+   "familia": "topologia",
+   "intencion": "envolvente",
+   "pregunta": "¿Qué otros equipos quedan fuera de servicio al cerrar las válvulas que aíslan el 1205-E-01?",
+   "enrutado": "topologia",
+   "grafo": {
+    "valor": [
+     "1205-PCV-01",
+     "1205-V-02"
+    ],
+    "ok": true,
+    "tokens": 17,
+    "ms": 0.08,
+    "cypher": "MATCH (v)-[:AISLA]->(e:Equipo {tag: $tag}) WITH collect(v) AS vs MATCH p=(e)-[:CONECTA_A*]-(x:Equipo) WHERE NONE(n IN nodes(p)[1..] WHERE n IN vs) RETURN DISTINCT x.tag"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "LINEA-04",
+     "LINEA-05",
+     "LINEA-06"
+    ],
+    "recuperado": [
+     "MAN-BCA-50-200#p2",
+     "MAN-BEN-25#p2",
+     "MAN-PTX-3051#p2",
+     "MAN-RC-2400#p2",
+     "MAN-SA-75#p2"
+    ],
+    "tokens": 152,
+    "ms": 0.65
+   }
+  },
+  {
+   "id": "TOP-24",
+   "familia": "topologia",
+   "intencion": "envolvente",
+   "pregunta": "¿Qué otros equipos quedan fuera de servicio al cerrar las válvulas que aíslan el 1305-E-01?",
+   "enrutado": "topologia",
+   "grafo": {
+    "valor": [
+     "1305-V-01"
+    ],
+    "ok": true,
+    "tokens": 13,
+    "ms": 0.08,
+    "cypher": "MATCH (v)-[:AISLA]->(e:Equipo {tag: $tag}) WITH collect(v) AS vs MATCH p=(e)-[:CONECTA_A*]-(x:Equipo) WHERE NONE(n IN nodes(p)[1..] WHERE n IN vs) RETURN DISTINCT x.tag"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "LINEA-09",
+     "LINEA-10"
+    ],
+    "recuperado": [
+     "DS-1305-E-01#p1",
+     "MAN-BCA-50-200#p2",
+     "MAN-BEN-25#p2",
+     "MAN-PTX-3051#p2",
+     "MAN-SA-75#p2"
+    ],
+    "tokens": 157,
+    "ms": 0.7
+   }
+  },
+  {
+   "id": "TOP-25",
+   "familia": "topologia",
+   "intencion": "envolvente",
+   "pregunta": "¿Qué otros equipos quedan fuera de servicio al cerrar las válvulas que aíslan el 1105-P-01?",
+   "enrutado": "topologia",
+   "grafo": {
+    "valor": [],
+    "ok": true,
+    "tokens": 10,
+    "ms": 0.09,
+    "cypher": "MATCH (v)-[:AISLA]->(e:Equipo {tag: $tag}) WITH collect(v) AS vs MATCH p=(e)-[:CONECTA_A*]-(x:Equipo) WHERE NONE(n IN nodes(p)[1..] WHERE n IN vs) RETURN DISTINCT x.tag"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "LINEA-02"
+    ],
+    "recuperado": [
+     "MAN-BCA-50-200#p2",
+     "MAN-BEN-25#p2",
+     "MAN-DS-400#p2",
+     "MAN-PTX-3051#p2",
+     "MAN-RC-2400#p2"
+    ],
+    "tokens": 152,
+    "ms": 1.09
+   }
+  },
+  {
+   "id": "HIS-01",
+   "familia": "historial",
+   "intencion": "ultima_accion",
+   "pregunta": "¿Qué se hizo la última vez que falló el 1305-e-1?",
+   "enrutado": "historial",
+   "grafo": {
+    "valor": "SE TAPONAN TUBOS, SE PROGRAMA CAMBIO DE HAZ DE TUBOS",
+    "ok": true,
+    "tokens": 23,
+    "ms": 0.18,
+    "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla)-[:ATENDIDA_POR]->(i) RETURN i.accion ORDER BY f.fecha DESC LIMIT 1"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "OT-2022-00017",
+     "OT-2023-00048",
+     "OT-2023-00059",
+     "OT-2025-00158"
+    ],
+    "recuperado": [
+     "DS-1105-PT-02#p1",
+     "DS-1405-PT-01#p1",
+     "LISTA-1405-S01",
+     "MAN-BEN-25#p2",
+     "MAN-PTX-3051#p2"
+    ],
+    "tokens": 232,
+    "ms": 1.28
+   }
+  },
+  {
+   "id": "HIS-02",
+   "familia": "historial",
+   "intencion": "ultima_accion",
+   "pregunta": "¿Qué se hizo la última vez que falló el 1205-V-01?",
+   "enrutado": "historial",
+   "grafo": {
+    "valor": "SE LIMPIA DEMISTER",
+    "ok": true,
+    "tokens": 14,
+    "ms": 0.15,
+    "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla)-[:ATENDIDA_POR]->(i) RETURN i.accion ORDER BY f.fecha DESC LIMIT 1"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "OT-2022-00039",
+     "OT-2023-00047",
+     "OT-2023-00078",
+     "OT-2025-00138"
+    ],
+    "recuperado": [
+     "DS-1105-PT-02#p1",
+     "DS-1205-V-01#p1",
+     "LINEA-04",
+     "OT-2022-00039",
+     "OT-2023-00047"
+    ],
+    "tokens": 198,
+    "ms": 0.96
+   }
+  },
+  {
+   "id": "HIS-03",
+   "familia": "historial",
+   "intencion": "ultima_accion",
+   "pregunta": "¿Qué se hizo la última vez que falló el 1105-V-04?",
+   "enrutado": "historial",
+   "grafo": {
+    "valor": "SE CALIBRA VISOR DE NIVEL",
+    "ok": true,
+    "tokens": 16,
+    "ms": 0.1,
+    "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla)-[:ATENDIDA_POR]->(i) RETURN i.accion ORDER BY f.fecha DESC LIMIT 1"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "OT-2023-00046",
+     "OT-2025-00151",
+     "OT-2026-00202"
+    ],
+    "recuperado": [
+     "DS-1105-PT-02#p1",
+     "DS-1105-V-04#p1",
+     "DS-1405-PT-01#p1",
+     "OT-2023-00046",
+     "OT-2025-00151"
+    ],
+    "tokens": 209,
+    "ms": 0.89
+   }
+  },
+  {
+   "id": "HIS-04",
+   "familia": "historial",
+   "intencion": "ultima_accion",
+   "pregunta": "¿Qué se hizo la última vez que falló el 1105-V-01?",
+   "enrutado": "historial",
+   "grafo": {
+    "valor": "SE CAMBIA BOQUILLA",
+    "ok": true,
+    "tokens": 14,
+    "ms": 0.19,
+    "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla)-[:ATENDIDA_POR]->(i) RETURN i.accion ORDER BY f.fecha DESC LIMIT 1"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "OT-2022-00013",
+     "OT-2022-00015",
+     "OT-2022-00035",
+     "OT-2024-00086",
+     "OT-2024-00099",
+     "OT-2024-00125",
+     "OT-2024-00129",
+     "OT-2025-00137",
+     "OT-2026-00181",
+     "OT-2026-00185",
+     "OT-2026-00194"
+    ],
+    "recuperado": [
+     "DS-1105-PT-02#p1",
+     "DS-1405-PT-01#p1",
+     "OT-2024-00086",
+     "OT-2024-00125",
+     "OT-2026-00181"
+    ],
+    "tokens": 228,
+    "ms": 0.83
+   }
+  },
+  {
+   "id": "HIS-05",
+   "familia": "historial",
+   "intencion": "ultima_accion",
+   "pregunta": "¿Qué se hizo la última vez que falló el 1305_V_02?",
+   "enrutado": "historial",
+   "grafo": {
+    "valor": "SE LIMPIA DEMISTER",
+    "ok": true,
+    "tokens": 14,
+    "ms": 0.13,
+    "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla)-[:ATENDIDA_POR]->(i) RETURN i.accion ORDER BY f.fecha DESC LIMIT 1"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "OT-2022-00023",
+     "OT-2023-00064",
+     "OT-2024-00094",
+     "OT-2024-00119",
+     "OT-2025-00133",
+     "OT-2025-00162",
+     "OT-2026-00171"
+    ],
+    "recuperado": [
+     "DS-1105-PT-02#p1",
+     "DS-1405-PT-01#p1",
+     "LISTA-1405-S01",
+     "MAN-BEN-25#p2",
+     "MAN-PTX-3051#p2"
+    ],
+    "tokens": 232,
+    "ms": 0.64
+   }
+  },
+  {
+   "id": "HIS-06",
+   "familia": "historial",
+   "intencion": "ultima_accion",
+   "pregunta": "¿Qué se hizo la última vez que falló el 1105-P-01?",
+   "enrutado": "historial",
+   "grafo": {
+    "valor": "SE REVISA ACOPLE Y ARRANQUE, SE NORMALIZA",
+    "ok": true,
+    "tokens": 20,
+    "ms": 0.13,
+    "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla)-[:ATENDIDA_POR]->(i) RETURN i.accion ORDER BY f.fecha DESC LIMIT 1"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "OT-2022-00010",
+     "OT-2024-00087",
+     "OT-2024-00092",
+     "OT-2025-00141",
+     "OT-2025-00166",
+     "OT-2026-00186",
+     "OT-2026-00193"
+    ],
+    "recuperado": [
+     "DS-1105-PT-02#p1",
+     "DS-1405-PT-01#p1",
+     "OT-2024-00087",
+     "OT-2024-00092",
+     "OT-2026-00186"
+    ],
+    "tokens": 211,
+    "ms": 0.63
+   }
+  },
+  {
+   "id": "HIS-07",
+   "familia": "historial",
+   "intencion": "ultima_accion",
+   "pregunta": "¿Qué se hizo la última vez que falló el 1405-P-01?",
+   "enrutado": "historial",
+   "grafo": {
+    "valor": "SE CORRIGE CARCASA",
+    "ok": true,
+    "tokens": 14,
+    "ms": 0.14,
+    "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla)-[:ATENDIDA_POR]->(i) RETURN i.accion ORDER BY f.fecha DESC LIMIT 1"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "OT-2022-00007",
+     "OT-2022-00014",
+     "OT-2022-00026",
+     "OT-2022-00028",
+     "OT-2024-00111",
+     "OT-2024-00127",
+     "OT-2025-00146",
+     "OT-2025-00164"
+    ],
+    "recuperado": [
+     "DS-1105-PT-02#p1",
+     "DS-1405-PT-01#p1",
+     "LISTA-1405-S01",
+     "OT-2022-00026",
+     "OT-2024-00111"
+    ],
+    "tokens": 259,
+    "ms": 1.06
+   }
+  },
+  {
+   "id": "HIS-08",
+   "familia": "historial",
+   "intencion": "ultima_accion",
+   "pregunta": "¿Qué se hizo la última vez que falló el 1305-C-01?",
+   "enrutado": "historial",
+   "grafo": {
+    "valor": "SE CAMBIA VÁLVULA DE DESCARGA Y SE LUBRICA",
+    "ok": true,
+    "tokens": 20,
+    "ms": 1.87,
+    "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla)-[:ATENDIDA_POR]->(i) RETURN i.accion ORDER BY f.fecha DESC LIMIT 1"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "OT-2021-00006",
+     "OT-2022-00009",
+     "OT-2022-00016",
+     "OT-2022-00019",
+     "OT-2022-00025",
+     "OT-2022-00029",
+     "OT-2023-00045",
+     "OT-2023-00049",
+     "OT-2024-00116",
+     "OT-2024-00128",
+     "OT-2025-00154"
+    ],
+    "recuperado": [
+     "DS-1105-PT-02#p1",
+     "DS-1405-PT-01#p1",
+     "LINEA-09",
+     "OT-2022-00016",
+     "OT-2023-00045"
+    ],
+    "tokens": 203,
+    "ms": 1.37
+   }
+  },
+  {
+   "id": "HIS-09",
+   "familia": "historial",
+   "intencion": "ultima_accion",
+   "pregunta": "¿Qué se hizo la última vez que falló el 1105-V-02?",
+   "enrutado": "historial",
+   "grafo": {
+    "valor": "SE CAMBIA BOQUILLA",
+    "ok": true,
+    "tokens": 14,
+    "ms": 0.13,
+    "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla)-[:ATENDIDA_POR]->(i) RETURN i.accion ORDER BY f.fecha DESC LIMIT 1"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "OT-2021-00005",
+     "OT-2023-00084",
+     "OT-2025-00147",
+     "OT-2026-00195"
+    ],
+    "recuperado": [
+     "DS-1105-PT-02#p1",
+     "DS-1405-PT-01#p1",
+     "LISTA-1105-S02",
+     "OT-2021-00005",
+     "OT-2026-00195"
+    ],
+    "tokens": 225,
+    "ms": 3.04
+   }
+  },
+  {
+   "id": "HIS-10",
+   "familia": "historial",
+   "intencion": "conteo_modo",
+   "pregunta": "¿Cuántas veces ha fallado el 1205-e-1 por transferencia de calor insuficiente (IHT)?",
+   "enrutado": "historial",
+   "grafo": {
+    "valor": 1,
+    "ok": true,
+    "tokens": 10,
+    "ms": 0.41,
+    "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla)-[:TIENE_MODO]->(:ModoFalla {codigo: 'IHT'}) RETURN count(f)"
+   },
+   "rag": {
+    "ok": true,
+    "evidencia": [
+     "OT-2023-00074"
+    ],
+    "recuperado": [
+     "OT-2022-00032",
+     "OT-2022-00033",
+     "OT-2023-00059",
+     "OT-2023-00074",
+     "OT-2024-00112"
+    ],
+    "tokens": 236,
+    "ms": 1.39
+   }
+  },
+  {
+   "id": "HIS-11",
+   "familia": "historial",
+   "intencion": "conteo_modo",
+   "pregunta": "¿Cuántas veces ha fallado el 1305-C-02 por avería (BRD)?",
+   "enrutado": "historial",
+   "grafo": {
+    "valor": 1,
+    "ok": true,
+    "tokens": 10,
+    "ms": 0.26,
+    "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla)-[:TIENE_MODO]->(:ModoFalla {codigo: 'BRD'}) RETURN count(f)"
+   },
+   "rag": {
+    "ok": true,
+    "evidencia": [
+     "OT-2025-00139"
+    ],
+    "recuperado": [
+     "OT-2024-00110",
+     "OT-2024-00120",
+     "OT-2025-00139",
+     "OT-2025-00141",
+     "OT-2025-00170"
+    ],
+    "tokens": 216,
+    "ms": 0.96
+   }
+  },
+  {
+   "id": "HIS-12",
+   "familia": "historial",
+   "intencion": "conteo_modo",
+   "pregunta": "¿Cuántas veces ha fallado el 1205 V 01 por taponamiento (PLU)?",
+   "enrutado": "historial",
+   "grafo": {
+    "valor": 2,
+    "ok": true,
+    "tokens": 14,
+    "ms": 0.12,
+    "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla)-[:TIENE_MODO]->(:ModoFalla {codigo: 'PLU'}) RETURN count(f)"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "OT-2023-00078",
+     "OT-2025-00138"
+    ],
+    "recuperado": [
+     "OT-2022-00012",
+     "OT-2022-00035",
+     "OT-2023-00084",
+     "OT-2024-00099",
+     "OT-2024-00105"
+    ],
+    "tokens": 215,
+    "ms": 0.82
+   }
+  },
+  {
+   "id": "HIS-13",
+   "familia": "historial",
+   "intencion": "conteo_modo",
+   "pregunta": "¿Cuántas veces ha fallado el 1305 C 01 por fuga externa de fluido de proceso (ELP)?",
+   "enrutado": "historial",
+   "grafo": {
+    "valor": 2,
+    "ok": true,
+    "tokens": 14,
+    "ms": 0.26,
+    "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla)-[:TIENE_MODO]->(:ModoFalla {codigo: 'ELP'}) RETURN count(f)"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "OT-2022-00019",
+     "OT-2023-00045"
+    ],
+    "recuperado": [
+     "OT-2022-00015",
+     "OT-2022-00017",
+     "OT-2024-00119",
+     "OT-2025-00162",
+     "OT-2026-00195"
+    ],
+    "tokens": 236,
+    "ms": 1.3
+   }
+  },
+  {
+   "id": "HIS-14",
+   "familia": "historial",
+   "intencion": "conteo_modo",
+   "pregunta": "¿Cuántas veces ha fallado el 1205-C-02 por sobrecalentamiento (OHE)?",
+   "enrutado": "historial",
+   "grafo": {
+    "valor": 1,
+    "ok": true,
+    "tokens": 10,
+    "ms": 0.28,
+    "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla)-[:TIENE_MODO]->(:ModoFalla {codigo: 'OHE'}) RETURN count(f)"
+   },
+   "rag": {
+    "ok": true,
+    "evidencia": [
+     "OT-2026-00178"
+    ],
+    "recuperado": [
+     "OT-2023-00044",
+     "OT-2025-00154",
+     "OT-2026-00178",
+     "OT-2026-00183",
+     "OT-2026-00187"
+    ],
+    "tokens": 238,
+    "ms": 5.55
+   }
+  },
+  {
+   "id": "HIS-15",
+   "familia": "historial",
+   "intencion": "conteo_modo",
+   "pregunta": "¿Cuántas veces ha fallado el 1105-V-02 por fuga externa de fluido de proceso (ELP)?",
+   "enrutado": "historial",
+   "grafo": {
+    "valor": 2,
+    "ok": true,
+    "tokens": 14,
+    "ms": 0.21,
+    "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla)-[:TIENE_MODO]->(:ModoFalla {codigo: 'ELP'}) RETURN count(f)"
+   },
+   "rag": {
+    "ok": true,
+    "evidencia": [
+     "OT-2021-00005",
+     "OT-2026-00195"
+    ],
+    "recuperado": [
+     "OT-2021-00005",
+     "OT-2022-00015",
+     "OT-2024-00119",
+     "OT-2025-00162",
+     "OT-2026-00195"
+    ],
+    "tokens": 231,
+    "ms": 1.88
+   }
+  },
+  {
+   "id": "HIS-16",
+   "familia": "historial",
+   "intencion": "conteo_modo",
+   "pregunta": "¿Cuántas veces ha fallado el 1105-P-01 por salida baja (LOO)?",
+   "enrutado": "historial",
+   "grafo": {
+    "valor": 1,
+    "ok": true,
+    "tokens": 10,
+    "ms": 0.23,
+    "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla)-[:TIENE_MODO]->(:ModoFalla {codigo: 'LOO'}) RETURN count(f)"
+   },
+   "rag": {
+    "ok": true,
+    "evidencia": [
+     "OT-2024-00087"
+    ],
+    "recuperado": [
+     "OT-2023-00057",
+     "OT-2024-00087",
+     "OT-2024-00088",
+     "OT-2025-00148",
+     "OT-2026-00179"
+    ],
+    "tokens": 225,
+    "ms": 1.15
+   }
+  },
+  {
+   "id": "HIS-17",
+   "familia": "historial",
+   "intencion": "conteo_modo",
+   "pregunta": "¿Cuántas veces ha fallado el 1105-P-02 por desviación de parámetro (PDE)?",
+   "enrutado": "historial",
+   "grafo": {
+    "valor": 3,
+    "ok": true,
+    "tokens": 18,
+    "ms": 0.28,
+    "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla)-[:TIENE_MODO]->(:ModoFalla {codigo: 'PDE'}) RETURN count(f)"
+   },
+   "rag": {
+    "ok": true,
+    "evidencia": [
+     "OT-2023-00062",
+     "OT-2024-00090",
+     "OT-2026-00180"
+    ],
+    "recuperado": [
+     "OT-2023-00062",
+     "OT-2024-00090",
+     "OT-2024-00116",
+     "OT-2024-00127",
+     "OT-2026-00180"
+    ],
+    "tokens": 242,
+    "ms": 1.13
+   }
+  },
+  {
+   "id": "HIS-18",
+   "familia": "historial",
+   "intencion": "conteo_anio",
+   "pregunta": "¿Cuántas fallas tuvo el 1105-P-01 en 2025?",
+   "enrutado": "historial",
+   "grafo": {
+    "valor": 2,
+    "ok": true,
+    "tokens": 14,
+    "ms": 0.38,
+    "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla) WHERE f.fecha STARTS WITH '2025' RETURN count(f)"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "OT-2025-00141",
+     "OT-2025-00166"
+    ],
+    "recuperado": [
+     "DS-1105-P-01#p1",
+     "OT-2022-00010",
+     "OT-2024-00092",
+     "OT-2026-00186",
+     "OT-2026-00193"
+    ],
+    "tokens": 211,
+    "ms": 1.14
+   }
+  },
+  {
+   "id": "HIS-19",
+   "familia": "historial",
+   "intencion": "conteo_anio",
+   "pregunta": "¿Cuántas fallas tuvo el 1305-e-1 en 2022?",
+   "enrutado": "historial",
+   "grafo": {
+    "valor": 1,
+    "ok": true,
+    "tokens": 10,
+    "ms": 0.25,
+    "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla) WHERE f.fecha STARTS WITH '2022' RETURN count(f)"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "OT-2022-00017"
+    ],
+    "recuperado": [
+     "MAN-BCA-50-200#p2",
+     "MAN-BEN-25#p2",
+     "MAN-PTX-3051#p2",
+     "MAN-RC-2400#p2",
+     "MAN-SA-75#p2"
+    ],
+    "tokens": 152,
+    "ms": 0.97
+   }
+  },
+  {
+   "id": "HIS-20",
+   "familia": "historial",
+   "intencion": "conteo_anio",
+   "pregunta": "¿Cuántas fallas tuvo el 1405 P 01 en 2025?",
+   "enrutado": "historial",
+   "grafo": {
+    "valor": 2,
+    "ok": true,
+    "tokens": 14,
+    "ms": 0.65,
+    "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla) WHERE f.fecha STARTS WITH '2025' RETURN count(f)"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "OT-2025-00146",
+     "OT-2025-00164"
+    ],
+    "recuperado": [
+     "OT-2022-00012",
+     "OT-2022-00017",
+     "OT-2024-00105",
+     "OT-2025-00164",
+     "OT-2026-00174"
+    ],
+    "tokens": 222,
+    "ms": 1.11
+   }
+  },
+  {
+   "id": "HIS-21",
+   "familia": "historial",
+   "intencion": "conteo_anio",
+   "pregunta": "¿Cuántas fallas tuvo el 1305-c-1 en 2022?",
+   "enrutado": "historial",
+   "grafo": {
+    "valor": 5,
+    "ok": true,
+    "tokens": 27,
+    "ms": 0.34,
+    "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla) WHERE f.fecha STARTS WITH '2022' RETURN count(f)"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "OT-2022-00009",
+     "OT-2022-00016",
+     "OT-2022-00019",
+     "OT-2022-00025",
+     "OT-2022-00029"
+    ],
+    "recuperado": [
+     "MAN-BCA-50-200#p2",
+     "MAN-BEN-25#p2",
+     "MAN-PTX-3051#p2",
+     "MAN-RC-2400#p2",
+     "MAN-SA-75#p2"
+    ],
+    "tokens": 152,
+    "ms": 1.08
+   }
+  },
+  {
+   "id": "HIS-22",
+   "familia": "historial",
+   "intencion": "conteo_anio",
+   "pregunta": "¿Cuántas fallas tuvo el 1405-P-02 en 2022?",
+   "enrutado": "historial",
+   "grafo": {
+    "valor": 0,
+    "ok": true,
+    "tokens": 6,
+    "ms": 0.25,
+    "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla) WHERE f.fecha STARTS WITH '2022' RETURN count(f)"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [],
+    "recuperado": [
+     "DS-1405-P-02#p1",
+     "LINEA-15",
+     "OT-2024-00108",
+     "OT-2025-00153",
+     "OT-2025-00167"
+    ],
+    "tokens": 188,
+    "ms": 1.02
+   }
+  },
+  {
+   "id": "HIS-23",
+   "familia": "historial",
+   "intencion": "conteo_anio",
+   "pregunta": "¿Cuántas fallas tuvo el 1305-v-3 en 2022?",
+   "enrutado": "historial",
+   "grafo": {
+    "valor": 2,
+    "ok": true,
+    "tokens": 14,
+    "ms": 0.29,
+    "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla) WHERE f.fecha STARTS WITH '2022' RETURN count(f)"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "OT-2022-00011",
+     "OT-2022-00040"
+    ],
+    "recuperado": [
+     "MAN-BCA-50-200#p2",
+     "MAN-BEN-25#p2",
+     "MAN-PTX-3051#p2",
+     "MAN-RC-2400#p2",
+     "MAN-SA-75#p2"
+    ],
+    "tokens": 152,
+    "ms": 1.08
+   }
+  },
+  {
+   "id": "HIS-24",
+   "familia": "historial",
+   "intencion": "conteo_anio",
+   "pregunta": "¿Cuántas fallas tuvo el 1205 C 01 en 2025?",
+   "enrutado": "historial",
+   "grafo": {
+    "valor": 2,
+    "ok": true,
+    "tokens": 14,
+    "ms": 0.31,
+    "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla) WHERE f.fecha STARTS WITH '2025' RETURN count(f)"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "OT-2025-00132",
+     "OT-2025-00165"
+    ],
+    "recuperado": [
+     "OT-2022-00012",
+     "OT-2022-00017",
+     "OT-2024-00105",
+     "OT-2025-00150",
+     "OT-2025-00164"
+    ],
+    "tokens": 231,
+    "ms": 1.18
+   }
+  },
+  {
+   "id": "HIS-25",
+   "familia": "historial",
+   "intencion": "conteo_anio",
+   "pregunta": "¿Cuántas fallas tuvo el 1405-V-01 en 2024?",
+   "enrutado": "historial",
+   "grafo": {
+    "valor": 1,
+    "ok": true,
+    "tokens": 10,
+    "ms": 0.24,
+    "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla) WHERE f.fecha STARTS WITH '2024' RETURN count(f)"
+   },
+   "rag": {
+    "ok": true,
+    "evidencia": [
+     "OT-2024-00095"
+    ],
+    "recuperado": [
+     "DS-1405-V-01#p1",
+     "LINEA-14",
+     "LINEA-17",
+     "OT-2024-00095",
+     "OT-2025-00169"
+    ],
+    "tokens": 181,
+    "ms": 0.98
+   }
+  },
+  {
+   "id": "COM-01",
+   "familia": "completitud",
+   "intencion": "faltantes_tag",
+   "pregunta": "¿Qué propiedades obligatorias le faltan al 1205-C-01?",
+   "enrutado": "completitud",
+   "grafo": {
+    "valor": [
+     "presion_descarga"
+    ],
+    "ok": true,
+    "tokens": 15,
+    "ms": 0.19,
+    "cypher": "MATCH (e:Equipo {tag: $tag}) OPTIONAL MATCH (d:Documento {tipo:'hoja_de_datos'})-[:DOCUMENTA]->(e) RETURN d IS NULL AS sin_hoja, [p IN $obligatorias WHERE e[p] IS NULL] AS faltantes"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "DS-1205-C-01#p1",
+     "DS-1205-C-01#p2"
+    ],
+    "recuperado": [
+     "OT-2022-00029",
+     "OT-2024-00097",
+     "OT-2025-00136",
+     "OT-2025-00140",
+     "OT-2026-00175"
+    ],
+    "tokens": 224,
+    "ms": 1.89
+   }
+  },
+  {
+   "id": "COM-02",
+   "familia": "completitud",
+   "intencion": "faltantes_tag",
+   "pregunta": "¿Qué propiedades obligatorias le faltan al 1205-C-02?",
+   "enrutado": "completitud",
+   "grafo": {
+    "valor": [
+     "presion_succion"
+    ],
+    "ok": true,
+    "tokens": 15,
+    "ms": 0.22,
+    "cypher": "MATCH (e:Equipo {tag: $tag}) OPTIONAL MATCH (d:Documento {tipo:'hoja_de_datos'})-[:DOCUMENTA]->(e) RETURN d IS NULL AS sin_hoja, [p IN $obligatorias WHERE e[p] IS NULL] AS faltantes"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "DS-1205-C-02#p1",
+     "DS-1205-C-02#p2"
+    ],
+    "recuperado": [
+     "OT-2022-00029",
+     "OT-2023-00083",
+     "OT-2024-00097",
+     "OT-2025-00136",
+     "OT-2026-00175"
+    ],
+    "tokens": 219,
+    "ms": 1.15
+   }
+  },
+  {
+   "id": "COM-03",
+   "familia": "completitud",
+   "intencion": "faltantes_tag",
+   "pregunta": "¿Qué propiedades obligatorias le faltan al 1205-PT-02?",
+   "enrutado": "completitud",
+   "grafo": {
+    "valor": [
+     "numero_serie"
+    ],
+    "ok": true,
+    "tokens": 14,
+    "ms": 0.17,
+    "cypher": "MATCH (e:Equipo {tag: $tag}) OPTIONAL MATCH (d:Documento {tipo:'hoja_de_datos'})-[:DOCUMENTA]->(e) RETURN d IS NULL AS sin_hoja, [p IN $obligatorias WHERE e[p] IS NULL] AS faltantes"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "DS-1205-PT-02#p1",
+     "DS-1205-PT-02#p2"
+    ],
+    "recuperado": [
+     "DS-1205-PT-02#p1",
+     "OT-2022-00029",
+     "OT-2024-00097",
+     "OT-2025-00136",
+     "OT-2026-00175"
+    ],
+    "tokens": 211,
+    "ms": 1.03
+   }
+  },
+  {
+   "id": "COM-04",
+   "familia": "completitud",
+   "intencion": "faltantes_tag",
+   "pregunta": "¿Qué propiedades obligatorias le faltan al 1205-V-01?",
+   "enrutado": "completitud",
+   "grafo": {
+    "valor": [
+     "material_cuerpo"
+    ],
+    "ok": true,
+    "tokens": 15,
+    "ms": 0.2,
+    "cypher": "MATCH (e:Equipo {tag: $tag}) OPTIONAL MATCH (d:Documento {tipo:'hoja_de_datos'})-[:DOCUMENTA]->(e) RETURN d IS NULL AS sin_hoja, [p IN $obligatorias WHERE e[p] IS NULL] AS faltantes"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "DS-1205-V-01#p1",
+     "DS-1205-V-01#p2"
+    ],
+    "recuperado": [
+     "DS-1205-V-01#p1",
+     "LINEA-04",
+     "OT-2022-00039",
+     "OT-2023-00047",
+     "OT-2024-00097"
+    ],
+    "tokens": 197,
+    "ms": 1.24
+   }
+  },
+  {
+   "id": "COM-05",
+   "familia": "completitud",
+   "intencion": "faltantes_tag",
+   "pregunta": "¿Qué propiedades obligatorias le faltan al 1305 C 01?",
+   "enrutado": "completitud",
+   "grafo": {
+    "valor": [
+     "caudal_nominal"
+    ],
+    "ok": true,
+    "tokens": 14,
+    "ms": 0.2,
+    "cypher": "MATCH (e:Equipo {tag: $tag}) OPTIONAL MATCH (d:Documento {tipo:'hoja_de_datos'})-[:DOCUMENTA]->(e) RETURN d IS NULL AS sin_hoja, [p IN $obligatorias WHERE e[p] IS NULL] AS faltantes"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "DS-1305-C-01#p1",
+     "DS-1305-C-01#p2"
+    ],
+    "recuperado": [
+     "OT-2022-00012",
+     "OT-2022-00017",
+     "OT-2024-00097",
+     "OT-2025-00134",
+     "OT-2025-00150"
+    ],
+    "tokens": 233,
+    "ms": 0.98
+   }
+  },
+  {
+   "id": "COM-06",
+   "familia": "completitud",
+   "intencion": "faltantes_tag",
+   "pregunta": "¿Qué propiedades obligatorias le faltan al 1305-PT-01?",
+   "enrutado": "completitud",
+   "grafo": {
+    "valor": [
+     "rango_max"
+    ],
+    "ok": true,
+    "tokens": 13,
+    "ms": 0.14,
+    "cypher": "MATCH (e:Equipo {tag: $tag}) OPTIONAL MATCH (d:Documento {tipo:'hoja_de_datos'})-[:DOCUMENTA]->(e) RETURN d IS NULL AS sin_hoja, [p IN $obligatorias WHERE e[p] IS NULL] AS faltantes"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "DS-1305-PT-01#p1",
+     "DS-1305-PT-01#p2"
+    ],
+    "recuperado": [
+     "DS-1305-PT-01#p1",
+     "OT-2022-00029",
+     "OT-2023-00055",
+     "OT-2024-00097",
+     "OT-2026-00175"
+    ],
+    "tokens": 216,
+    "ms": 0.88
+   }
+  },
+  {
+   "id": "COM-07",
+   "familia": "completitud",
+   "intencion": "faltantes_tag",
+   "pregunta": "¿Qué propiedades obligatorias le faltan al 1305-V-02?",
+   "enrutado": "completitud",
+   "grafo": {
+    "valor": [
+     "volumen"
+    ],
+    "ok": true,
+    "tokens": 13,
+    "ms": 0.16,
+    "cypher": "MATCH (e:Equipo {tag: $tag}) OPTIONAL MATCH (d:Documento {tipo:'hoja_de_datos'})-[:DOCUMENTA]->(e) RETURN d IS NULL AS sin_hoja, [p IN $obligatorias WHERE e[p] IS NULL] AS faltantes"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "DS-1305-V-02#p1",
+     "DS-1305-V-02#p2"
+    ],
+    "recuperado": [
+     "LINEA-12",
+     "OT-2022-00029",
+     "OT-2024-00097",
+     "OT-2025-00136",
+     "OT-2026-00175"
+    ],
+    "tokens": 202,
+    "ms": 0.81
+   }
+  },
+  {
+   "id": "COM-08",
+   "familia": "completitud",
+   "intencion": "faltantes_tag",
+   "pregunta": "¿Qué propiedades obligatorias le faltan al 1105-PT-01?",
+   "enrutado": "completitud",
+   "grafo": {
+    "valor": "SIN_HOJA",
+    "ok": true,
+    "tokens": 13,
+    "ms": 0.14,
+    "cypher": "MATCH (e:Equipo {tag: $tag}) OPTIONAL MATCH (d:Documento {tipo:'hoja_de_datos'})-[:DOCUMENTA]->(e) RETURN d IS NULL AS sin_hoja, [p IN $obligatorias WHERE e[p] IS NULL] AS faltantes"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [],
+    "recuperado": [
+     "LISTA-1105-S01",
+     "OT-2022-00029",
+     "OT-2024-00097",
+     "OT-2025-00136",
+     "OT-2026-00175"
+    ],
+    "tokens": 222,
+    "ms": 0.77
+   }
+  },
+  {
+   "id": "COM-09",
+   "familia": "completitud",
+   "intencion": "faltantes_tag",
+   "pregunta": "¿Qué propiedades obligatorias le faltan al 1205-E-01?",
+   "enrutado": "completitud",
+   "grafo": {
+    "valor": "SIN_HOJA",
+    "ok": true,
+    "tokens": 12,
+    "ms": 0.11,
+    "cypher": "MATCH (e:Equipo {tag: $tag}) OPTIONAL MATCH (d:Documento {tipo:'hoja_de_datos'})-[:DOCUMENTA]->(e) RETURN d IS NULL AS sin_hoja, [p IN $obligatorias WHERE e[p] IS NULL] AS faltantes"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [],
+    "recuperado": [
+     "OT-2022-00029",
+     "OT-2024-00097",
+     "OT-2025-00136",
+     "OT-2025-00140",
+     "OT-2026-00175"
+    ],
+    "tokens": 224,
+    "ms": 0.67
+   }
+  },
+  {
+   "id": "COM-10",
+   "familia": "completitud",
+   "intencion": "faltantes_tag",
+   "pregunta": "¿Qué propiedades obligatorias le faltan al 1405 PCV 01?",
+   "enrutado": "completitud",
+   "grafo": {
+    "valor": "SIN_HOJA",
+    "ok": true,
+    "tokens": 13,
+    "ms": 0.1,
+    "cypher": "MATCH (e:Equipo {tag: $tag}) OPTIONAL MATCH (d:Documento {tipo:'hoja_de_datos'})-[:DOCUMENTA]->(e) RETURN d IS NULL AS sin_hoja, [p IN $obligatorias WHERE e[p] IS NULL] AS faltantes"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [],
+    "recuperado": [
+     "OT-2022-00012",
+     "OT-2022-00029",
+     "OT-2024-00097",
+     "OT-2025-00164",
+     "OT-2026-00175"
+    ],
+    "tokens": 215,
+    "ms": 0.65
+   }
+  },
+  {
+   "id": "COM-11",
+   "familia": "completitud",
+   "intencion": "faltantes_tag",
+   "pregunta": "¿Qué propiedades obligatorias le faltan al 1205PT01?",
+   "enrutado": "completitud",
+   "grafo": {
+    "valor": [],
+    "ok": true,
+    "tokens": 11,
+    "ms": 0.16,
+    "cypher": "MATCH (e:Equipo {tag: $tag}) OPTIONAL MATCH (d:Documento {tipo:'hoja_de_datos'})-[:DOCUMENTA]->(e) RETURN d IS NULL AS sin_hoja, [p IN $obligatorias WHERE e[p] IS NULL] AS faltantes"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "DS-1205-PT-01#p1",
+     "DS-1205-PT-01#p2"
+    ],
+    "recuperado": [
+     "OT-2022-00029",
+     "OT-2024-00097",
+     "OT-2025-00136",
+     "OT-2025-00140",
+     "OT-2026-00175"
+    ],
+    "tokens": 224,
+    "ms": 1.25
+   }
+  },
+  {
+   "id": "COM-12",
+   "familia": "completitud",
+   "intencion": "faltantes_tag",
+   "pregunta": "¿Qué propiedades obligatorias le faltan al 1105-P-02?",
+   "enrutado": "completitud",
+   "grafo": {
+    "valor": [],
+    "ok": true,
+    "tokens": 10,
+    "ms": 0.34,
+    "cypher": "MATCH (e:Equipo {tag: $tag}) OPTIONAL MATCH (d:Documento {tipo:'hoja_de_datos'})-[:DOCUMENTA]->(e) RETURN d IS NULL AS sin_hoja, [p IN $obligatorias WHERE e[p] IS NULL] AS faltantes"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "DS-1105-P-02#p1",
+     "DS-1105-P-02#p2"
+    ],
+    "recuperado": [
+     "OT-2022-00029",
+     "OT-2024-00097",
+     "OT-2025-00136",
+     "OT-2025-00140",
+     "OT-2026-00175"
+    ],
+    "tokens": 224,
+    "ms": 4.46
+   }
+  },
+  {
+   "id": "COM-13",
+   "familia": "completitud",
+   "intencion": "faltantes_tag",
+   "pregunta": "¿Qué propiedades obligatorias le faltan al 1405PT01?",
+   "enrutado": "completitud",
+   "grafo": {
+    "valor": [],
+    "ok": true,
+    "tokens": 11,
+    "ms": 0.37,
+    "cypher": "MATCH (e:Equipo {tag: $tag}) OPTIONAL MATCH (d:Documento {tipo:'hoja_de_datos'})-[:DOCUMENTA]->(e) RETURN d IS NULL AS sin_hoja, [p IN $obligatorias WHERE e[p] IS NULL] AS faltantes"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "DS-1405-PT-01#p1",
+     "DS-1405-PT-01#p2"
+    ],
+    "recuperado": [
+     "OT-2022-00029",
+     "OT-2024-00097",
+     "OT-2025-00136",
+     "OT-2025-00140",
+     "OT-2026-00175"
+    ],
+    "tokens": 224,
+    "ms": 1.9
+   }
+  },
+  {
+   "id": "COM-14",
+   "familia": "completitud",
+   "intencion": "sin_hoja_clase",
+   "pregunta": "¿Qué equipos de la clase Transmisor de presión no tienen hoja de datos?",
+   "enrutado": "completitud",
+   "grafo": {
+    "valor": [
+     "1105-PT-01"
+    ],
+    "ok": true,
+    "tokens": 18,
+    "ms": 0.4,
+    "cypher": "MATCH (e:Equipo {clase: 'Transmisor de presión'}) WHERE NOT (:Documento {tipo:'hoja_de_datos'})-[:DOCUMENTA]->(e) RETURN e.tag"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [],
+    "recuperado": [
+     "DS-1105-PT-02#p1",
+     "DS-1205-PT-01#p1",
+     "DS-1205-PT-02#p1",
+     "DS-1305-PT-01#p1",
+     "DS-1405-PT-01#p1"
+    ],
+    "tokens": 201,
+    "ms": 13.52
+   }
+  },
+  {
+   "id": "COM-15",
+   "familia": "completitud",
+   "intencion": "sin_hoja_clase",
+   "pregunta": "¿Qué equipos de la clase Intercambiador de calor no tienen hoja de datos?",
+   "enrutado": "completitud",
+   "grafo": {
+    "valor": [
+     "1205-E-01"
+    ],
+    "ok": true,
+    "tokens": 18,
+    "ms": 0.31,
+    "cypher": "MATCH (e:Equipo {clase: 'Intercambiador de calor'}) WHERE NOT (:Documento {tipo:'hoja_de_datos'})-[:DOCUMENTA]->(e) RETURN e.tag"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [],
+    "recuperado": [
+     "DS-1105-E-01#p1",
+     "DS-1105-PCV-01#p2",
+     "DS-1105-PT-02#p1",
+     "DS-1205-PCV-01#p2",
+     "DS-1405-PT-01#p1"
+    ],
+    "tokens": 176,
+    "ms": 1.15
+   }
+  },
+  {
+   "id": "COM-16",
+   "familia": "completitud",
+   "intencion": "sin_hoja_clase",
+   "pregunta": "¿Qué equipos de la clase Soplador no tienen hoja de datos?",
+   "enrutado": "completitud",
+   "grafo": {
+    "valor": [],
+    "ok": true,
+    "tokens": 12,
+    "ms": 0.3,
+    "cypher": "MATCH (e:Equipo {clase: 'Soplador'}) WHERE NOT (:Documento {tipo:'hoja_de_datos'})-[:DOCUMENTA]->(e) RETURN e.tag"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [],
+    "recuperado": [
+     "DS-1105-PCV-01#p2",
+     "DS-1105-PT-02#p1",
+     "DS-1205-PCV-01#p2",
+     "DS-1305-K-01#p1",
+     "DS-1405-PT-01#p1"
+    ],
+    "tokens": 174,
+    "ms": 1.24
+   }
+  },
+  {
+   "id": "COM-17",
+   "familia": "completitud",
+   "intencion": "sin_hoja_clase",
+   "pregunta": "¿Qué equipos de la clase Válvula de control no tienen hoja de datos?",
+   "enrutado": "completitud",
+   "grafo": {
+    "valor": [
+     "1405-PCV-01"
+    ],
+    "ok": true,
+    "tokens": 17,
+    "ms": 0.3,
+    "cypher": "MATCH (e:Equipo {clase: 'Válvula de control'}) WHERE NOT (:Documento {tipo:'hoja_de_datos'})-[:DOCUMENTA]->(e) RETURN e.tag"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [],
+    "recuperado": [
+     "DS-1105-PCV-01#p1",
+     "DS-1105-PCV-01#p2",
+     "DS-1105-PT-02#p1",
+     "DS-1205-PCV-01#p1",
+     "DS-1405-PT-01#p1"
+    ],
+    "tokens": 192,
+    "ms": 1.15
+   }
+  },
+  {
+   "id": "COM-18",
+   "familia": "completitud",
+   "intencion": "sin_hoja_clase",
+   "pregunta": "¿Qué equipos de la clase Bomba centrífuga no tienen hoja de datos?",
+   "enrutado": "completitud",
+   "grafo": {
+    "valor": [],
+    "ok": true,
+    "tokens": 14,
+    "ms": 0.18,
+    "cypher": "MATCH (e:Equipo {clase: 'Bomba centrífuga'}) WHERE NOT (:Documento {tipo:'hoja_de_datos'})-[:DOCUMENTA]->(e) RETURN e.tag"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [],
+    "recuperado": [
+     "DS-1105-PT-02#p1",
+     "DS-1205-P-02#p1",
+     "DS-1405-PT-01#p1",
+     "LISTA-1405-S01",
+     "OT-2023-00083"
+    ],
+    "tokens": 252,
+    "ms": 1.14
+   }
+  },
+  {
+   "id": "COM-19",
+   "familia": "completitud",
+   "intencion": "sin_hoja_clase",
+   "pregunta": "¿Qué equipos de la clase Compresor no tienen hoja de datos?",
+   "enrutado": "completitud",
+   "grafo": {
+    "valor": [],
+    "ok": true,
+    "tokens": 12,
+    "ms": 0.33,
+    "cypher": "MATCH (e:Equipo {clase: 'Compresor'}) WHERE NOT (:Documento {tipo:'hoja_de_datos'})-[:DOCUMENTA]->(e) RETURN e.tag"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [],
+    "recuperado": [
+     "DS-1105-PT-02#p1",
+     "DS-1205-C-01#p1",
+     "DS-1305-C-01#p1",
+     "DS-1305-C-02#p1",
+     "DS-1405-PT-01#p1"
+    ],
+    "tokens": 199,
+    "ms": 1.11
+   }
+  },
+  {
+   "id": "COM-20",
+   "familia": "completitud",
+   "intencion": "faltantes_clase",
+   "pregunta": "¿Qué equipos de la clase Válvula de control tienen propiedades obligatorias faltantes?",
+   "enrutado": "completitud",
+   "grafo": {
+    "valor": [],
+    "ok": true,
+    "tokens": 14,
+    "ms": 0.23,
+    "cypher": "MATCH (e:Equipo {clase: 'Válvula de control'}) WHERE any(p IN $obligatorias WHERE e[p] IS NULL) RETURN e.tag"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "DS-1105-PCV-01#p1",
+     "DS-1105-PCV-01#p2",
+     "DS-1205-PCV-01#p1",
+     "DS-1205-PCV-01#p2",
+     "LISTA-1105-S03",
+     "LISTA-1205-S01",
+     "LISTA-1405-S01"
+    ],
+    "recuperado": [
+     "DS-1105-PCV-01#p1",
+     "DS-1105-PT-02#p1",
+     "LISTA-1105-S02",
+     "LISTA-1405-S01",
+     "OT-2022-00016"
+    ],
+    "tokens": 272,
+    "ms": 0.95
+   }
+  },
+  {
+   "id": "COM-21",
+   "familia": "completitud",
+   "intencion": "faltantes_clase",
+   "pregunta": "¿Qué equipos de la clase Compresor tienen propiedades obligatorias faltantes?",
+   "enrutado": "completitud",
+   "grafo": {
+    "valor": [
+     "1205-C-01",
+     "1205-C-02",
+     "1305-C-01"
+    ],
+    "ok": true,
+    "tokens": 21,
+    "ms": 0.25,
+    "cypher": "MATCH (e:Equipo {clase: 'Compresor'}) WHERE any(p IN $obligatorias WHERE e[p] IS NULL) RETURN e.tag"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "DS-1205-C-01#p1",
+     "DS-1205-C-01#p2",
+     "DS-1205-C-02#p1",
+     "DS-1205-C-02#p2",
+     "DS-1305-C-01#p1",
+     "DS-1305-C-01#p2",
+     "DS-1305-C-02#p1",
+     "DS-1305-C-02#p2",
+     "LISTA-1205-S01",
+     "LISTA-1305-S01"
+    ],
+    "recuperado": [
+     "DS-1105-PCV-01#p2",
+     "DS-1205-PCV-01#p2",
+     "LISTA-1105-S02",
+     "LISTA-1205-S01",
+     "LISTA-1305-S01"
+    ],
+    "tokens": 257,
+    "ms": 1.2
+   }
+  },
+  {
+   "id": "COM-22",
+   "familia": "completitud",
+   "intencion": "faltantes_clase",
+   "pregunta": "¿Qué equipos de la clase Soplador tienen propiedades obligatorias faltantes?",
+   "enrutado": "completitud",
+   "grafo": {
+    "valor": [],
+    "ok": true,
+    "tokens": 12,
+    "ms": 0.56,
+    "cypher": "MATCH (e:Equipo {clase: 'Soplador'}) WHERE any(p IN $obligatorias WHERE e[p] IS NULL) RETURN e.tag"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "DS-1305-K-01#p1",
+     "DS-1305-K-01#p2",
+     "LISTA-1305-S02"
+    ],
+    "recuperado": [
+     "DS-1105-PCV-01#p2",
+     "DS-1205-PCV-01#p2",
+     "DS-1305-K-01#p1",
+     "LISTA-1105-S02",
+     "LISTA-1305-S02"
+    ],
+    "tokens": 208,
+    "ms": 5.07
+   }
+  },
+  {
+   "id": "COM-23",
+   "familia": "completitud",
+   "intencion": "faltantes_clase",
+   "pregunta": "¿Qué equipos de la clase Intercambiador de calor tienen propiedades obligatorias faltantes?",
+   "enrutado": "completitud",
+   "grafo": {
+    "valor": [],
+    "ok": true,
+    "tokens": 15,
+    "ms": 0.21,
+    "cypher": "MATCH (e:Equipo {clase: 'Intercambiador de calor'}) WHERE any(p IN $obligatorias WHERE e[p] IS NULL) RETURN e.tag"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "DS-1105-E-01#p1",
+     "DS-1105-E-01#p2",
+     "DS-1105-E-02#p1",
+     "DS-1105-E-02#p2",
+     "DS-1205-E-02#p1",
+     "DS-1205-E-02#p2",
+     "DS-1305-E-01#p1",
+     "DS-1305-E-01#p2",
+     "LISTA-1105-S02",
+     "LISTA-1105-S03",
+     "LISTA-1205-S01",
+     "LISTA-1205-S02",
+     "LISTA-1305-S01"
+    ],
+    "recuperado": [
+     "DS-1105-E-01#p1",
+     "DS-1105-PCV-01#p2",
+     "DS-1105-PT-02#p1",
+     "DS-1205-PCV-01#p2",
+     "LISTA-1105-S02"
+    ],
+    "tokens": 185,
+    "ms": 0.7
+   }
+  },
+  {
+   "id": "COM-24",
+   "familia": "completitud",
+   "intencion": "faltantes_clase",
+   "pregunta": "¿Qué equipos de la clase Recipiente tienen propiedades obligatorias faltantes?",
+   "enrutado": "completitud",
+   "grafo": {
+    "valor": [
+     "1205-V-01",
+     "1305-V-02"
+    ],
+    "ok": true,
+    "tokens": 18,
+    "ms": 0.19,
+    "cypher": "MATCH (e:Equipo {clase: 'Recipiente'}) WHERE any(p IN $obligatorias WHERE e[p] IS NULL) RETURN e.tag"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "DS-1105-V-01#p1",
+     "DS-1105-V-01#p2",
+     "DS-1105-V-02#p1",
+     "DS-1105-V-02#p2",
+     "DS-1105-V-03#p1",
+     "DS-1105-V-03#p2",
+     "DS-1105-V-04#p1",
+     "DS-1105-V-04#p2",
+     "DS-1105-V-05#p1",
+     "DS-1105-V-05#p2",
+     "DS-1205-V-01#p1",
+     "DS-1205-V-01#p2",
+     "DS-1205-V-02#p1",
+     "DS-1205-V-02#p2",
+     "DS-1205-V-03#p1",
+     "DS-1205-V-03#p2",
+     "DS-1305-V-01#p1",
+     "DS-1305-V-01#p2",
+     "DS-1305-V-02#p1",
+     "DS-1305-V-02#p2",
+     "DS-1305-V-03#p1",
+     "DS-1305-V-03#p2",
+     "DS-1305-V-04#p1",
+     "DS-1305-V-04#p2",
+     "DS-1405-V-01#p1",
+     "DS-1405-V-01#p2",
+     "LISTA-1105-S01",
+     "LISTA-1105-S02",
+     "LISTA-1105-S03",
+     "LISTA-1205-S01",
+     "LISTA-1205-S02",
+     "LISTA-1305-S01",
+     "LISTA-1305-S02",
+     "LISTA-1405-S01"
+    ],
+    "recuperado": [
+     "DS-1105-PCV-01#p2",
+     "DS-1105-PT-02#p1",
+     "DS-1205-PCV-01#p2",
+     "DS-1405-PT-01#p1",
+     "LISTA-1105-S02"
+    ],
+    "tokens": 188,
+    "ms": 0.61
+   }
+  },
+  {
+   "id": "COM-25",
+   "familia": "completitud",
+   "intencion": "faltantes_clase",
+   "pregunta": "¿Qué equipos de la clase Bomba centrífuga tienen propiedades obligatorias faltantes?",
+   "enrutado": "completitud",
+   "grafo": {
+    "valor": [],
+    "ok": true,
+    "tokens": 14,
+    "ms": 0.16,
+    "cypher": "MATCH (e:Equipo {clase: 'Bomba centrífuga'}) WHERE any(p IN $obligatorias WHERE e[p] IS NULL) RETURN e.tag"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "DS-1105-P-01#p1",
+     "DS-1105-P-01#p2",
+     "DS-1105-P-02#p1",
+     "DS-1105-P-02#p2",
+     "DS-1205-P-01#p1",
+     "DS-1205-P-01#p2",
+     "DS-1205-P-02#p1",
+     "DS-1205-P-02#p2",
+     "DS-1405-P-01#p1",
+     "DS-1405-P-01#p2",
+     "DS-1405-P-02#p1",
+     "DS-1405-P-02#p2",
+     "DS-1405-P-03#p1",
+     "DS-1405-P-03#p2",
+     "LISTA-1105-S03",
+     "LISTA-1205-S02",
+     "LISTA-1405-S01"
+    ],
+    "recuperado": [
+     "DS-1105-PCV-01#p2",
+     "DS-1105-PT-02#p1",
+     "DS-1205-PCV-01#p2",
+     "LISTA-1105-S02",
+     "LISTA-1405-S01"
+    ],
+    "tokens": 230,
+    "ms": 0.6
+   }
+  }
+ ],
+ "preguntas_parafrasis": [
+  {
+   "id": "PAR-01",
+   "familia": "identificacion",
+   "intencion": "descripcion",
+   "pregunta": "Dame la descripción del 1205-C-01",
+   "enrutado": "documental",
+   "grafo": {
+    "valor": "MANUAL DE OPERACIÓN Y MANTENIMIENTO\nModelo AC-8 · Calderería Industrial del Norte\nDescripción general del equipo y de sus subunidades.",
+    "ok": false,
+    "tokens": 44,
+    "ms": 1.88,
+    "cypher": ""
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "LISTA-1205-S01"
+    ],
+    "recuperado": [
+     "MAN-AC-8#p1",
+     "MAN-DS-400#p1",
+     "MAN-RB-350#p1",
+     "MAN-SCR-30#p1",
+     "MAN-TK-LO-2#p1"
+    ],
+    "tokens": 171,
+    "ms": 0.65
+   }
+  },
+  {
+   "id": "PAR-02",
+   "familia": "identificacion",
+   "intencion": "descripcion",
+   "pregunta": "¿Para qué sirve el 1105-V-03?",
+   "enrutado": "documental",
+   "grafo": {
+    "valor": "OPERACIÓN\nAntes de arrancar el modelo AC-8, verificar alineación, nivel de lubricante y válvulas de bloqueo abiertas.",
+    "ok": false,
+    "tokens": 39,
+    "ms": 0.53,
+    "cypher": ""
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "LISTA-1105-S03"
+    ],
+    "recuperado": [
+     "DS-1105-V-03#p1",
+     "LINEA-02",
+     "MAN-PTX-3051#p2",
+     "MAN-RC-2400#p2",
+     "MAN-SA-75#p2"
+    ],
+    "tokens": 189,
+    "ms": 0.69
+   }
+  },
+  {
+   "id": "PAR-03",
+   "familia": "identificacion",
+   "intencion": "sistema",
+   "pregunta": "¿A qué sistema pertenece la 1405-P-03?",
+   "enrutado": "identificacion",
+   "grafo": {
+    "valor": "Bombeo contra incendio",
+    "ok": true,
+    "tokens": 16,
+    "ms": 0.3,
+    "cypher": "MATCH (e:Equipo {tag: $tag})-[:PERTENECE_A]->(s:Sistema) RETURN s.nombre"
+   },
+   "rag": {
+    "ok": true,
+    "evidencia": [
+     "LISTA-1405-S01"
+    ],
+    "recuperado": [
+     "DS-1105-P-01#p1",
+     "DS-1205-P-01#p1",
+     "DS-1405-P-03#p1",
+     "LISTA-1105-S02",
+     "LISTA-1405-S01"
+    ],
+    "tokens": 248,
+    "ms": 1.69
+   }
+  },
+  {
+   "id": "PAR-04",
+   "familia": "identificacion",
+   "intencion": "area",
+   "pregunta": "¿Dónde queda el 1305-K-01, en qué unidad?",
+   "enrutado": "documental",
+   "grafo": {
+    "valor": "OPERACIÓN\nAntes de arrancar el modelo AC-8, verificar alineación, nivel de lubricante y válvulas de bloqueo abiertas.",
+    "ok": false,
+    "tokens": 39,
+    "ms": 9.96,
+    "cypher": ""
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "LISTA-1305-S02"
+    ],
+    "recuperado": [
+     "DS-1305-K-01#p1",
+     "LINEA-12",
+     "MAN-PTX-3051#p2",
+     "OT-2025-00140",
+     "OT-2026-00191"
+    ],
+    "tokens": 186,
+    "ms": 1.68
+   }
+  },
+  {
+   "id": "PAR-05",
+   "familia": "identificacion",
+   "intencion": "fabricante",
+   "pregunta": "¿Qué marca es la bomba 1105-P-02?",
+   "enrutado": "documental",
+   "grafo": {
+    "valor": "SOLUCIÓN DE PROBLEMAS · modelo RC-2400\n- Síntoma: parada espuria. Revisar sensor de vibración. Acción recomendada: inspeccionar y reemplazar sensor de vibración si presenta daño.\n- Síntoma: vibración. Revisar acople. Acción recomendada: inspeccionar y reemplazar acople si presenta daño.\n- Síntoma: fuga externa de fluido de proceso. Revisar empaquetadura. Acción recomendada: inspeccionar y reemplazar empaquetadura si presenta daño.\n- Síntoma: falla al arrancar. Revisar bomba de aceite. Acción recomendada: inspeccionar y reemplazar bomba de aceite si presenta daño.\n- Síntoma: sobrecalentamiento. Revisar válvula de descarga. Acción recomendada: inspeccionar y reemplazar válvula de descarga si presenta daño.\n- Síntoma: desviación de parámetro. Revisar válvula de succión. Acción recomendada: inspeccionar y reemplazar válvula de succión si presenta daño.\n- Síntoma: ruido. Revisar anillos de pistón. Acción recomendada: inspeccionar y reemplazar anillos de pistón si presenta daño.\n- Síntoma: fuga externa de fluido de servicio. Revisar filtro de aceite. Acción recomendada: inspeccionar y reemplazar filtro de aceite si presenta daño.\n- Síntoma: avería. Revisar caja multiplicadora. Acción recomendada: inspeccionar y reemplazar caja multiplicadora si presenta daño.",
+    "ok": false,
+    "tokens": 331,
+    "ms": 1.2,
+    "cypher": ""
+   },
+   "rag": {
+    "ok": true,
+    "evidencia": [
+     "DS-1105-P-02#p1"
+    ],
+    "recuperado": [
+     "DS-1105-P-02#p1",
+     "DS-1105-PT-02#p1",
+     "LISTA-1405-S01",
+     "OT-2022-00029",
+     "OT-2025-00136"
+    ],
+    "tokens": 255,
+    "ms": 0.98
+   }
+  },
+  {
+   "id": "PAR-06",
+   "familia": "topologia",
+   "intencion": "aislamiento",
+   "pregunta": "¿Qué tengo que cerrar para intervenir la 1405-P-02?",
+   "enrutado": "documental",
+   "grafo": {
+    "valor": "SOLUCIÓN DE PROBLEMAS · modelo CV-2-300\n- Síntoma: falla al abrir. Revisar actuador. Acción recomendada: inspeccionar y reemplazar actuador si presenta daño.\n- Síntoma: falla al cerrar. Revisar asiento. Acción recomendada: inspeccionar y reemplazar asiento si presenta daño.\n- Síntoma: fuga externa de fluido de proceso. Revisar empaquetadura. Acción recomendada: inspeccionar y reemplazar empaquetadura si presenta daño.\n- Síntoma: fuga interna. Revisar asiento. Acción recomendada: inspeccionar y reemplazar asiento si presenta daño.\n- Síntoma: operación demorada. Revisar posicionador. Acción recomendada: inspeccionar y reemplazar posicionador si presenta daño.\n- Síntoma: problemas menores en servicio. Revisar diafragma. Acción recomendada: inspeccionar y reemplazar diafragma si presenta daño.",
+    "ok": false,
+    "tokens": 212,
+    "ms": 1.16,
+    "cypher": ""
+   },
+   "rag": {
+    "ok": true,
+    "evidencia": [
+     "LINEA-15"
+    ],
+    "recuperado": [
+     "DS-1105-PT-02#p1",
+     "DS-1405-PT-01#p1",
+     "LINEA-15",
+     "LISTA-1405-S01",
+     "OT-2024-00108"
+    ],
+    "tokens": 229,
+    "ms": 1.29
+   }
+  },
+  {
+   "id": "PAR-07",
+   "familia": "topologia",
+   "intencion": "aislamiento",
+   "pregunta": "Lista de bloqueos para trabajar en el 1205-C-02",
+   "enrutado": "documental",
+   "grafo": {
+    "valor": "OPERACIÓN\nAntes de arrancar el modelo AC-8, verificar alineación, nivel de lubricante y válvulas de bloqueo abiertas.",
+    "ok": false,
+    "tokens": 39,
+    "ms": 1.72,
+    "cypher": ""
+   },
+   "rag": {
+    "ok": true,
+    "evidencia": [
+     "LINEA-05"
+    ],
+    "recuperado": [
+     "DS-1205-C-02#p1",
+     "LINEA-05",
+     "LINEA-13",
+     "OT-2023-00083",
+     "OT-2026-00184"
+    ],
+    "tokens": 177,
+    "ms": 0.97
+   }
+  },
+  {
+   "id": "PAR-08",
+   "familia": "topologia",
+   "intencion": "aislamiento",
+   "pregunta": "¿Con qué válvulas se bloquea el 1105-E-01?",
+   "enrutado": "documental",
+   "grafo": {
+    "valor": "OPERACIÓN\nAntes de arrancar el modelo AC-8, verificar alineación, nivel de lubricante y válvulas de bloqueo abiertas.",
+    "ok": false,
+    "tokens": 39,
+    "ms": 0.86,
+    "cypher": ""
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "LINEA-02"
+    ],
+    "recuperado": [
+     "LISTA-1105-S02",
+     "MAN-BCA-50-200#p2",
+     "MAN-BEN-25#p2",
+     "MAN-PTX-3051#p2",
+     "MAN-SA-75#p2"
+    ],
+    "tokens": 175,
+    "ms": 0.86
+   }
+  },
+  {
+   "id": "PAR-09",
+   "familia": "topologia",
+   "intencion": "envolvente",
+   "pregunta": "Si aíslo el 1305-E-01, ¿qué más se para?",
+   "enrutado": "documental",
+   "grafo": {
+    "valor": "SOLUCIÓN DE PROBLEMAS · modelo AC-8\n- Síntoma: fuga externa de fluido de proceso. Revisar boquilla. Acción recomendada: inspeccionar y reemplazar boquilla si presenta daño.\n- Síntoma: taponamiento. Revisar demister. Acción recomendada: inspeccionar y reemplazar demister si presenta daño.\n- Síntoma: deficiencia estructural. Revisar cuerpo. Acción recomendada: inspeccionar y reemplazar cuerpo si presenta daño.\n- Síntoma: lectura anormal de instrumento. Revisar visor de nivel. Acción recomendada: inspeccionar y reemplazar visor de nivel si presenta daño.\n- Síntoma: otro. Revisar internos. Acción recomendada: inspeccionar y reemplazar internos si presenta daño.",
+    "ok": false,
+    "tokens": 177,
+    "ms": 0.86,
+    "cypher": ""
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "LINEA-09",
+     "LINEA-10"
+    ],
+    "recuperado": [
+     "DS-1305-E-01#p1",
+     "LINEA-10",
+     "OT-2023-00048",
+     "OT-2023-00059",
+     "OT-2025-00158"
+    ],
+    "tokens": 223,
+    "ms": 0.77
+   }
+  },
+  {
+   "id": "PAR-10",
+   "familia": "topologia",
+   "intencion": "aislamiento",
+   "pregunta": "Válvulas a cerrar para sacar de servicio el 1105-V-02",
+   "enrutado": "documental",
+   "grafo": {
+    "valor": "OPERACIÓN\nAntes de arrancar el modelo AC-8, verificar alineación, nivel de lubricante y válvulas de bloqueo abiertas.",
+    "ok": false,
+    "tokens": 39,
+    "ms": 0.82,
+    "cypher": ""
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "LINEA-01",
+     "LINEA-02",
+     "LINEA-03"
+    ],
+    "recuperado": [
+     "DS-1105-P-01#p1",
+     "DS-1205-P-01#p1",
+     "MAN-BCA-50-200#p2",
+     "MAN-PTX-3051#p2",
+     "MAN-SA-75#p2"
+    ],
+    "tokens": 167,
+    "ms": 0.75
+   }
+  },
+  {
+   "id": "PAR-11",
+   "familia": "historial",
+   "intencion": "conteo_total",
+   "pregunta": "¿Cuántas averías ha tenido el 1205-C-01?",
+   "enrutado": "documental",
+   "grafo": {
+    "valor": "OPERACIÓN\nAntes de arrancar el modelo AC-8, verificar alineación, nivel de lubricante y válvulas de bloqueo abiertas.",
+    "ok": false,
+    "tokens": 39,
+    "ms": 0.83,
+    "cypher": ""
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "OT-2022-00030",
+     "OT-2022-00031",
+     "OT-2023-00073",
+     "OT-2023-00081",
+     "OT-2024-00093",
+     "OT-2024-00100",
+     "OT-2024-00101",
+     "OT-2024-00104",
+     "OT-2025-00132",
+     "OT-2025-00165",
+     "OT-2026-00183",
+     "OT-2026-00187",
+     "OT-2026-00201"
+    ],
+    "recuperado": [
+     "DS-1205-C-01#p1",
+     "LINEA-04",
+     "MAN-BEN-25#p2",
+     "MAN-DS-400#p2",
+     "MAN-PTX-3051#p2"
+    ],
+    "tokens": 155,
+    "ms": 0.74
+   }
+  },
+  {
+   "id": "PAR-12",
+   "familia": "historial",
+   "intencion": "ultima_accion",
+   "pregunta": "¿Cuál fue la última intervención del 1105-P-01?",
+   "enrutado": "documental",
+   "grafo": {
+    "valor": "MANUAL DE OPERACIÓN Y MANTENIMIENTO\nModelo AC-8 · Calderería Industrial del Norte\nDescripción general del equipo y de sus subunidades.",
+    "ok": false,
+    "tokens": 44,
+    "ms": 0.77,
+    "cypher": ""
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "OT-2022-00010",
+     "OT-2024-00087",
+     "OT-2024-00092",
+     "OT-2025-00141",
+     "OT-2025-00166",
+     "OT-2026-00186",
+     "OT-2026-00193"
+    ],
+    "recuperado": [
+     "DS-1105-PT-02#p1",
+     "DS-1405-PT-01#p1",
+     "MAN-DS-400#p1",
+     "MAN-RV-5#p1",
+     "MAN-SCR-36#p1"
+    ],
+    "tokens": 187,
+    "ms": 0.74
+   }
+  },
+  {
+   "id": "PAR-13",
+   "familia": "historial",
+   "intencion": "conteo_anio",
+   "pregunta": "¿Cuántas órdenes correctivas tuvo el 1405-P-01 durante 2024?",
+   "enrutado": "documental",
+   "grafo": {
+    "valor": "OPERACIÓN\nAntes de arrancar el modelo AC-8, verificar alineación, nivel de lubricante y válvulas de bloqueo abiertas.",
+    "ok": false,
+    "tokens": 39,
+    "ms": 0.74,
+    "cypher": ""
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "OT-2024-00111",
+     "OT-2024-00127"
+    ],
+    "recuperado": [
+     "DS-1405-P-01#p1",
+     "LINEA-14",
+     "OT-2022-00007",
+     "OT-2022-00026",
+     "OT-2024-00111"
+    ],
+    "tokens": 203,
+    "ms": 0.98
+   }
+  },
+  {
+   "id": "PAR-14",
+   "familia": "historial",
+   "intencion": "conteo_total",
+   "pregunta": "Número de fallas registradas del 1305-V-02",
+   "enrutado": "documental",
+   "grafo": {
+    "valor": "MANUAL DE OPERACIÓN Y MANTENIMIENTO\nModelo AC-8 · Calderería Industrial del Norte\nDescripción general del equipo y de sus subunidades.",
+    "ok": false,
+    "tokens": 44,
+    "ms": 1.04,
+    "cypher": ""
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "OT-2022-00023",
+     "OT-2023-00064",
+     "OT-2024-00094",
+     "OT-2024-00119",
+     "OT-2025-00133",
+     "OT-2025-00162",
+     "OT-2026-00171"
+    ],
+    "recuperado": [
+     "DS-1205-V-01#p1",
+     "DS-1205-V-02#p1",
+     "DS-1205-V-03#p1",
+     "DS-1305-V-02#p1",
+     "MAN-DS-400#p1"
+    ],
+    "tokens": 190,
+    "ms": 0.95
+   }
+  },
+  {
+   "id": "PAR-15",
+   "familia": "historial",
+   "intencion": "ultima_accion",
+   "pregunta": "¿Qué le hicieron al 1205-E-01 la vez más reciente que se dañó?",
+   "enrutado": "documental",
+   "grafo": {
+    "valor": "SOLUCIÓN DE PROBLEMAS · modelo CV-2-300\n- Síntoma: falla al abrir. Revisar actuador. Acción recomendada: inspeccionar y reemplazar actuador si presenta daño.\n- Síntoma: falla al cerrar. Revisar asiento. Acción recomendada: inspeccionar y reemplazar asiento si presenta daño.\n- Síntoma: fuga externa de fluido de proceso. Revisar empaquetadura. Acción recomendada: inspeccionar y reemplazar empaquetadura si presenta daño.\n- Síntoma: fuga interna. Revisar asiento. Acción recomendada: inspeccionar y reemplazar asiento si presenta daño.\n- Síntoma: operación demorada. Revisar posicionador. Acción recomendada: inspeccionar y reemplazar posicionador si presenta daño.\n- Síntoma: problemas menores en servicio. Revisar diafragma. Acción recomendada: inspeccionar y reemplazar diafragma si presenta daño.",
+    "ok": false,
+    "tokens": 212,
+    "ms": 0.83,
+    "cypher": ""
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "OT-2021-00001",
+     "OT-2021-00002",
+     "OT-2022-00038",
+     "OT-2023-00066",
+     "OT-2023-00074",
+     "OT-2024-00105",
+     "OT-2024-00107",
+     "OT-2024-00113",
+     "OT-2025-00163",
+     "OT-2026-00176",
+     "OT-2026-00188"
+    ],
+    "recuperado": [
+     "DS-1105-PT-02#p1",
+     "OT-2022-00029",
+     "OT-2024-00097",
+     "OT-2025-00136",
+     "OT-2026-00175"
+    ],
+    "tokens": 218,
+    "ms": 0.72
+   }
+  },
+  {
+   "id": "PAR-16",
+   "familia": "completitud",
+   "intencion": "faltantes_tag",
+   "pregunta": "¿Está completa la hoja de datos del 1205-C-01?",
+   "enrutado": "completitud",
+   "grafo": {
+    "valor": null,
+    "ok": false,
+    "tokens": 7,
+    "ms": 0.08,
+    "cypher": ""
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "DS-1205-C-01#p1",
+     "DS-1205-C-01#p2"
+    ],
+    "recuperado": [
+     "DS-1105-PT-02#p1",
+     "DS-1205-C-01#p1",
+     "DS-1205-V-01#p1",
+     "DS-1205-V-02#p1",
+     "DS-1405-PT-01#p1"
+    ],
+    "tokens": 199,
+    "ms": 1.84
+   }
+  },
+  {
+   "id": "PAR-17",
+   "familia": "completitud",
+   "intencion": "faltantes_tag",
+   "pregunta": "¿Qué datos le faltan a la ficha del 1305-V-02?",
+   "enrutado": "completitud",
+   "grafo": {
+    "valor": [
+     "volumen"
+    ],
+    "ok": true,
+    "tokens": 13,
+    "ms": 0.17,
+    "cypher": "MATCH (e:Equipo {tag: $tag}) OPTIONAL MATCH (d:Documento {tipo:'hoja_de_datos'})-[:DOCUMENTA]->(e) RETURN d IS NULL AS sin_hoja, [p IN $obligatorias WHERE e[p] IS NULL] AS faltantes"
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "DS-1305-V-02#p1",
+     "DS-1305-V-02#p2"
+    ],
+    "recuperado": [
+     "DS-1105-P-01#p1",
+     "DS-1105-PT-02#p1",
+     "DS-1205-C-01#p1",
+     "DS-1205-P-01#p1",
+     "DS-1305-V-02#p1"
+    ],
+    "tokens": 191,
+    "ms": 0.89
+   }
+  },
+  {
+   "id": "PAR-18",
+   "familia": "completitud",
+   "intencion": "sin_hoja_clase",
+   "pregunta": "¿Cuáles intercambiadores no tienen datasheet?",
+   "enrutado": "documental",
+   "grafo": {
+    "valor": "MANUAL DE OPERACIÓN Y MANTENIMIENTO\nModelo AC-8 · Calderería Industrial del Norte\nDescripción general del equipo y de sus subunidades.",
+    "ok": false,
+    "tokens": 44,
+    "ms": 0.8,
+    "cypher": ""
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [],
+    "recuperado": [
+     "OT-2023-00070",
+     "OT-2023-00077",
+     "OT-2023-00083",
+     "OT-2024-00087",
+     "OT-2024-00130"
+    ],
+    "tokens": 226,
+    "ms": 0.84
+   }
+  },
+  {
+   "id": "PAR-19",
+   "familia": "completitud",
+   "intencion": "faltantes_clase",
+   "pregunta": "¿Qué compresores tienen la ficha incompleta?",
+   "enrutado": "documental",
+   "grafo": {
+    "valor": "MANUAL DE OPERACIÓN Y MANTENIMIENTO\nModelo RC-2400 · Compresores del Valle\nDescripción general del equipo y de sus subunidades.",
+    "ok": false,
+    "tokens": 43,
+    "ms": 0.71,
+    "cypher": ""
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [
+     "DS-1205-C-01#p1",
+     "DS-1205-C-01#p2",
+     "DS-1205-C-02#p1",
+     "DS-1205-C-02#p2",
+     "DS-1305-C-01#p1",
+     "DS-1305-C-01#p2",
+     "DS-1305-C-02#p1",
+     "DS-1305-C-02#p2",
+     "LISTA-1205-S01",
+     "LISTA-1305-S01"
+    ],
+    "recuperado": [
+     "DS-1105-PT-02#p1",
+     "DS-1205-C-01#p1",
+     "DS-1405-PT-01#p1",
+     "MAN-RC-2400#p1",
+     "MAN-SA-75#p1"
+    ],
+    "tokens": 186,
+    "ms": 0.67
+   }
+  },
+  {
+   "id": "PAR-20",
+   "familia": "completitud",
+   "intencion": "faltantes_tag",
+   "pregunta": "¿El 1405-PCV-01 tiene hoja de datos?",
+   "enrutado": "completitud",
+   "grafo": {
+    "valor": null,
+    "ok": false,
+    "tokens": 7,
+    "ms": 0.08,
+    "cypher": ""
+   },
+   "rag": {
+    "ok": false,
+    "evidencia": [],
+    "recuperado": [
+     "DS-1205-PT-01#p1",
+     "DS-1205-PT-02#p1",
+     "DS-1205-V-02#p1",
+     "DS-1205-V-03#p1",
+     "LINEA-17"
+    ],
+    "tokens": 171,
+    "ms": 1.14
+   }
+  }
+ ]
+}

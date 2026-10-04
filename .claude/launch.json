@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "demo-p1",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "app.servidor"],
+      "port": 8001,
+      "url": "http://127.0.0.1:8001"
+    }
+  ]
+}

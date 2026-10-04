@@ -4,49 +4,111 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Asistente de planta · demo</title>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f6f8f7;--card:#fff;--ink:#111b21;--dim:#54655d;--line:rgba(17,27,33,.09);--acc:#00a884;--acc2:#0f766e;--warn:#b45309;--bad:#b42318}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1417;--card:#131d21;--ink:#e6efec;--dim:#93a7a0;--line:rgba(230,239,236,.1)}}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 Manrope,system-ui,sans-serif}
-header{padding:20px 24px;border-bottom:1px solid var(--line);display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
-header b{font-size:18px}header span{color:var(--dim);font:12px 'IBM Plex Mono',monospace}
-main{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:16px;padding:16px 24px;max-width:1400px;margin:auto}
-@media(max-width:900px){main{grid-template-columns:1fr;padding:16px}}
-.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
-.k{font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--acc2);margin-bottom:8px}
-textarea{width:100%;min-height:64px;border:1px solid var(--line);border-radius:8px;padding:10px;font:inherit;background:var(--bg);color:var(--ink)}
-button{font:600 13px Manrope;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:6px 12px;cursor:pointer}
-button.pri{background:var(--acc);border-color:var(--acc);color:#fff}button:disabled{opacity:.5;cursor:default}
-.ej{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}.ej button{font-weight:500;font-size:12px}
-svg{width:100%;height:auto;display:block}
-.leg{display:flex;flex-wrap:wrap;gap:10px;font:11px 'IBM Plex Mono',monospace;color:var(--dim);margin-top:6px}
-.leg i{display:inline-block;width:9px;height:9px;border-radius:5px;margin-right:4px;vertical-align:middle}
-table{width:100%;border-collapse:collapse;font-size:13px}td,th{text-align:left;padding:4px 6px;border-bottom:1px solid var(--line);vertical-align:top}
-th{color:var(--dim);font-weight:600}.mono{font-family:'IBM Plex Mono',monospace;font-size:12px}
-.col{display:grid;gap:12px}.warn{color:var(--warn)}.estado{font:600 12px 'IBM Plex Mono';padding:2px 8px;border-radius:999px;border:1px solid currentColor}
-.cita{color:var(--dim);font:11px 'IBM Plex Mono'}ul{margin:4px 0;padding-left:18px}
+/* Misma estética del portafolio: tokens de projects/_styles.css */
+:root{--bg:#eef2f0;--card:#fff;--elev:#f6f8f7;--line:#e2e8e5;--line-2:#cfe0d8;--ink:#111b21;--dim:#54655d;--faint:#869aa0;
+  --teal:#00a884;--deep:#0f766e;--tint:#ccfbf1;--amber:#b45309;--amber-bg:#fff8e6;--sage:#9db8ac;
+  --shadow:0 1px 2px rgba(17,27,33,.04),0 16px 36px -28px rgba(17,27,33,.28)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Manrope',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+.mono{font-family:'IBM Plex Mono',monospace}
+nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.78);backdrop-filter:saturate(180%) blur(14px);border-bottom:.8px solid rgba(17,27,33,.06)}
+.nav-in{max-width:1240px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:14px}
+.logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:15px;display:flex;align-items:center;gap:8px}
+.logo i{width:8px;height:8px;border-radius:50%;background:var(--teal)}
+.estado{margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:5px 11px;border-radius:999px;background:var(--tint);color:var(--deep)}
+.estado.est{background:var(--amber-bg);color:var(--amber)}
+.hero{position:relative;overflow:hidden;padding:34px 0 26px}
+.hero:before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(15,118,110,.18) 1px,transparent 1px);background-size:22px 22px;-webkit-mask-image:radial-gradient(70% 80% at 30% 40%,#000 20%,transparent 75%);mask-image:radial-gradient(70% 80% at 30% 40%,#000 20%,transparent 75%)}
+.hero:after{content:"";position:absolute;width:520px;height:520px;left:-140px;top:-220px;border-radius:50%;filter:blur(60px);opacity:.5;background:radial-gradient(circle,rgba(45,212,167,.45),transparent 65%)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px;position:relative;z-index:1}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--deep);background:rgba(255,255,255,.7);border:1px solid rgba(0,168,132,.25);border-radius:999px;padding:7px 14px}
+.eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--teal);animation:pulso 2s infinite}
+@keyframes pulso{0%{box-shadow:0 0 0 0 rgba(0,168,132,.55)}70%{box-shadow:0 0 0 10px rgba(0,168,132,0)}100%{box-shadow:0 0 0 0 rgba(0,168,132,0)}}
+h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(28px,3.6vw,42px);line-height:1.06;letter-spacing:-.03em;margin:16px 0 0;max-width:22ch}
+.one{color:var(--dim);font-size:16.5px;max-width:64ch;margin-top:12px}
+main{max-width:1240px;margin:0 auto;padding:6px 20px 48px;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:16px;align-items:start}
+@media(max-width:980px){main{grid-template-columns:1fr}}
+.col{display:grid;gap:16px}
+.card{background:var(--card);border:.8px solid var(--line);border-radius:16px;padding:18px 20px 20px;box-shadow:var(--shadow)}
+.k{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--deep);margin-bottom:10px;display:flex;align-items:center;justify-content:space-between;gap:8px}
+textarea{width:100%;min-height:76px;resize:vertical;border:.8px solid var(--line);border-radius:12px;padding:12px 14px;font:15px/1.5 'Manrope',sans-serif;color:var(--ink);background:var(--elev);outline:none;transition:border-color .2s,box-shadow .2s}
+textarea:focus{border-color:var(--teal);box-shadow:0 0 0 4px rgba(0,168,132,.12)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 14px}
+.chip{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--deep);background:var(--tint);border:0;border-radius:999px;padding:6px 12px;cursor:pointer;transition:transform .2s,box-shadow .2s;text-align:left}
+.chip:hover{transform:translateY(-1px);box-shadow:0 6px 16px -8px rgba(0,168,132,.5)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:999px;font:700 14px 'Manrope',sans-serif;border:0;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}
+.btn.pri{background:var(--teal);color:#fff;box-shadow:0 8px 20px -10px rgba(0,168,132,.6)}
+.btn.pri:hover{transform:translateY(-2px);box-shadow:0 14px 30px -10px rgba(0,168,132,.8)}
+.btn:disabled{opacity:.5;cursor:default;transform:none}
+svg.g{width:100%;height:auto;display:block;border-radius:12px;background:radial-gradient(600px 300px at 30% 20%,rgba(0,168,132,.06),transparent 60%),#fff}
+.leg{display:flex;flex-wrap:wrap;gap:14px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--dim);margin-top:10px}
+.leg span{display:inline-flex;align-items:center;gap:6px}
+.vacio{color:var(--faint);font-size:14px;text-align:center;padding:40px 10px}
+.tag{font-family:'Space Grotesk',sans-serif;font-size:26px;font-weight:700;letter-spacing:-.02em}
+.sub{color:var(--dim);font-size:14px;margin-top:2px}
+.pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.pill{font-family:'IBM Plex Mono',monospace;font-size:11px;padding:3px 9px;border-radius:999px;background:var(--elev);border:.8px solid var(--line);color:var(--dim)}
+.pill.crit{background:var(--tint);border-color:transparent;color:var(--deep)}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);font-weight:500;text-align:left;padding:0 8px 6px}
+td{padding:8px;border-top:.8px solid var(--line);vertical-align:top}
+td.m{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--dim);white-space:nowrap}
+.sim b{color:var(--deep)}
+.cita{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--faint);margin-top:8px;line-height:1.6}
+.adv{border-left:4px solid var(--amber);background:var(--amber-bg)}
+.adv .k{color:var(--amber)}
+.adv li{color:#7a3a07;font-size:14px;margin-left:18px}
+.badge{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.08em;font-weight:700;padding:3px 10px;border-radius:999px;background:var(--amber-bg);color:var(--amber)}
+.badge.ok{background:var(--tint);color:var(--deep)}
+.sol{border-left:4px solid var(--amber)}
+.sol.ok{border-left-color:var(--teal)}
+.filas{display:grid;grid-template-columns:150px 1fr;gap:10px 14px;font-size:14px}
+.filas dt{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);padding-top:3px}
+.filas dd ul{margin:0;padding-left:18px}
+.filas .v{font-family:'IBM Plex Mono',monospace;font-size:13px}
+.ap{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;padding-top:14px;border-top:1px dashed var(--line-2)}
+.ap input{flex:1;min-width:200px;border:.8px solid var(--line);border-radius:999px;padding:10px 16px;font:14px 'Manrope',sans-serif;background:var(--elev);outline:none}
+.ap input:focus{border-color:var(--teal);box-shadow:0 0 0 4px rgba(0,168,132,.12)}
+.res{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--deep);margin-top:10px}
+.res.err{color:var(--amber)}
+.aparece{animation:sube .45s cubic-bezier(.16,.84,.3,1) both}
+@keyframes sube{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+footer{max-width:1240px;margin:0 auto;padding:22px 20px 34px;border-top:1px solid var(--line);font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--faint)}
 </style>
 </head>
 <body>
-<header><b>Asistente de planta</b><span>P1 · grafo de conocimiento · datos sintéticos · sin credenciales</span><span id="modo"></span></header>
+<nav><div class="nav-in"><div class="logo"><i></i>Asistente de planta</div><span class="estado" id="modo">conectando…</span></div></nav>
+<section class="hero"><div class="wrap">
+  <div class="eyebrow"><span class="dot"></span>P1 · serie planta · datos sintéticos · sin credenciales</div>
+  <h1>Del reporte de falla a la solicitud de entrega</h1>
+  <p class="one">Escriba un reporte como lo diría un técnico. El agente identifica el equipo, consulta el grafo con cuatro herramientas y deja la solicitud en borrador hasta que alguien la apruebe.</p>
+</div></section>
 <main>
   <section class="col">
     <div class="card">
       <div class="k">Reporte de falla</div>
       <textarea id="rep" placeholder="Ej.: La bomba 1105p01 está botando glicol por el sello"></textarea>
-      <div class="ej" id="ejemplos"></div>
-      <button class="pri" id="enviar">Analizar reporte</button>
+      <div class="chips" id="ejemplos"></div>
+      <button class="btn pri" id="enviar">Analizar reporte <span>→</span></button>
     </div>
     <div class="card">
-      <div class="k">Vecindario en el grafo de proceso</div>
-      <svg id="g" viewBox="0 0 600 360" role="img" aria-label="Grafo del vecindario del equipo"></svg>
-      <div class="leg"><span><i style="background:var(--acc)"></i>equipo</span><span><i style="background:var(--bad)"></i>válvula que aísla</span>
-        <span><i style="background:var(--warn)"></i>queda fuera de servicio</span><span><i style="background:#94a3a0"></i>otros</span></div>
+      <div class="k">Vecindario en el grafo de proceso <span id="gtag" class="mono" style="color:var(--faint)"></span></div>
+      <svg class="g" id="g" viewBox="0 0 600 380" role="img" aria-label="Grafo del vecindario del equipo"></svg>
+      <div class="leg">
+        <span><svg width="12" height="12"><circle cx="6" cy="6" r="5" fill="#00a884"/></svg>equipo</span>
+        <span><svg width="14" height="12"><path d="M2 2 L7 6 L2 10 Z M12 2 L7 6 L12 10 Z" fill="#54655d"/></svg>válvula de bloqueo</span>
+        <span><svg width="14" height="12"><path d="M2 2 L7 6 L2 10 Z M12 2 L7 6 L12 10 Z" fill="#b45309"/></svg>se cierra para aislar</span>
+        <span><svg width="12" height="12"><circle cx="6" cy="6" r="4.5" fill="#eef2f0" stroke="#b45309" stroke-dasharray="2 2"/></svg>queda fuera de servicio</span>
+      </div>
     </div>
   </section>
-  <section class="col" id="der"><div class="card" style="color:var(--dim)">Escriba un reporte o elija un ejemplo.</div></section>
+  <section class="col" id="der"><div class="card vacio">Elija un ejemplo o escriba un reporte.</div></section>
 </main>
+<footer>p1-asistente-planta · demo local · los datos de la planta son sintéticos (planta-core, semilla 14224)</footer>
 <script>
 let DEMO = null, SERVIDOR = false, ACTUAL = null;
 const $ = s => document.querySelector(s);
@@ -55,81 +117,100 @@ const esc = s => String(s ?? '—').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&
 async function init() {
   try { const r = await fetch('api/reporte', {method:'POST', body:'{"reporte":""}'}); SERVIDOR = r.ok; } catch(e) {}
   try { DEMO = await (await fetch('demo.json')).json(); } catch(e) {}
-  $('#modo').textContent = SERVIDOR ? '· servidor local en vivo' : '· modo estático (ejemplos precalculados)';
+  const m = $('#modo');
+  m.textContent = SERVIDOR ? '● servidor local en vivo' : 'modo estático · ejemplos precalculados';
+  m.classList.toggle('est', !SERVIDOR);
   (DEMO?.ejemplos || []).forEach(e => {
-    const b = document.createElement('button'); b.textContent = e.reporte.slice(0, 48) + (e.reporte.length > 48 ? '…' : '');
+    const b = document.createElement('button'); b.className = 'chip'; b.type = 'button';
+    b.textContent = e.reporte.length > 46 ? e.reporte.slice(0, 46) + '…' : e.reporte; b.title = e.reporte;
     b.onclick = () => { $('#rep').value = e.reporte; analizar(); }; $('#ejemplos').appendChild(b);
   });
-  $('#rep').readOnly = !SERVIDOR;
-  if (!SERVIDOR) $('#rep').placeholder = 'En modo estático elija uno de los ejemplos. Con `make demo` puede escribir su propio reporte.';
+  if (!SERVIDOR) { $('#rep').readOnly = true; $('#rep').placeholder = 'En modo estático elija un ejemplo. Con `make demo` puede escribir su propio reporte.'; }
+  grafo(null);
 }
 
 async function analizar() {
   const rep = $('#rep').value.trim(); if (!rep) return;
-  let s;
-  if (SERVIDOR) s = await (await fetch('api/reporte', {method:'POST', body: JSON.stringify({reporte: rep})})).json();
-  else s = DEMO.ejemplos.find(e => e.reporte === rep);
-  ACTUAL = s; pintar(s);
+  $('#enviar').disabled = true;
+  let s = null;
+  try {
+    if (SERVIDOR) s = await (await fetch('api/reporte', {method:'POST', body: JSON.stringify({reporte: rep})})).json();
+    else s = DEMO.ejemplos.find(e => e.reporte === rep);
+  } finally { $('#enviar').disabled = false; }
+  if (s) { ACTUAL = s; pintar(s); }
 }
 
+const VAL = (x, y, col, s = 7) => `<path d="M ${x-s} ${y-s*.72} L ${x} ${y} L ${x-s} ${y+s*.72} Z M ${x+s} ${y-s*.72} L ${x} ${y} L ${x+s} ${y+s*.72} Z" fill="${col}"/>`;
 function grafo(gr) {
-  const svg = $('#g'); if (!gr) { svg.innerHTML = '<text x="300" y="180" text-anchor="middle" fill="currentColor" opacity=".5">sin equipo identificado</text>'; return; }
-  const P = Object.fromEntries(gr.nodos.map(n => [n.id, n]));
-  const col = {equipo:'var(--acc)', valvula_aisla:'var(--bad)', fuera_servicio:'var(--warn)'};
-  let h = gr.aristas.map(([a,b]) => `<line x1="${P[a].x}" y1="${P[a].y}" x2="${P[b].x}" y2="${P[b].y}" stroke="#94a3a0" stroke-width="1.4"/>`).join('');
-  h += gr.nodos.map(n => {
-    const r = n.rol === 'equipo' ? 10 : (n.tipo === 'HDR' || n.tipo === 'LIM') ? 4 : 7;
-    const c = col[n.rol] || '#94a3a0';
-    const lbl = n.tipo === 'HDR' ? '' : n.id.replace(/^LIM-/, '');
-    return `<g><circle cx="${n.x}" cy="${n.y}" r="${r}" fill="${c}" ${n.tipo==='HV'?'stroke="var(--card)" stroke-width="2"':''}/>`
-      + `<text x="${n.x}" y="${n.y + r + 11}" font-family="IBM Plex Mono" font-size="9.5" text-anchor="middle" fill="currentColor" opacity="${n.rol==='otro'?.55:1}">${esc(lbl)}</text></g>`;
+  const svg = $('#g');
+  if (!gr) { svg.innerHTML = '<text x="300" y="195" text-anchor="middle" font-family="Manrope" font-size="14" fill="#869aa0">Aquí aparece el equipo y lo que hay que cerrar para intervenirlo</text>'; $('#gtag').textContent = ''; return; }
+  const P = Object.fromEntries(gr.nodos.map(n => [n.id, {...n, y: n.y + 15}]));
+  let h = gr.aristas.map(([a, b]) => `<line x1="${P[a].x}" y1="${P[a].y}" x2="${P[b].x}" y2="${P[b].y}" stroke="#9db8ac" stroke-width="1.8"/>`).join('');
+  h += Object.values(P).map(n => {
+    const lbl = n.tipo === 'HDR' ? '' : n.id.replace(/^LIM-/, '').replace(/^\d{4}-/, '');
+    let body = '';
+    if (n.tipo === 'HV') body = (n.rol === 'valvula_aisla' ? `<circle cx="${n.x}" cy="${n.y}" r="13" fill="rgba(180,83,9,.12)" stroke="#b45309"/>` : '') + VAL(n.x, n.y, n.rol === 'valvula_aisla' ? '#b45309' : '#54655d');
+    else if (n.tipo === 'HDR') body = `<circle cx="${n.x}" cy="${n.y}" r="3.5" fill="#9db8ac"/>`;
+    else if (n.tipo === 'LIM') body = `<path d="M ${n.x-7} ${n.y-6} L ${n.x+3} ${n.y-6} L ${n.x+8} ${n.y} L ${n.x+3} ${n.y+6} L ${n.x-7} ${n.y+6} Z" fill="#fff" stroke="#54655d" stroke-width="1.2"/>`;
+    else if (n.tipo === 'PCV') body = (n.rol === 'fuera_servicio' ? `<circle cx="${n.x}" cy="${n.y-3}" r="14" fill="none" stroke="#b45309" stroke-dasharray="4 3"/>` : '') + `<line x1="${n.x}" y1="${n.y}" x2="${n.x}" y2="${n.y-10}" stroke="#869aa0" stroke-width="1.4"/><path d="M ${n.x-6} ${n.y-10} A 6 6 0 0 1 ${n.x+6} ${n.y-10} Z" fill="#869aa0"/>` + VAL(n.x, n.y, n.rol === 'fuera_servicio' ? '#b45309' : '#869aa0');
+    else {
+      const foco = n.rol === 'equipo', fuera = n.rol === 'fuera_servicio';
+      body = (foco ? `<circle cx="${n.x}" cy="${n.y}" r="20" fill="none" stroke="#00a884" stroke-width="1.6"><animate attributeName="r" values="14;28;14" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values=".8;0;.8" dur="2s" repeatCount="indefinite"/></circle>` : '')
+           + (fuera ? `<circle cx="${n.x}" cy="${n.y}" r="17" fill="none" stroke="#b45309" stroke-dasharray="4 3"/>` : '')
+           + `<circle cx="${n.x}" cy="${n.y}" r="${foco ? 12 : 10}" fill="${fuera ? '#eef2f0' : foco ? '#00a884' : '#8fbfb1'}" stroke="${fuera ? '#b45309' : '#0f766e'}" stroke-width="${foco ? 2.4 : 1.4}"/>`;
+    }
+    const col = n.rol === 'equipo' ? '#111b21' : n.rol === 'valvula_aisla' || n.rol === 'fuera_servicio' ? '#b45309' : '#54655d';
+    const fw = ['equipo', 'valvula_aisla', 'fuera_servicio'].includes(n.rol) ? 700 : 500;
+    const dy = n.tipo === 'HV' ? 19 : 25;
+    return `<g>${body}${lbl ? `<text x="${n.x}" y="${n.y + dy}" font-family="IBM Plex Mono" font-size="10.5" font-weight="${fw}" fill="${col}" text-anchor="middle">${esc(lbl)}</text>` : ''}</g>`;
   }).join('');
   svg.innerHTML = h;
 }
 
 function pintar(s) {
   grafo(s.grafo);
-  const adv = s.advertencias.length ? `<div class="card warn"><div class="k" style="color:var(--warn)">Advertencias</div><ul>${s.advertencias.map(a => `<li>${esc(a)}</li>`).join('')}</ul></div>` : '';
+  $('#gtag').textContent = s.equipo ? s.equipo.tag : '';
+  const adv = s.advertencias.length ? `<div class="card adv aparece"><div class="k">Advertencias</div><ul>${s.advertencias.map(a => `<li>${esc(a)}</li>`).join('')}</ul></div>` : '';
   if (!s.equipo) { $('#der').innerHTML = adv; return; }
   const e = s.equipo, a = s.aislamientos, sim = s.fallas_similares;
   $('#der').innerHTML = `
-  <div class="card"><div class="k">Ficha · buscar_equipo</div>
-    <b class="mono">${esc(e.tag)}</b> · ${esc(e.descripcion)}<br><span class="cita">${esc(e.clase)} · ${esc(e.sistema)} · ${esc(e.area)}${e.critico ? ' · crítico' : ''}</span></div>
-  <div class="card"><div class="k">Historial · últimas órdenes</div>
+  <div class="card aparece"><div class="k">1 · Ficha <span class="mono" style="color:var(--faint)">buscar_equipo</span></div>
+    <div class="tag">${esc(e.tag)}</div><div class="sub">${esc(e.descripcion)}</div>
+    <div class="pills"><span class="pill">${esc(e.clase)}</span><span class="pill">${esc(e.sistema)}</span><span class="pill">${esc(e.area)}</span>${e.critico ? '<span class="pill crit">crítico</span>' : ''}</div></div>
+  <div class="card aparece" style="animation-delay:.08s"><div class="k">2 · Historial <span class="mono" style="color:var(--faint)">últimas órdenes</span></div>
     <table><tr><th>Orden</th><th>Fecha</th><th>Modo</th><th>Acción</th></tr>
-    ${s.historial.map(h => `<tr><td class="mono">${h.orden}</td><td class="mono">${h.fecha}</td><td class="mono">${h.modo}</td><td>${esc(h.accion)}</td></tr>`).join('')}</table></div>
-  ${sim ? `<div class="card"><div class="k">Fallas similares · ${esc(sim.clase)} · ${esc(sim.modo)}</div>
-    ${sim.total} antecedentes en la clase. Acción más frecuente: <b>${esc(sim.accion_mas_frecuente)}</b> · mediana ${esc(s.duracion_estimada_h)} h
-    <div class="cita">${sim.casos.map(c => `${c.tag} ${c.orden}`).join(' · ')}</div></div>` : ''}
+    ${s.historial.map(h => `<tr><td class="m">${esc(h.orden)}</td><td class="m">${esc(h.fecha)}</td><td class="m">${esc(h.modo)}</td><td>${esc(h.accion)}</td></tr>`).join('')}</table></div>
+  ${sim ? `<div class="card aparece sim" style="animation-delay:.16s"><div class="k">3 · Fallas similares <span class="mono" style="color:var(--faint)">${esc(sim.clase)} · ${esc(sim.modo)}</span></div>
+    ${sim.total} antecedentes en la clase. Lo más frecuente: <b>${esc(sim.accion_mas_frecuente)}</b> · mediana ${esc(s.duracion_estimada_h)} h
+    <div class="cita">${sim.casos.map(c => `${esc(c.tag)} ${esc(c.orden)}`).join(' · ')}</div></div>` : ''}
   ${adv}
-  <div class="card"><div class="k">Solicitud de entrega a operaciones <span class="estado" id="est" style="margin-left:6px">${esc(s.estado)}</span></div>
-    <table>
-      <tr><th>Equipo</th><td class="mono">${esc(e.tag)} · ${esc(e.descripcion)}</td></tr>
-      <tr><th>Síntoma</th><td>${s.sintoma ? `${esc(s.sintoma.nombre)} (${s.sintoma.modo})` : '—'}</td></tr>
-      <tr><th>Intervención propuesta</th><td>${esc(s.intervencion_propuesta)}</td></tr>
-      <tr><th>Aislamientos</th><td class="mono">${a.valvulas.join(', ')}${a.fuera_de_servicio.length ? `<br>fuera de servicio: ${a.fuera_de_servicio.join(', ')}` : ''}${a.ramas_abiertas.length ? `<br><span class="warn">rama abierta: ${a.ramas_abiertas.join(', ')}</span>` : ''}</td></tr>
-      <tr><th>Permisos requeridos</th><td><ul>${s.permisos_requeridos.map(p => `<li>${esc(p)}</li>`).join('')}</ul></td></tr>
-      <tr><th>Cuadrilla</th><td>${esc(s.cuadrilla)}</td></tr>
-      <tr><th>Duración estimada</th><td>${esc(s.duracion_estimada_h)} h</td></tr>
-    </table>
-    <div class="cita" style="margin:8px 0">Herramientas llamadas: ${s.llamadas.map(esc).join(' → ')}</div>
-    <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
-      <input id="aprob" placeholder="Nombre de quien aprueba" style="flex:1;min-width:160px;padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)">
-      <button class="pri" id="btnap">Aprobar y emitir</button></div>
-    <div id="res" class="cita" style="margin-top:6px"></div></div>`;
+  <div class="card sol aparece" id="sol" style="animation-delay:.24s"><div class="k">4 · Solicitud de entrega a operaciones <span class="badge" id="est">${esc(s.estado)}</span></div>
+    <dl class="filas">
+      <dt>Equipo</dt><dd class="v">${esc(e.tag)} · ${esc(e.descripcion)}</dd>
+      <dt>Síntoma</dt><dd>${s.sintoma ? `${esc(s.sintoma.nombre)} <span class="mono">(${esc(s.sintoma.modo)})</span>` : '—'}</dd>
+      <dt>Intervención</dt><dd>${esc(s.intervencion_propuesta)}</dd>
+      <dt>Aislamientos</dt><dd class="v">${a.valvulas.map(esc).join(', ')}${a.fuera_de_servicio.length ? `<br><span style="color:var(--amber)">fuera de servicio: ${a.fuera_de_servicio.map(esc).join(', ')}</span>` : ''}${a.ramas_abiertas.length ? `<br><span style="color:var(--amber)">rama abierta: ${a.ramas_abiertas.map(esc).join(', ')}</span>` : ''}</dd>
+      <dt>Permisos</dt><dd><ul>${s.permisos_requeridos.map(p => `<li>${esc(p)}</li>`).join('')}</ul></dd>
+      <dt>Cuadrilla</dt><dd>${esc(s.cuadrilla)}</dd>
+      <dt>Duración</dt><dd>${esc(s.duracion_estimada_h)} h <span style="color:var(--faint)">· mediana de la clase</span></dd>
+    </dl>
+    <div class="cita">Herramientas: ${s.llamadas.map(esc).join(' → ')}</div>
+    <div class="ap"><input id="aprob" placeholder="Nombre de quien aprueba" autocomplete="off"><button class="btn pri" id="btnap">Aprobar y emitir</button></div>
+    <div class="res" id="res"></div></div>`;
   $('#btnap').onclick = aprobar;
 }
 
 async function aprobar() {
-  const quien = $('#aprob').value.trim();
-  if (!quien) { $('#res').textContent = 'La aprobación exige el nombre de quien aprueba.'; return; }
+  const quien = $('#aprob').value.trim(), res = $('#res');
+  if (!quien) { res.className = 'res err'; res.textContent = 'La aprobación exige el nombre de quien aprueba.'; return; }
   if (SERVIDOR) {
     const r = await (await fetch('api/aprobar', {method:'POST', body: JSON.stringify({reporte: ACTUAL.reporte, aprobador: quien})})).json();
-    $('#res').textContent = r.error ? r.error : `Aprobada por ${r.aprobacion.aprobador} el ${r.aprobacion.fecha} · registrada en app/aprobaciones.jsonl`;
+    if (r.error) { res.className = 'res err'; res.textContent = r.error; return; }
+    res.className = 'res'; res.textContent = `✓ Aprobada por ${r.aprobacion.aprobador} el ${r.aprobacion.fecha} · registrada en app/aprobaciones.jsonl`;
   } else {
-    $('#res').textContent = `Aprobada por ${quien} en esta sesión (modo estático: no se registra; con make demo queda en app/aprobaciones.jsonl).`;
+    res.className = 'res'; res.textContent = `✓ Aprobada por ${quien} en esta sesión (modo estático: no se registra; con make demo queda en app/aprobaciones.jsonl).`;
   }
-  $('#est').textContent = 'APROBADA'; $('#btnap').disabled = true;
+  $('#est').textContent = 'APROBADA'; $('#est').classList.add('ok'); $('#sol').classList.add('ok'); $('#btnap').disabled = true;
 }
 $('#enviar').onclick = analizar;
 init();

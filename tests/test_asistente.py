@@ -70,6 +70,15 @@ def test_agente_borrador_y_aprobacion(g, tmp_path):
     assert (tmp_path / "aprobaciones.jsonl").read_text(encoding="utf-8").count("Ing. de turno") == 1
 
 
+def test_linea_de_comandos(capsys):
+    from asistente.__main__ import main
+
+    assert main(["La bomba 1105p01 está botando glicol por el sello"]) == 0
+    salida = capsys.readouterr().out
+    assert salida.startswith("BORRADOR · 1105-P-01") and "1105-HV-09, 1105-HV-10" in salida
+    assert main(["Hay una bomba que vibra mucho en glicol"]) == 1
+
+
 def test_agente_sin_tag_no_inventa(g):
     s = Agente(g).atender("Hay una bomba que vibra mucho en glicol")
     assert s.estado == "NO_RESUELTA" and s.equipo is None

@@ -86,7 +86,7 @@ Propiedades faltantes inyectadas: 7 · detectadas: 7 · falsos positivos: 0 · l
 | Medición | Requiere |
 |---|---|
 | Generación de Cypher con LLM y redacción con LLM | ANTHROPIC_API_KEY |
-| Backend Neo4j (`GRAFO_BACKEND=neo4j`) | Demonio Docker |
+| Carga y consultas sobre Neo4j 5 (`make neo4j`) | Demonio Docker |
 | Extracción desde PDFs reales con Docling o visión | PDFs del fabricante y llave de API |
 | Minutos para resolver un reporte de falla contra búsqueda manual | Cronometraje con usuarios |
 | Verificación a mano de las 100 respuestas esperadas | Ingeniero de planta |

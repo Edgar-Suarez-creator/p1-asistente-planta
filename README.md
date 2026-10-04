@@ -53,13 +53,19 @@ página, o el nodo del grafo.
 
 ```bash
 make setup   # instala planta-core y este paquete y genera los datos (semilla 14224)
-make test    # 8 tests
+make test    # 9 pruebas
 make eval    # reproduce evaluacion/RESULTS.md
 make demo    # http://127.0.0.1:8001, sin credenciales
 ```
 
 En Windows sin `make`: `python tareas.py setup|test|eval|demo|cypher`. Se espera `planta-core` como
 carpeta hermana (`../planta-core`).
+
+Desde la terminal, un reporte de punta a punta (imprime el borrador; no aprueba ni emite):
+
+```bash
+python -m asistente "La bomba 1105p01 está botando glicol por el sello"
+```
 
 ## Resultados medidos (corrida `deterministico-sin-llm`, 2026-10-04)
 

@@ -375,7 +375,7 @@
   "rag_exactitud_cota": 0.2,
   "enrutamiento": 0.2
  },
- "segundos": 0.27,
+ "segundos": 0.15,
  "preguntas": [
   {
    "id": "IDE-01",
@@ -387,7 +387,7 @@
     "valor": "Transmisor de presión de descarga",
     "ok": true,
     "tokens": 19,
-    "ms": 0.18,
+    "ms": 0.12,
     "cypher": "MATCH (e:Equipo {tag: $tag}) RETURN e.descripcion, e.clase"
    },
    "rag": {
@@ -403,7 +403,7 @@
      "MAN-SA-75#p2"
     ],
     "tokens": 156,
-    "ms": 0.93
+    "ms": 0.67
    }
   },
   {
@@ -416,7 +416,7 @@
     "valor": "Tanque flash de glicol rico",
     "ok": true,
     "tokens": 17,
-    "ms": 0.09,
+    "ms": 0.07,
     "cypher": "MATCH (e:Equipo {tag: $tag}) RETURN e.descripcion, e.clase"
    },
    "rag": {
@@ -432,7 +432,7 @@
      "MAN-RC-2400#p2"
     ],
     "tokens": 190,
-    "ms": 0.58
+    "ms": 0.5
    }
   },
   {
@@ -445,7 +445,7 @@
     "valor": "Compresor de aire de tornillo B",
     "ok": true,
     "tokens": 18,
-    "ms": 0.07,
+    "ms": 0.06,
     "cypher": "MATCH (e:Equipo {tag: $tag}) RETURN e.descripcion, e.clase"
    },
    "rag": {
@@ -461,7 +461,7 @@
      "OT-2026-00198"
     ],
     "tokens": 161,
-    "ms": 0.53
+    "ms": 0.56
    }
   },
   {
@@ -474,7 +474,7 @@
     "valor": "Bomba de glicol pobre B",
     "ok": true,
     "tokens": 16,
-    "ms": 0.07,
+    "ms": 0.06,
     "cypher": "MATCH (e:Equipo {tag: $tag}) RETURN e.descripcion, e.clase"
    },
    "rag": {
@@ -490,7 +490,7 @@
      "OT-2025-00170"
     ],
     "tokens": 183,
-    "ms": 0.53
+    "ms": 0.43
    }
   },
   {
@@ -503,7 +503,7 @@
     "valor": "Válvula de control de presión del tanque flash",
     "ok": true,
     "tokens": 22,
-    "ms": 0.07,
+    "ms": 0.05,
     "cypher": "MATCH (e:Equipo {tag: $tag}) RETURN e.descripcion, e.clase"
    },
    "rag": {
@@ -519,7 +519,7 @@
      "MAN-SA-75#p2"
     ],
     "tokens": 152,
-    "ms": 0.97
+    "ms": 0.44
    }
   },
   {
@@ -532,7 +532,7 @@
     "valor": "Transmisor de presión de la contactora",
     "ok": true,
     "tokens": 20,
-    "ms": 0.13,
+    "ms": 0.06,
     "cypher": "MATCH (e:Equipo {tag: $tag}) RETURN e.descripcion, e.clase"
    },
    "rag": {
@@ -548,7 +548,7 @@
      "OT-2025-00152"
     ],
     "tokens": 195,
-    "ms": 1.23
+    "ms": 0.45
    }
   },
   {
@@ -561,7 +561,7 @@
     "valor": "Tanque de aceite de lubricación",
     "ok": true,
     "tokens": 18,
-    "ms": 0.12,
+    "ms": 0.06,
     "cypher": "MATCH (e:Equipo {tag: $tag}) RETURN e.descripcion, e.clase"
    },
    "rag": {
@@ -577,7 +577,7 @@
      "MAN-SA-75#p2"
     ],
     "tokens": 152,
-    "ms": 1.11
+    "ms": 0.45
    }
   },
   {
@@ -590,7 +590,7 @@
     "valor": "Compresión de gas",
     "ok": true,
     "tokens": 15,
-    "ms": 0.13,
+    "ms": 0.06,
     "cypher": "MATCH (e:Equipo {tag: $tag})-[:PERTENECE_A]->(s:Sistema) RETURN s.nombre"
    },
    "rag": {
@@ -606,7 +606,7 @@
      "OT-2021-00001"
     ],
     "tokens": 170,
-    "ms": 0.6
+    "ms": 0.44
    }
   },
   {
@@ -619,7 +619,7 @@
     "valor": "Bombeo contra incendio",
     "ok": true,
     "tokens": 16,
-    "ms": 0.07,
+    "ms": 0.08,
     "cypher": "MATCH (e:Equipo {tag: $tag})-[:PERTENECE_A]->(s:Sistema) RETURN s.nombre"
    },
    "rag": {
@@ -664,7 +664,7 @@
      "OT-2025-00145"
     ],
     "tokens": 223,
-    "ms": 0.56
+    "ms": 0.47
    }
   },
   {
@@ -677,7 +677,7 @@
     "valor": "Generación de aire",
     "ok": true,
     "tokens": 15,
-    "ms": 0.08,
+    "ms": 0.06,
     "cypher": "MATCH (e:Equipo {tag: $tag})-[:PERTENECE_A]->(s:Sistema) RETURN s.nombre"
    },
    "rag": {
@@ -693,7 +693,7 @@
      "OT-2026-00182"
     ],
     "tokens": 230,
-    "ms": 0.53
+    "ms": 0.48
    }
   },
   {
@@ -706,7 +706,7 @@
     "valor": "Bombeo contra incendio",
     "ok": true,
     "tokens": 16,
-    "ms": 0.07,
+    "ms": 0.06,
     "cypher": "MATCH (e:Equipo {tag: $tag})-[:PERTENECE_A]->(s:Sistema) RETURN s.nombre"
    },
    "rag": {
@@ -722,7 +722,7 @@
      "MAN-PTX-3051#p2"
     ],
     "tokens": 196,
-    "ms": 0.57
+    "ms": 0.49
    }
   },
   {
@@ -735,7 +735,7 @@
     "valor": "Bombeo contra incendio",
     "ok": true,
     "tokens": 16,
-    "ms": 0.08,
+    "ms": 0.07,
     "cypher": "MATCH (e:Equipo {tag: $tag})-[:PERTENECE_A]->(s:Sistema) RETURN s.nombre"
    },
    "rag": {
@@ -751,7 +751,7 @@
      "OT-2025-00169"
     ],
     "tokens": 181,
-    "ms": 0.59
+    "ms": 0.48
    }
   },
   {
@@ -764,7 +764,7 @@
     "valor": "Deshidratación con glicol (TEG)",
     "ok": true,
     "tokens": 18,
-    "ms": 0.07,
+    "ms": 0.06,
     "cypher": "MATCH (e:Equipo {tag: $tag})-[:PERTENECE_A]->(:Sistema)-[:PERTENECE_A]->(a:Area) RETURN a.nombre"
    },
    "rag": {
@@ -780,7 +780,7 @@
      "OT-2025-00152"
     ],
     "tokens": 210,
-    "ms": 0.54
+    "ms": 0.48
    }
   },
   {
@@ -793,7 +793,7 @@
     "valor": "Agua contra incendio",
     "ok": true,
     "tokens": 16,
-    "ms": 0.06,
+    "ms": 0.05,
     "cypher": "MATCH (e:Equipo {tag: $tag})-[:PERTENECE_A]->(:Sistema)-[:PERTENECE_A]->(a:Area) RETURN a.nombre"
    },
    "rag": {
@@ -809,7 +809,7 @@
      "MAN-BEN-25#p1"
     ],
     "tokens": 171,
-    "ms": 0.49
+    "ms": 0.47
    }
   },
   {
@@ -822,7 +822,7 @@
     "valor": "Agua contra incendio",
     "ok": true,
     "tokens": 16,
-    "ms": 0.06,
+    "ms": 0.05,
     "cypher": "MATCH (e:Equipo {tag: $tag})-[:PERTENECE_A]->(:Sistema)-[:PERTENECE_A]->(a:Area) RETURN a.nombre"
    },
    "rag": {
@@ -838,7 +838,7 @@
      "MAN-BEN-25#p1"
     ],
     "tokens": 157,
-    "ms": 0.54
+    "ms": 0.5
    }
   },
   {
@@ -851,7 +851,7 @@
     "valor": "Compresión de gas",
     "ok": true,
     "tokens": 15,
-    "ms": 0.07,
+    "ms": 0.06,
     "cypher": "MATCH (e:Equipo {tag: $tag})-[:PERTENECE_A]->(:Sistema)-[:PERTENECE_A]->(a:Area) RETURN a.nombre"
    },
    "rag": {
@@ -867,7 +867,7 @@
      "LISTA-1205-S01"
     ],
     "tokens": 237,
-    "ms": 0.53
+    "ms": 0.47
    }
   },
   {
@@ -896,7 +896,7 @@
      "LISTA-1205-S02"
     ],
     "tokens": 189,
-    "ms": 0.55
+    "ms": 0.5
    }
   },
   {
@@ -909,7 +909,7 @@
     "valor": "Agua contra incendio",
     "ok": true,
     "tokens": 15,
-    "ms": 0.07,
+    "ms": 0.06,
     "cypher": "MATCH (e:Equipo {tag: $tag})-[:PERTENECE_A]->(:Sistema)-[:PERTENECE_A]->(a:Area) RETURN a.nombre"
    },
    "rag": {
@@ -925,7 +925,7 @@
      "OT-2025-00169"
     ],
     "tokens": 166,
-    "ms": 0.56
+    "ms": 0.48
    }
   },
   {
@@ -938,7 +938,7 @@
     "valor": "Calderería Industrial del Norte",
     "ok": true,
     "tokens": 18,
-    "ms": 0.08,
+    "ms": 0.06,
     "cypher": "MATCH (e:Equipo {tag: $tag})<-[:DOCUMENTA]-(d:Documento {tipo:'hoja_de_datos'}) RETURN d.fabricante"
    },
    "rag": {
@@ -954,7 +954,7 @@
      "MAN-TK-FW-900#p1"
     ],
     "tokens": 173,
-    "ms": 0.55
+    "ms": 0.5
    }
   },
   {
@@ -967,7 +967,7 @@
     "valor": "Calderería Industrial del Norte",
     "ok": true,
     "tokens": 18,
-    "ms": 0.07,
+    "ms": 0.06,
     "cypher": "MATCH (e:Equipo {tag: $tag})<-[:DOCUMENTA]-(d:Documento {tipo:'hoja_de_datos'}) RETURN d.fabricante"
    },
    "rag": {
@@ -983,7 +983,7 @@
      "OT-2025-00164"
     ],
     "tokens": 193,
-    "ms": 0.5
+    "ms": 0.49
    }
   },
   {
@@ -1012,7 +1012,7 @@
      "MAN-SEP-H-1800#p1"
     ],
     "tokens": 176,
-    "ms": 0.5
+    "ms": 0.47
    }
   },
   {
@@ -1041,7 +1041,7 @@
      "OT-2023-00047"
     ],
     "tokens": 191,
-    "ms": 0.49
+    "ms": 0.5
    }
   },
   {
@@ -1070,7 +1070,7 @@
      "MAN-RV-3#p1"
     ],
     "tokens": 175,
-    "ms": 0.48
+    "ms": 0.47
    }
   },
   {
@@ -1131,7 +1131,7 @@
      "MAN-SA-75#p2"
     ],
     "tokens": 152,
-    "ms": 0.52
+    "ms": 0.5
    }
   },
   {
@@ -1149,7 +1149,7 @@
     ],
     "ok": true,
     "tokens": 24,
-    "ms": 0.08,
+    "ms": 0.06,
     "cypher": "MATCH (v:Equipo {tipo:'HV'})-[:AISLA]->(e:Equipo {tag: $tag}) RETURN v.tag"
    },
    "rag": {
@@ -1167,7 +1167,7 @@
      "OT-2023-00084"
     ],
     "tokens": 164,
-    "ms": 0.71
+    "ms": 0.52
    }
   },
   {
@@ -1185,7 +1185,7 @@
     ],
     "ok": true,
     "tokens": 24,
-    "ms": 0.13,
+    "ms": 0.06,
     "cypher": "MATCH (v:Equipo {tipo:'HV'})-[:AISLA]->(e:Equipo {tag: $tag}) RETURN v.tag"
    },
    "rag": {
@@ -1201,7 +1201,7 @@
      "MAN-RC-2400#p2"
     ],
     "tokens": 152,
-    "ms": 1.39
+    "ms": 0.53
    }
   },
   {
@@ -1217,7 +1217,7 @@
     ],
     "ok": true,
     "tokens": 17,
-    "ms": 0.23,
+    "ms": 0.06,
     "cypher": "MATCH (v:Equipo {tipo:'HV'})-[:AISLA]->(e:Equipo {tag: $tag}) RETURN v.tag"
    },
    "rag": {
@@ -1233,7 +1233,7 @@
      "MAN-RC-2400#p2"
     ],
     "tokens": 152,
-    "ms": 1.51
+    "ms": 0.53
    }
   },
   {
@@ -1249,7 +1249,7 @@
     ],
     "ok": true,
     "tokens": 17,
-    "ms": 0.11,
+    "ms": 0.06,
     "cypher": "MATCH (v:Equipo {tipo:'HV'})-[:AISLA]->(e:Equipo {tag: $tag}) RETURN v.tag"
    },
    "rag": {
@@ -1265,7 +1265,7 @@
      "MAN-SA-75#p2"
     ],
     "tokens": 151,
-    "ms": 1.23
+    "ms": 0.56
    }
   },
   {
@@ -1281,7 +1281,7 @@
     ],
     "ok": true,
     "tokens": 17,
-    "ms": 0.14,
+    "ms": 0.06,
     "cypher": "MATCH (v:Equipo {tipo:'HV'})-[:AISLA]->(e:Equipo {tag: $tag}) RETURN v.tag"
    },
    "rag": {
@@ -1297,7 +1297,7 @@
      "OT-2026-00174"
     ],
     "tokens": 176,
-    "ms": 1.12
+    "ms": 1.54
    }
   },
   {
@@ -1315,7 +1315,7 @@
     ],
     "ok": true,
     "tokens": 24,
-    "ms": 0.12,
+    "ms": 0.07,
     "cypher": "MATCH (v:Equipo {tipo:'HV'})-[:AISLA]->(e:Equipo {tag: $tag}) RETURN v.tag"
    },
    "rag": {
@@ -1334,7 +1334,7 @@
      "MAN-RC-2400#p2"
     ],
     "tokens": 152,
-    "ms": 1.11
+    "ms": 0.54
    }
   },
   {
@@ -1350,7 +1350,7 @@
     ],
     "ok": true,
     "tokens": 17,
-    "ms": 0.1,
+    "ms": 0.06,
     "cypher": "MATCH (v:Equipo {tipo:'HV'})-[:AISLA]->(e:Equipo {tag: $tag}) RETURN v.tag"
    },
    "rag": {
@@ -1366,7 +1366,7 @@
      "MAN-SA-75#p2"
     ],
     "tokens": 152,
-    "ms": 0.76
+    "ms": 0.53
    }
   },
   {
@@ -1382,7 +1382,7 @@
     ],
     "ok": true,
     "tokens": 17,
-    "ms": 0.09,
+    "ms": 0.06,
     "cypher": "MATCH (v:Equipo {tipo:'HV'})-[:AISLA]->(e:Equipo {tag: $tag}) RETURN v.tag"
    },
    "rag": {
@@ -1398,7 +1398,7 @@
      "MAN-RC-2400#p2"
     ],
     "tokens": 152,
-    "ms": 0.67
+    "ms": 0.5
    }
   },
   {
@@ -1416,7 +1416,7 @@
     ],
     "ok": true,
     "tokens": 24,
-    "ms": 0.11,
+    "ms": 0.06,
     "cypher": "MATCH (v:Equipo {tipo:'HV'})-[:AISLA]->(e:Equipo {tag: $tag}) RETURN v.tag"
    },
    "rag": {
@@ -1434,7 +1434,7 @@
      "MAN-SA-75#p2"
     ],
     "tokens": 151,
-    "ms": 0.61
+    "ms": 0.51
    }
   },
   {
@@ -1450,7 +1450,7 @@
     ],
     "ok": true,
     "tokens": 17,
-    "ms": 0.09,
+    "ms": 0.05,
     "cypher": "MATCH (v:Equipo {tipo:'HV'})-[:AISLA]->(e:Equipo {tag: $tag}) RETURN v.tag"
    },
    "rag": {
@@ -1466,7 +1466,7 @@
      "MAN-SA-75#p2"
     ],
     "tokens": 152,
-    "ms": 0.63
+    "ms": 0.51
    }
   },
   {
@@ -1482,7 +1482,7 @@
     ],
     "ok": true,
     "tokens": 17,
-    "ms": 0.14,
+    "ms": 0.05,
     "cypher": "MATCH (v:Equipo {tipo:'HV'})-[:AISLA]->(e:Equipo {tag: $tag}) RETURN v.tag"
    },
    "rag": {
@@ -1498,7 +1498,7 @@
      "MAN-RC-2400#p2"
     ],
     "tokens": 152,
-    "ms": 1.87
+    "ms": 0.51
    }
   },
   {
@@ -1513,7 +1513,7 @@
     ],
     "ok": true,
     "tokens": 13,
-    "ms": 0.13,
+    "ms": 0.06,
     "cypher": "MATCH (v:Equipo {tipo:'HV'})-[:AISLA]->(e:Equipo {tag: $tag}) RETURN v.tag"
    },
    "rag": {
@@ -1529,7 +1529,7 @@
      "MAN-SA-75#p2"
     ],
     "tokens": 151,
-    "ms": 1.48
+    "ms": 0.51
    }
   },
   {
@@ -1544,7 +1544,7 @@
     ],
     "ok": true,
     "tokens": 13,
-    "ms": 0.32,
+    "ms": 0.06,
     "cypher": "MATCH (v:Equipo {tipo:'HV'})-[:AISLA]->(e:Equipo {tag: $tag}) RETURN v.tag"
    },
    "rag": {
@@ -1560,7 +1560,7 @@
      "MAN-RC-2400#p2"
     ],
     "tokens": 152,
-    "ms": 1.14
+    "ms": 0.5
    }
   },
   {
@@ -1577,7 +1577,7 @@
     ],
     "ok": true,
     "tokens": 20,
-    "ms": 0.1,
+    "ms": 0.06,
     "cypher": "MATCH (v:Equipo {tipo:'HV'})-[:AISLA]->(e:Equipo {tag: $tag}) RETURN v.tag"
    },
    "rag": {
@@ -1594,7 +1594,7 @@
      "OT-2022-00017"
     ],
     "tokens": 170,
-    "ms": 0.85
+    "ms": 0.54
    }
   },
   {
@@ -1611,7 +1611,7 @@
     ],
     "ok": true,
     "tokens": 20,
-    "ms": 0.09,
+    "ms": 0.06,
     "cypher": "MATCH (v:Equipo {tipo:'HV'})-[:AISLA]->(e:Equipo {tag: $tag}) RETURN v.tag"
    },
    "rag": {
@@ -1628,7 +1628,7 @@
      "MAN-RC-2400#p2"
     ],
     "tokens": 152,
-    "ms": 0.66
+    "ms": 0.52
    }
   },
   {
@@ -1645,7 +1645,7 @@
     ],
     "ok": true,
     "tokens": 20,
-    "ms": 0.08,
+    "ms": 0.06,
     "cypher": "MATCH (v:Equipo {tipo:'HV'})-[:AISLA]->(e:Equipo {tag: $tag}) RETURN v.tag"
    },
    "rag": {
@@ -1662,7 +1662,7 @@
      "MAN-RC-2400#p2"
     ],
     "tokens": 152,
-    "ms": 0.63
+    "ms": 0.53
    }
   },
   {
@@ -1681,7 +1681,7 @@
     ],
     "ok": true,
     "tokens": 27,
-    "ms": 0.11,
+    "ms": 0.06,
     "cypher": "MATCH (v:Equipo {tipo:'HV'})-[:AISLA]->(e:Equipo {tag: $tag}) RETURN v.tag"
    },
    "rag": {
@@ -1700,7 +1700,7 @@
      "MAN-SA-75#p2"
     ],
     "tokens": 152,
-    "ms": 0.81
+    "ms": 0.61
    }
   },
   {
@@ -1716,7 +1716,7 @@
     ],
     "ok": true,
     "tokens": 17,
-    "ms": 0.13,
+    "ms": 0.06,
     "cypher": "MATCH (v:Equipo {tipo:'HV'})-[:AISLA]->(e:Equipo {tag: $tag}) RETURN v.tag"
    },
    "rag": {
@@ -1732,7 +1732,7 @@
      "MAN-SA-75#p2"
     ],
     "tokens": 152,
-    "ms": 0.97
+    "ms": 0.53
    }
   },
   {
@@ -1748,7 +1748,7 @@
     ],
     "ok": true,
     "tokens": 17,
-    "ms": 0.16,
+    "ms": 0.06,
     "cypher": "MATCH (v:Equipo {tipo:'HV'})-[:AISLA]->(e:Equipo {tag: $tag}) RETURN v.tag"
    },
    "rag": {
@@ -1764,7 +1764,7 @@
      "MAN-SA-75#p2"
     ],
     "tokens": 152,
-    "ms": 1.76
+    "ms": 0.51
    }
   },
   {
@@ -1780,7 +1780,7 @@
     ],
     "ok": true,
     "tokens": 17,
-    "ms": 0.11,
+    "ms": 0.06,
     "cypher": "MATCH (v:Equipo {tipo:'HV'})-[:AISLA]->(e:Equipo {tag: $tag}) RETURN v.tag"
    },
    "rag": {
@@ -1796,7 +1796,7 @@
      "MAN-RC-2400#p2"
     ],
     "tokens": 152,
-    "ms": 1.03
+    "ms": 0.58
    }
   },
   {
@@ -1811,7 +1811,7 @@
     ],
     "ok": true,
     "tokens": 13,
-    "ms": 0.08,
+    "ms": 0.09,
     "cypher": "MATCH (v)-[:AISLA]->(e:Equipo {tag: $tag}) WITH collect(v) AS vs MATCH p=(e)-[:CONECTA_A*]-(x:Equipo) WHERE NONE(n IN nodes(p)[1..] WHERE n IN vs) RETURN DISTINCT x.tag"
    },
    "rag": {
@@ -1827,7 +1827,7 @@
      "MAN-PTX-3051#p2"
     ],
     "tokens": 160,
-    "ms": 0.67
+    "ms": 1.48
    }
   },
   {
@@ -1843,7 +1843,7 @@
     ],
     "ok": true,
     "tokens": 17,
-    "ms": 0.08,
+    "ms": 0.09,
     "cypher": "MATCH (v)-[:AISLA]->(e:Equipo {tag: $tag}) WITH collect(v) AS vs MATCH p=(e)-[:CONECTA_A*]-(x:Equipo) WHERE NONE(n IN nodes(p)[1..] WHERE n IN vs) RETURN DISTINCT x.tag"
    },
    "rag": {
@@ -1861,7 +1861,7 @@
      "MAN-SA-75#p2"
     ],
     "tokens": 152,
-    "ms": 0.65
+    "ms": 0.81
    }
   },
   {
@@ -1876,7 +1876,7 @@
     ],
     "ok": true,
     "tokens": 13,
-    "ms": 0.08,
+    "ms": 0.07,
     "cypher": "MATCH (v)-[:AISLA]->(e:Equipo {tag: $tag}) WITH collect(v) AS vs MATCH p=(e)-[:CONECTA_A*]-(x:Equipo) WHERE NONE(n IN nodes(p)[1..] WHERE n IN vs) RETURN DISTINCT x.tag"
    },
    "rag": {
@@ -1893,7 +1893,7 @@
      "MAN-SA-75#p2"
     ],
     "tokens": 157,
-    "ms": 0.7
+    "ms": 0.61
    }
   },
   {
@@ -1906,7 +1906,7 @@
     "valor": [],
     "ok": true,
     "tokens": 10,
-    "ms": 0.09,
+    "ms": 0.06,
     "cypher": "MATCH (v)-[:AISLA]->(e:Equipo {tag: $tag}) WITH collect(v) AS vs MATCH p=(e)-[:CONECTA_A*]-(x:Equipo) WHERE NONE(n IN nodes(p)[1..] WHERE n IN vs) RETURN DISTINCT x.tag"
    },
    "rag": {
@@ -1922,7 +1922,7 @@
      "MAN-RC-2400#p2"
     ],
     "tokens": 152,
-    "ms": 1.09
+    "ms": 0.57
    }
   },
   {
@@ -1935,7 +1935,7 @@
     "valor": "SE TAPONAN TUBOS, SE PROGRAMA CAMBIO DE HAZ DE TUBOS",
     "ok": true,
     "tokens": 23,
-    "ms": 0.18,
+    "ms": 0.09,
     "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla)-[:ATENDIDA_POR]->(i) RETURN i.accion ORDER BY f.fecha DESC LIMIT 1"
    },
    "rag": {
@@ -1954,7 +1954,7 @@
      "MAN-PTX-3051#p2"
     ],
     "tokens": 232,
-    "ms": 1.28
+    "ms": 0.57
    }
   },
   {
@@ -1967,7 +1967,7 @@
     "valor": "SE LIMPIA DEMISTER",
     "ok": true,
     "tokens": 14,
-    "ms": 0.15,
+    "ms": 0.08,
     "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla)-[:ATENDIDA_POR]->(i) RETURN i.accion ORDER BY f.fecha DESC LIMIT 1"
    },
    "rag": {
@@ -1986,7 +1986,7 @@
      "OT-2023-00047"
     ],
     "tokens": 198,
-    "ms": 0.96
+    "ms": 0.48
    }
   },
   {
@@ -1999,7 +1999,7 @@
     "valor": "SE CALIBRA VISOR DE NIVEL",
     "ok": true,
     "tokens": 16,
-    "ms": 0.1,
+    "ms": 0.07,
     "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla)-[:ATENDIDA_POR]->(i) RETURN i.accion ORDER BY f.fecha DESC LIMIT 1"
    },
    "rag": {
@@ -2017,7 +2017,7 @@
      "OT-2025-00151"
     ],
     "tokens": 209,
-    "ms": 0.89
+    "ms": 0.45
    }
   },
   {
@@ -2030,7 +2030,7 @@
     "valor": "SE CAMBIA BOQUILLA",
     "ok": true,
     "tokens": 14,
-    "ms": 0.19,
+    "ms": 0.12,
     "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla)-[:ATENDIDA_POR]->(i) RETURN i.accion ORDER BY f.fecha DESC LIMIT 1"
    },
    "rag": {
@@ -2056,7 +2056,7 @@
      "OT-2026-00181"
     ],
     "tokens": 228,
-    "ms": 0.83
+    "ms": 0.85
    }
   },
   {
@@ -2091,7 +2091,7 @@
      "MAN-PTX-3051#p2"
     ],
     "tokens": 232,
-    "ms": 0.64
+    "ms": 0.69
    }
   },
   {
@@ -2126,7 +2126,7 @@
      "OT-2026-00186"
     ],
     "tokens": 211,
-    "ms": 0.63
+    "ms": 0.69
    }
   },
   {
@@ -2139,7 +2139,7 @@
     "valor": "SE CORRIGE CARCASA",
     "ok": true,
     "tokens": 14,
-    "ms": 0.14,
+    "ms": 0.13,
     "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla)-[:ATENDIDA_POR]->(i) RETURN i.accion ORDER BY f.fecha DESC LIMIT 1"
    },
    "rag": {
@@ -2162,7 +2162,7 @@
      "OT-2024-00111"
     ],
     "tokens": 259,
-    "ms": 1.06
+    "ms": 0.68
    }
   },
   {
@@ -2175,7 +2175,7 @@
     "valor": "SE CAMBIA VÁLVULA DE DESCARGA Y SE LUBRICA",
     "ok": true,
     "tokens": 20,
-    "ms": 1.87,
+    "ms": 0.16,
     "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla)-[:ATENDIDA_POR]->(i) RETURN i.accion ORDER BY f.fecha DESC LIMIT 1"
    },
    "rag": {
@@ -2201,7 +2201,7 @@
      "OT-2023-00045"
     ],
     "tokens": 203,
-    "ms": 1.37
+    "ms": 0.7
    }
   },
   {
@@ -2214,7 +2214,7 @@
     "valor": "SE CAMBIA BOQUILLA",
     "ok": true,
     "tokens": 14,
-    "ms": 0.13,
+    "ms": 0.09,
     "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla)-[:ATENDIDA_POR]->(i) RETURN i.accion ORDER BY f.fecha DESC LIMIT 1"
    },
    "rag": {
@@ -2233,7 +2233,7 @@
      "OT-2026-00195"
     ],
     "tokens": 225,
-    "ms": 3.04
+    "ms": 0.69
    }
   },
   {
@@ -2246,7 +2246,7 @@
     "valor": 1,
     "ok": true,
     "tokens": 10,
-    "ms": 0.41,
+    "ms": 0.26,
     "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla)-[:TIENE_MODO]->(:ModoFalla {codigo: 'IHT'}) RETURN count(f)"
    },
    "rag": {
@@ -2262,7 +2262,7 @@
      "OT-2024-00112"
     ],
     "tokens": 236,
-    "ms": 1.39
+    "ms": 0.73
    }
   },
   {
@@ -2275,7 +2275,7 @@
     "valor": 1,
     "ok": true,
     "tokens": 10,
-    "ms": 0.26,
+    "ms": 0.17,
     "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla)-[:TIENE_MODO]->(:ModoFalla {codigo: 'BRD'}) RETURN count(f)"
    },
    "rag": {
@@ -2291,7 +2291,7 @@
      "OT-2025-00170"
     ],
     "tokens": 216,
-    "ms": 0.96
+    "ms": 0.68
    }
   },
   {
@@ -2304,7 +2304,7 @@
     "valor": 2,
     "ok": true,
     "tokens": 14,
-    "ms": 0.12,
+    "ms": 0.1,
     "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla)-[:TIENE_MODO]->(:ModoFalla {codigo: 'PLU'}) RETURN count(f)"
    },
    "rag": {
@@ -2321,7 +2321,7 @@
      "OT-2024-00105"
     ],
     "tokens": 215,
-    "ms": 0.82
+    "ms": 0.77
    }
   },
   {
@@ -2334,7 +2334,7 @@
     "valor": 2,
     "ok": true,
     "tokens": 14,
-    "ms": 0.26,
+    "ms": 0.2,
     "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla)-[:TIENE_MODO]->(:ModoFalla {codigo: 'ELP'}) RETURN count(f)"
    },
    "rag": {
@@ -2351,7 +2351,7 @@
      "OT-2026-00195"
     ],
     "tokens": 236,
-    "ms": 1.3
+    "ms": 0.83
    }
   },
   {
@@ -2364,7 +2364,7 @@
     "valor": 1,
     "ok": true,
     "tokens": 10,
-    "ms": 0.28,
+    "ms": 0.18,
     "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla)-[:TIENE_MODO]->(:ModoFalla {codigo: 'OHE'}) RETURN count(f)"
    },
    "rag": {
@@ -2380,7 +2380,7 @@
      "OT-2026-00187"
     ],
     "tokens": 238,
-    "ms": 5.55
+    "ms": 0.75
    }
   },
   {
@@ -2393,7 +2393,7 @@
     "valor": 2,
     "ok": true,
     "tokens": 14,
-    "ms": 0.21,
+    "ms": 0.13,
     "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla)-[:TIENE_MODO]->(:ModoFalla {codigo: 'ELP'}) RETURN count(f)"
    },
    "rag": {
@@ -2410,7 +2410,7 @@
      "OT-2026-00195"
     ],
     "tokens": 231,
-    "ms": 1.88
+    "ms": 0.69
    }
   },
   {
@@ -2423,7 +2423,7 @@
     "valor": 1,
     "ok": true,
     "tokens": 10,
-    "ms": 0.23,
+    "ms": 0.13,
     "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla)-[:TIENE_MODO]->(:ModoFalla {codigo: 'LOO'}) RETURN count(f)"
    },
    "rag": {
@@ -2439,7 +2439,7 @@
      "OT-2026-00179"
     ],
     "tokens": 225,
-    "ms": 1.15
+    "ms": 1.35
    }
   },
   {
@@ -2452,7 +2452,7 @@
     "valor": 3,
     "ok": true,
     "tokens": 18,
-    "ms": 0.28,
+    "ms": 0.36,
     "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla)-[:TIENE_MODO]->(:ModoFalla {codigo: 'PDE'}) RETURN count(f)"
    },
    "rag": {
@@ -2470,7 +2470,7 @@
      "OT-2026-00180"
     ],
     "tokens": 242,
-    "ms": 1.13
+    "ms": 0.91
    }
   },
   {
@@ -2483,7 +2483,7 @@
     "valor": 2,
     "ok": true,
     "tokens": 14,
-    "ms": 0.38,
+    "ms": 0.3,
     "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla) WHERE f.fecha STARTS WITH '2025' RETURN count(f)"
    },
    "rag": {
@@ -2500,7 +2500,7 @@
      "OT-2026-00193"
     ],
     "tokens": 211,
-    "ms": 1.14
+    "ms": 0.8
    }
   },
   {
@@ -2513,7 +2513,7 @@
     "valor": 1,
     "ok": true,
     "tokens": 10,
-    "ms": 0.25,
+    "ms": 0.18,
     "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla) WHERE f.fecha STARTS WITH '2022' RETURN count(f)"
    },
    "rag": {
@@ -2529,7 +2529,7 @@
      "MAN-SA-75#p2"
     ],
     "tokens": 152,
-    "ms": 0.97
+    "ms": 0.76
    }
   },
   {
@@ -2542,7 +2542,7 @@
     "valor": 2,
     "ok": true,
     "tokens": 14,
-    "ms": 0.65,
+    "ms": 0.21,
     "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla) WHERE f.fecha STARTS WITH '2025' RETURN count(f)"
    },
    "rag": {
@@ -2559,7 +2559,7 @@
      "OT-2026-00174"
     ],
     "tokens": 222,
-    "ms": 1.11
+    "ms": 0.72
    }
   },
   {
@@ -2572,7 +2572,7 @@
     "valor": 5,
     "ok": true,
     "tokens": 27,
-    "ms": 0.34,
+    "ms": 0.29,
     "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla) WHERE f.fecha STARTS WITH '2022' RETURN count(f)"
    },
    "rag": {
@@ -2592,7 +2592,7 @@
      "MAN-SA-75#p2"
     ],
     "tokens": 152,
-    "ms": 1.08
+    "ms": 0.53
    }
   },
   {
@@ -2605,7 +2605,7 @@
     "valor": 0,
     "ok": true,
     "tokens": 6,
-    "ms": 0.25,
+    "ms": 0.12,
     "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla) WHERE f.fecha STARTS WITH '2022' RETURN count(f)"
    },
    "rag": {
@@ -2619,7 +2619,7 @@
      "OT-2025-00167"
     ],
     "tokens": 188,
-    "ms": 1.02
+    "ms": 0.48
    }
   },
   {
@@ -2632,7 +2632,7 @@
     "valor": 2,
     "ok": true,
     "tokens": 14,
-    "ms": 0.29,
+    "ms": 0.13,
     "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla) WHERE f.fecha STARTS WITH '2022' RETURN count(f)"
    },
    "rag": {
@@ -2649,7 +2649,7 @@
      "MAN-SA-75#p2"
     ],
     "tokens": 152,
-    "ms": 1.08
+    "ms": 0.45
    }
   },
   {
@@ -2662,7 +2662,7 @@
     "valor": 2,
     "ok": true,
     "tokens": 14,
-    "ms": 0.31,
+    "ms": 0.16,
     "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla) WHERE f.fecha STARTS WITH '2025' RETURN count(f)"
    },
    "rag": {
@@ -2679,7 +2679,7 @@
      "OT-2025-00164"
     ],
     "tokens": 231,
-    "ms": 1.18
+    "ms": 0.5
    }
   },
   {
@@ -2692,7 +2692,7 @@
     "valor": 1,
     "ok": true,
     "tokens": 10,
-    "ms": 0.24,
+    "ms": 0.12,
     "cypher": "MATCH (e:Equipo {tag: $tag})-[:PRESENTO_FALLA]->(f:Falla) WHERE f.fecha STARTS WITH '2024' RETURN count(f)"
    },
    "rag": {
@@ -2708,7 +2708,7 @@
      "OT-2025-00169"
     ],
     "tokens": 181,
-    "ms": 0.98
+    "ms": 0.44
    }
   },
   {
@@ -2723,7 +2723,7 @@
     ],
     "ok": true,
     "tokens": 15,
-    "ms": 0.19,
+    "ms": 0.09,
     "cypher": "MATCH (e:Equipo {tag: $tag}) OPTIONAL MATCH (d:Documento {tipo:'hoja_de_datos'})-[:DOCUMENTA]->(e) RETURN d IS NULL AS sin_hoja, [p IN $obligatorias WHERE e[p] IS NULL] AS faltantes"
    },
    "rag": {
@@ -2740,7 +2740,7 @@
      "OT-2026-00175"
     ],
     "tokens": 224,
-    "ms": 1.89
+    "ms": 0.48
    }
   },
   {
@@ -2755,7 +2755,7 @@
     ],
     "ok": true,
     "tokens": 15,
-    "ms": 0.22,
+    "ms": 0.08,
     "cypher": "MATCH (e:Equipo {tag: $tag}) OPTIONAL MATCH (d:Documento {tipo:'hoja_de_datos'})-[:DOCUMENTA]->(e) RETURN d IS NULL AS sin_hoja, [p IN $obligatorias WHERE e[p] IS NULL] AS faltantes"
    },
    "rag": {
@@ -2772,7 +2772,7 @@
      "OT-2026-00175"
     ],
     "tokens": 219,
-    "ms": 1.15
+    "ms": 0.49
    }
   },
   {
@@ -2787,7 +2787,7 @@
     ],
     "ok": true,
     "tokens": 14,
-    "ms": 0.17,
+    "ms": 0.07,
     "cypher": "MATCH (e:Equipo {tag: $tag}) OPTIONAL MATCH (d:Documento {tipo:'hoja_de_datos'})-[:DOCUMENTA]->(e) RETURN d IS NULL AS sin_hoja, [p IN $obligatorias WHERE e[p] IS NULL] AS faltantes"
    },
    "rag": {
@@ -2804,7 +2804,7 @@
      "OT-2026-00175"
     ],
     "tokens": 211,
-    "ms": 1.03
+    "ms": 0.51
    }
   },
   {
@@ -2819,7 +2819,7 @@
     ],
     "ok": true,
     "tokens": 15,
-    "ms": 0.2,
+    "ms": 0.08,
     "cypher": "MATCH (e:Equipo {tag: $tag}) OPTIONAL MATCH (d:Documento {tipo:'hoja_de_datos'})-[:DOCUMENTA]->(e) RETURN d IS NULL AS sin_hoja, [p IN $obligatorias WHERE e[p] IS NULL] AS faltantes"
    },
    "rag": {
@@ -2836,7 +2836,7 @@
      "OT-2024-00097"
     ],
     "tokens": 197,
-    "ms": 1.24
+    "ms": 0.54
    }
   },
   {
@@ -2851,7 +2851,7 @@
     ],
     "ok": true,
     "tokens": 14,
-    "ms": 0.2,
+    "ms": 0.1,
     "cypher": "MATCH (e:Equipo {tag: $tag}) OPTIONAL MATCH (d:Documento {tipo:'hoja_de_datos'})-[:DOCUMENTA]->(e) RETURN d IS NULL AS sin_hoja, [p IN $obligatorias WHERE e[p] IS NULL] AS faltantes"
    },
    "rag": {
@@ -2868,7 +2868,7 @@
      "OT-2025-00150"
     ],
     "tokens": 233,
-    "ms": 0.98
+    "ms": 0.54
    }
   },
   {
@@ -2883,7 +2883,7 @@
     ],
     "ok": true,
     "tokens": 13,
-    "ms": 0.14,
+    "ms": 0.08,
     "cypher": "MATCH (e:Equipo {tag: $tag}) OPTIONAL MATCH (d:Documento {tipo:'hoja_de_datos'})-[:DOCUMENTA]->(e) RETURN d IS NULL AS sin_hoja, [p IN $obligatorias WHERE e[p] IS NULL] AS faltantes"
    },
    "rag": {
@@ -2900,7 +2900,7 @@
      "OT-2026-00175"
     ],
     "tokens": 216,
-    "ms": 0.88
+    "ms": 0.49
    }
   },
   {
@@ -2915,7 +2915,7 @@
     ],
     "ok": true,
     "tokens": 13,
-    "ms": 0.16,
+    "ms": 0.09,
     "cypher": "MATCH (e:Equipo {tag: $tag}) OPTIONAL MATCH (d:Documento {tipo:'hoja_de_datos'})-[:DOCUMENTA]->(e) RETURN d IS NULL AS sin_hoja, [p IN $obligatorias WHERE e[p] IS NULL] AS faltantes"
    },
    "rag": {
@@ -2932,7 +2932,7 @@
      "OT-2026-00175"
     ],
     "tokens": 202,
-    "ms": 0.81
+    "ms": 0.54
    }
   },
   {
@@ -2945,7 +2945,7 @@
     "valor": "SIN_HOJA",
     "ok": true,
     "tokens": 13,
-    "ms": 0.14,
+    "ms": 0.08,
     "cypher": "MATCH (e:Equipo {tag: $tag}) OPTIONAL MATCH (d:Documento {tipo:'hoja_de_datos'})-[:DOCUMENTA]->(e) RETURN d IS NULL AS sin_hoja, [p IN $obligatorias WHERE e[p] IS NULL] AS faltantes"
    },
    "rag": {
@@ -2959,7 +2959,7 @@
      "OT-2026-00175"
     ],
     "tokens": 222,
-    "ms": 0.77
+    "ms": 0.56
    }
   },
   {
@@ -2972,7 +2972,7 @@
     "valor": "SIN_HOJA",
     "ok": true,
     "tokens": 12,
-    "ms": 0.11,
+    "ms": 0.09,
     "cypher": "MATCH (e:Equipo {tag: $tag}) OPTIONAL MATCH (d:Documento {tipo:'hoja_de_datos'})-[:DOCUMENTA]->(e) RETURN d IS NULL AS sin_hoja, [p IN $obligatorias WHERE e[p] IS NULL] AS faltantes"
    },
    "rag": {
@@ -2986,7 +2986,7 @@
      "OT-2026-00175"
     ],
     "tokens": 224,
-    "ms": 0.67
+    "ms": 0.55
    }
   },
   {
@@ -2999,7 +2999,7 @@
     "valor": "SIN_HOJA",
     "ok": true,
     "tokens": 13,
-    "ms": 0.1,
+    "ms": 0.08,
     "cypher": "MATCH (e:Equipo {tag: $tag}) OPTIONAL MATCH (d:Documento {tipo:'hoja_de_datos'})-[:DOCUMENTA]->(e) RETURN d IS NULL AS sin_hoja, [p IN $obligatorias WHERE e[p] IS NULL] AS faltantes"
    },
    "rag": {
@@ -3013,7 +3013,7 @@
      "OT-2026-00175"
     ],
     "tokens": 215,
-    "ms": 0.65
+    "ms": 0.51
    }
   },
   {
@@ -3026,7 +3026,7 @@
     "valor": [],
     "ok": true,
     "tokens": 11,
-    "ms": 0.16,
+    "ms": 0.08,
     "cypher": "MATCH (e:Equipo {tag: $tag}) OPTIONAL MATCH (d:Documento {tipo:'hoja_de_datos'})-[:DOCUMENTA]->(e) RETURN d IS NULL AS sin_hoja, [p IN $obligatorias WHERE e[p] IS NULL] AS faltantes"
    },
    "rag": {
@@ -3043,7 +3043,7 @@
      "OT-2026-00175"
     ],
     "tokens": 224,
-    "ms": 1.25
+    "ms": 0.53
    }
   },
   {
@@ -3056,7 +3056,7 @@
     "valor": [],
     "ok": true,
     "tokens": 10,
-    "ms": 0.34,
+    "ms": 0.09,
     "cypher": "MATCH (e:Equipo {tag: $tag}) OPTIONAL MATCH (d:Documento {tipo:'hoja_de_datos'})-[:DOCUMENTA]->(e) RETURN d IS NULL AS sin_hoja, [p IN $obligatorias WHERE e[p] IS NULL] AS faltantes"
    },
    "rag": {
@@ -3073,7 +3073,7 @@
      "OT-2026-00175"
     ],
     "tokens": 224,
-    "ms": 4.46
+    "ms": 0.53
    }
   },
   {
@@ -3086,7 +3086,7 @@
     "valor": [],
     "ok": true,
     "tokens": 11,
-    "ms": 0.37,
+    "ms": 0.08,
     "cypher": "MATCH (e:Equipo {tag: $tag}) OPTIONAL MATCH (d:Documento {tipo:'hoja_de_datos'})-[:DOCUMENTA]->(e) RETURN d IS NULL AS sin_hoja, [p IN $obligatorias WHERE e[p] IS NULL] AS faltantes"
    },
    "rag": {
@@ -3103,7 +3103,7 @@
      "OT-2026-00175"
     ],
     "tokens": 224,
-    "ms": 1.9
+    "ms": 0.49
    }
   },
   {
@@ -3118,7 +3118,7 @@
     ],
     "ok": true,
     "tokens": 18,
-    "ms": 0.4,
+    "ms": 0.15,
     "cypher": "MATCH (e:Equipo {clase: 'Transmisor de presión'}) WHERE NOT (:Documento {tipo:'hoja_de_datos'})-[:DOCUMENTA]->(e) RETURN e.tag"
    },
    "rag": {
@@ -3132,7 +3132,7 @@
      "DS-1405-PT-01#p1"
     ],
     "tokens": 201,
-    "ms": 13.52
+    "ms": 0.54
    }
   },
   {
@@ -3147,7 +3147,7 @@
     ],
     "ok": true,
     "tokens": 18,
-    "ms": 0.31,
+    "ms": 0.11,
     "cypher": "MATCH (e:Equipo {clase: 'Intercambiador de calor'}) WHERE NOT (:Documento {tipo:'hoja_de_datos'})-[:DOCUMENTA]->(e) RETURN e.tag"
    },
    "rag": {
@@ -3161,7 +3161,7 @@
      "DS-1405-PT-01#p1"
     ],
     "tokens": 176,
-    "ms": 1.15
+    "ms": 0.53
    }
   },
   {
@@ -3174,7 +3174,7 @@
     "valor": [],
     "ok": true,
     "tokens": 12,
-    "ms": 0.3,
+    "ms": 0.1,
     "cypher": "MATCH (e:Equipo {clase: 'Soplador'}) WHERE NOT (:Documento {tipo:'hoja_de_datos'})-[:DOCUMENTA]->(e) RETURN e.tag"
    },
    "rag": {
@@ -3188,7 +3188,7 @@
      "DS-1405-PT-01#p1"
     ],
     "tokens": 174,
-    "ms": 1.24
+    "ms": 0.49
    }
   },
   {
@@ -3203,7 +3203,7 @@
     ],
     "ok": true,
     "tokens": 17,
-    "ms": 0.3,
+    "ms": 0.09,
     "cypher": "MATCH (e:Equipo {clase: 'Válvula de control'}) WHERE NOT (:Documento {tipo:'hoja_de_datos'})-[:DOCUMENTA]->(e) RETURN e.tag"
    },
    "rag": {
@@ -3217,7 +3217,7 @@
      "DS-1405-PT-01#p1"
     ],
     "tokens": 192,
-    "ms": 1.15
+    "ms": 0.52
    }
   },
   {
@@ -3230,7 +3230,7 @@
     "valor": [],
     "ok": true,
     "tokens": 14,
-    "ms": 0.18,
+    "ms": 0.09,
     "cypher": "MATCH (e:Equipo {clase: 'Bomba centrífuga'}) WHERE NOT (:Documento {tipo:'hoja_de_datos'})-[:DOCUMENTA]->(e) RETURN e.tag"
    },
    "rag": {
@@ -3244,7 +3244,7 @@
      "OT-2023-00083"
     ],
     "tokens": 252,
-    "ms": 1.14
+    "ms": 0.49
    }
   },
   {
@@ -3257,7 +3257,7 @@
     "valor": [],
     "ok": true,
     "tokens": 12,
-    "ms": 0.33,
+    "ms": 0.09,
     "cypher": "MATCH (e:Equipo {clase: 'Compresor'}) WHERE NOT (:Documento {tipo:'hoja_de_datos'})-[:DOCUMENTA]->(e) RETURN e.tag"
    },
    "rag": {
@@ -3271,7 +3271,7 @@
      "DS-1405-PT-01#p1"
     ],
     "tokens": 199,
-    "ms": 1.11
+    "ms": 0.51
    }
   },
   {
@@ -3284,7 +3284,7 @@
     "valor": [],
     "ok": true,
     "tokens": 14,
-    "ms": 0.23,
+    "ms": 0.1,
     "cypher": "MATCH (e:Equipo {clase: 'Válvula de control'}) WHERE any(p IN $obligatorias WHERE e[p] IS NULL) RETURN e.tag"
    },
    "rag": {
@@ -3306,7 +3306,7 @@
      "OT-2022-00016"
     ],
     "tokens": 272,
-    "ms": 0.95
+    "ms": 0.51
    }
   },
   {
@@ -3323,7 +3323,7 @@
     ],
     "ok": true,
     "tokens": 21,
-    "ms": 0.25,
+    "ms": 0.1,
     "cypher": "MATCH (e:Equipo {clase: 'Compresor'}) WHERE any(p IN $obligatorias WHERE e[p] IS NULL) RETURN e.tag"
    },
    "rag": {
@@ -3348,7 +3348,7 @@
      "LISTA-1305-S01"
     ],
     "tokens": 257,
-    "ms": 1.2
+    "ms": 0.5
    }
   },
   {
@@ -3361,7 +3361,7 @@
     "valor": [],
     "ok": true,
     "tokens": 12,
-    "ms": 0.56,
+    "ms": 0.09,
     "cypher": "MATCH (e:Equipo {clase: 'Soplador'}) WHERE any(p IN $obligatorias WHERE e[p] IS NULL) RETURN e.tag"
    },
    "rag": {
@@ -3379,7 +3379,7 @@
      "LISTA-1305-S02"
     ],
     "tokens": 208,
-    "ms": 5.07
+    "ms": 0.48
    }
   },
   {
@@ -3392,7 +3392,7 @@
     "valor": [],
     "ok": true,
     "tokens": 15,
-    "ms": 0.21,
+    "ms": 0.09,
     "cypher": "MATCH (e:Equipo {clase: 'Intercambiador de calor'}) WHERE any(p IN $obligatorias WHERE e[p] IS NULL) RETURN e.tag"
    },
    "rag": {
@@ -3420,7 +3420,7 @@
      "LISTA-1105-S02"
     ],
     "tokens": 185,
-    "ms": 0.7
+    "ms": 0.51
    }
   },
   {
@@ -3436,7 +3436,7 @@
     ],
     "ok": true,
     "tokens": 18,
-    "ms": 0.19,
+    "ms": 0.1,
     "cypher": "MATCH (e:Equipo {clase: 'Recipiente'}) WHERE any(p IN $obligatorias WHERE e[p] IS NULL) RETURN e.tag"
    },
    "rag": {
@@ -3485,7 +3485,7 @@
      "LISTA-1105-S02"
     ],
     "tokens": 188,
-    "ms": 0.61
+    "ms": 0.51
    }
   },
   {
@@ -3498,7 +3498,7 @@
     "valor": [],
     "ok": true,
     "tokens": 14,
-    "ms": 0.16,
+    "ms": 0.1,
     "cypher": "MATCH (e:Equipo {clase: 'Bomba centrífuga'}) WHERE any(p IN $obligatorias WHERE e[p] IS NULL) RETURN e.tag"
    },
    "rag": {
@@ -3530,7 +3530,7 @@
      "LISTA-1405-S01"
     ],
     "tokens": 230,
-    "ms": 0.6
+    "ms": 0.49
    }
   }
  ],
@@ -3545,7 +3545,7 @@
     "valor": "MANUAL DE OPERACIÓN Y MANTENIMIENTO\nModelo AC-8 · Calderería Industrial del Norte\nDescripción general del equipo y de sus subunidades.",
     "ok": false,
     "tokens": 44,
-    "ms": 1.88,
+    "ms": 0.65,
     "cypher": ""
    },
    "rag": {
@@ -3561,7 +3561,7 @@
      "MAN-TK-LO-2#p1"
     ],
     "tokens": 171,
-    "ms": 0.65
+    "ms": 0.51
    }
   },
   {
@@ -3574,7 +3574,7 @@
     "valor": "OPERACIÓN\nAntes de arrancar el modelo AC-8, verificar alineación, nivel de lubricante y válvulas de bloqueo abiertas.",
     "ok": false,
     "tokens": 39,
-    "ms": 0.53,
+    "ms": 0.5,
     "cypher": ""
    },
    "rag": {
@@ -3590,7 +3590,7 @@
      "MAN-SA-75#p2"
     ],
     "tokens": 189,
-    "ms": 0.69
+    "ms": 0.47
    }
   },
   {
@@ -3603,7 +3603,7 @@
     "valor": "Bombeo contra incendio",
     "ok": true,
     "tokens": 16,
-    "ms": 0.3,
+    "ms": 0.07,
     "cypher": "MATCH (e:Equipo {tag: $tag})-[:PERTENECE_A]->(s:Sistema) RETURN s.nombre"
    },
    "rag": {
@@ -3619,7 +3619,7 @@
      "LISTA-1405-S01"
     ],
     "tokens": 248,
-    "ms": 1.69
+    "ms": 0.5
    }
   },
   {
@@ -3632,7 +3632,7 @@
     "valor": "OPERACIÓN\nAntes de arrancar el modelo AC-8, verificar alineación, nivel de lubricante y válvulas de bloqueo abiertas.",
     "ok": false,
     "tokens": 39,
-    "ms": 9.96,
+    "ms": 0.49,
     "cypher": ""
    },
    "rag": {
@@ -3648,7 +3648,7 @@
      "OT-2026-00191"
     ],
     "tokens": 186,
-    "ms": 1.68
+    "ms": 0.48
    }
   },
   {
@@ -3661,7 +3661,7 @@
     "valor": "SOLUCIÓN DE PROBLEMAS · modelo RC-2400\n- Síntoma: parada espuria. Revisar sensor de vibración. Acción recomendada: inspeccionar y reemplazar sensor de vibración si presenta daño.\n- Síntoma: vibración. Revisar acople. Acción recomendada: inspeccionar y reemplazar acople si presenta daño.\n- Síntoma: fuga externa de fluido de proceso. Revisar empaquetadura. Acción recomendada: inspeccionar y reemplazar empaquetadura si presenta daño.\n- Síntoma: falla al arrancar. Revisar bomba de aceite. Acción recomendada: inspeccionar y reemplazar bomba de aceite si presenta daño.\n- Síntoma: sobrecalentamiento. Revisar válvula de descarga. Acción recomendada: inspeccionar y reemplazar válvula de descarga si presenta daño.\n- Síntoma: desviación de parámetro. Revisar válvula de succión. Acción recomendada: inspeccionar y reemplazar válvula de succión si presenta daño.\n- Síntoma: ruido. Revisar anillos de pistón. Acción recomendada: inspeccionar y reemplazar anillos de pistón si presenta daño.\n- Síntoma: fuga externa de fluido de servicio. Revisar filtro de aceite. Acción recomendada: inspeccionar y reemplazar filtro de aceite si presenta daño.\n- Síntoma: avería. Revisar caja multiplicadora. Acción recomendada: inspeccionar y reemplazar caja multiplicadora si presenta daño.",
     "ok": false,
     "tokens": 331,
-    "ms": 1.2,
+    "ms": 0.5,
     "cypher": ""
    },
    "rag": {
@@ -3677,7 +3677,7 @@
      "OT-2025-00136"
     ],
     "tokens": 255,
-    "ms": 0.98
+    "ms": 0.47
    }
   },
   {
@@ -3690,7 +3690,7 @@
     "valor": "SOLUCIÓN DE PROBLEMAS · modelo CV-2-300\n- Síntoma: falla al abrir. Revisar actuador. Acción recomendada: inspeccionar y reemplazar actuador si presenta daño.\n- Síntoma: falla al cerrar. Revisar asiento. Acción recomendada: inspeccionar y reemplazar asiento si presenta daño.\n- Síntoma: fuga externa de fluido de proceso. Revisar empaquetadura. Acción recomendada: inspeccionar y reemplazar empaquetadura si presenta daño.\n- Síntoma: fuga interna. Revisar asiento. Acción recomendada: inspeccionar y reemplazar asiento si presenta daño.\n- Síntoma: operación demorada. Revisar posicionador. Acción recomendada: inspeccionar y reemplazar posicionador si presenta daño.\n- Síntoma: problemas menores en servicio. Revisar diafragma. Acción recomendada: inspeccionar y reemplazar diafragma si presenta daño.",
     "ok": false,
     "tokens": 212,
-    "ms": 1.16,
+    "ms": 0.53,
     "cypher": ""
    },
    "rag": {
@@ -3706,7 +3706,7 @@
      "OT-2024-00108"
     ],
     "tokens": 229,
-    "ms": 1.29
+    "ms": 0.5
    }
   },
   {
@@ -3719,7 +3719,7 @@
     "valor": "OPERACIÓN\nAntes de arrancar el modelo AC-8, verificar alineación, nivel de lubricante y válvulas de bloqueo abiertas.",
     "ok": false,
     "tokens": 39,
-    "ms": 1.72,
+    "ms": 0.56,
     "cypher": ""
    },
    "rag": {
@@ -3735,7 +3735,7 @@
      "OT-2026-00184"
     ],
     "tokens": 177,
-    "ms": 0.97
+    "ms": 0.49
    }
   },
   {
@@ -3748,7 +3748,7 @@
     "valor": "OPERACIÓN\nAntes de arrancar el modelo AC-8, verificar alineación, nivel de lubricante y válvulas de bloqueo abiertas.",
     "ok": false,
     "tokens": 39,
-    "ms": 0.86,
+    "ms": 0.52,
     "cypher": ""
    },
    "rag": {
@@ -3764,7 +3764,7 @@
      "MAN-SA-75#p2"
     ],
     "tokens": 175,
-    "ms": 0.86
+    "ms": 0.47
    }
   },
   {
@@ -3777,7 +3777,7 @@
     "valor": "SOLUCIÓN DE PROBLEMAS · modelo AC-8\n- Síntoma: fuga externa de fluido de proceso. Revisar boquilla. Acción recomendada: inspeccionar y reemplazar boquilla si presenta daño.\n- Síntoma: taponamiento. Revisar demister. Acción recomendada: inspeccionar y reemplazar demister si presenta daño.\n- Síntoma: deficiencia estructural. Revisar cuerpo. Acción recomendada: inspeccionar y reemplazar cuerpo si presenta daño.\n- Síntoma: lectura anormal de instrumento. Revisar visor de nivel. Acción recomendada: inspeccionar y reemplazar visor de nivel si presenta daño.\n- Síntoma: otro. Revisar internos. Acción recomendada: inspeccionar y reemplazar internos si presenta daño.",
     "ok": false,
     "tokens": 177,
-    "ms": 0.86,
+    "ms": 0.54,
     "cypher": ""
    },
    "rag": {
@@ -3794,7 +3794,7 @@
      "OT-2025-00158"
     ],
     "tokens": 223,
-    "ms": 0.77
+    "ms": 0.46
    }
   },
   {
@@ -3807,7 +3807,7 @@
     "valor": "OPERACIÓN\nAntes de arrancar el modelo AC-8, verificar alineación, nivel de lubricante y válvulas de bloqueo abiertas.",
     "ok": false,
     "tokens": 39,
-    "ms": 0.82,
+    "ms": 0.59,
     "cypher": ""
    },
    "rag": {
@@ -3825,7 +3825,7 @@
      "MAN-SA-75#p2"
     ],
     "tokens": 167,
-    "ms": 0.75
+    "ms": 0.48
    }
   },
   {
@@ -3838,7 +3838,7 @@
     "valor": "OPERACIÓN\nAntes de arrancar el modelo AC-8, verificar alineación, nivel de lubricante y válvulas de bloqueo abiertas.",
     "ok": false,
     "tokens": 39,
-    "ms": 0.83,
+    "ms": 0.5,
     "cypher": ""
    },
    "rag": {
@@ -3866,7 +3866,7 @@
      "MAN-PTX-3051#p2"
     ],
     "tokens": 155,
-    "ms": 0.74
+    "ms": 0.45
    }
   },
   {
@@ -3879,7 +3879,7 @@
     "valor": "MANUAL DE OPERACIÓN Y MANTENIMIENTO\nModelo AC-8 · Calderería Industrial del Norte\nDescripción general del equipo y de sus subunidades.",
     "ok": false,
     "tokens": 44,
-    "ms": 0.77,
+    "ms": 0.47,
     "cypher": ""
    },
    "rag": {
@@ -3901,7 +3901,7 @@
      "MAN-SCR-36#p1"
     ],
     "tokens": 187,
-    "ms": 0.74
+    "ms": 0.45
    }
   },
   {
@@ -3914,7 +3914,7 @@
     "valor": "OPERACIÓN\nAntes de arrancar el modelo AC-8, verificar alineación, nivel de lubricante y válvulas de bloqueo abiertas.",
     "ok": false,
     "tokens": 39,
-    "ms": 0.74,
+    "ms": 0.46,
     "cypher": ""
    },
    "rag": {
@@ -3931,7 +3931,7 @@
      "OT-2024-00111"
     ],
     "tokens": 203,
-    "ms": 0.98
+    "ms": 0.45
    }
   },
   {
@@ -3944,7 +3944,7 @@
     "valor": "MANUAL DE OPERACIÓN Y MANTENIMIENTO\nModelo AC-8 · Calderería Industrial del Norte\nDescripción general del equipo y de sus subunidades.",
     "ok": false,
     "tokens": 44,
-    "ms": 1.04,
+    "ms": 0.45,
     "cypher": ""
    },
    "rag": {
@@ -3966,7 +3966,7 @@
      "MAN-DS-400#p1"
     ],
     "tokens": 190,
-    "ms": 0.95
+    "ms": 0.48
    }
   },
   {
@@ -3979,7 +3979,7 @@
     "valor": "SOLUCIÓN DE PROBLEMAS · modelo CV-2-300\n- Síntoma: falla al abrir. Revisar actuador. Acción recomendada: inspeccionar y reemplazar actuador si presenta daño.\n- Síntoma: falla al cerrar. Revisar asiento. Acción recomendada: inspeccionar y reemplazar asiento si presenta daño.\n- Síntoma: fuga externa de fluido de proceso. Revisar empaquetadura. Acción recomendada: inspeccionar y reemplazar empaquetadura si presenta daño.\n- Síntoma: fuga interna. Revisar asiento. Acción recomendada: inspeccionar y reemplazar asiento si presenta daño.\n- Síntoma: operación demorada. Revisar posicionador. Acción recomendada: inspeccionar y reemplazar posicionador si presenta daño.\n- Síntoma: problemas menores en servicio. Revisar diafragma. Acción recomendada: inspeccionar y reemplazar diafragma si presenta daño.",
     "ok": false,
     "tokens": 212,
-    "ms": 0.83,
+    "ms": 0.47,
     "cypher": ""
    },
    "rag": {
@@ -4005,7 +4005,7 @@
      "OT-2026-00175"
     ],
     "tokens": 218,
-    "ms": 0.72
+    "ms": 0.46
    }
   },
   {
@@ -4018,7 +4018,7 @@
     "valor": null,
     "ok": false,
     "tokens": 7,
-    "ms": 0.08,
+    "ms": 0.05,
     "cypher": ""
    },
    "rag": {
@@ -4035,7 +4035,7 @@
      "DS-1405-PT-01#p1"
     ],
     "tokens": 199,
-    "ms": 1.84
+    "ms": 0.51
    }
   },
   {
@@ -4050,7 +4050,7 @@
     ],
     "ok": true,
     "tokens": 13,
-    "ms": 0.17,
+    "ms": 0.1,
     "cypher": "MATCH (e:Equipo {tag: $tag}) OPTIONAL MATCH (d:Documento {tipo:'hoja_de_datos'})-[:DOCUMENTA]->(e) RETURN d IS NULL AS sin_hoja, [p IN $obligatorias WHERE e[p] IS NULL] AS faltantes"
    },
    "rag": {
@@ -4067,7 +4067,7 @@
      "DS-1305-V-02#p1"
     ],
     "tokens": 191,
-    "ms": 0.89
+    "ms": 0.48
    }
   },
   {
@@ -4080,7 +4080,7 @@
     "valor": "MANUAL DE OPERACIÓN Y MANTENIMIENTO\nModelo AC-8 · Calderería Industrial del Norte\nDescripción general del equipo y de sus subunidades.",
     "ok": false,
     "tokens": 44,
-    "ms": 0.8,
+    "ms": 0.46,
     "cypher": ""
    },
    "rag": {
@@ -4094,7 +4094,7 @@
      "OT-2024-00130"
     ],
     "tokens": 226,
-    "ms": 0.84
+    "ms": 0.44
    }
   },
   {
@@ -4107,7 +4107,7 @@
     "valor": "MANUAL DE OPERACIÓN Y MANTENIMIENTO\nModelo RC-2400 · Compresores del Valle\nDescripción general del equipo y de sus subunidades.",
     "ok": false,
     "tokens": 43,
-    "ms": 0.71,
+    "ms": 0.47,
     "cypher": ""
    },
    "rag": {
@@ -4132,7 +4132,7 @@
      "MAN-SA-75#p1"
     ],
     "tokens": 186,
-    "ms": 0.67
+    "ms": 0.44
    }
   },
   {
@@ -4145,7 +4145,7 @@
     "valor": null,
     "ok": false,
     "tokens": 7,
-    "ms": 0.08,
+    "ms": 0.04,
     "cypher": ""
    },
    "rag": {
@@ -4159,7 +4159,7 @@
      "LINEA-17"
     ],
     "tokens": 171,
-    "ms": 1.14
+    "ms": 0.47
    }
   }
  ]

@@ -1,0 +1,1350 @@
+{
+ "ejemplos": [
+  {
+   "reporte": "La bomba 1105p01 está botando glicol por el sello",
+   "estado": "BORRADOR",
+   "equipo": {
+    "tag": "1105-P-01",
+    "descripcion": "Bomba de glicol pobre A",
+    "clase": "Bomba centrífuga",
+    "sistema": "Regeneración de glicol",
+    "area": "Deshidratación con glicol (TEG)",
+    "critico": true
+   },
+   "sintoma": {
+    "modo": "ELP",
+    "nombre": "Fuga externa de fluido de proceso"
+   },
+   "intervencion_propuesta": "SE CAMBIA SELLO MECÁNICO",
+   "aislamientos": {
+    "equipo": "1105-P-01",
+    "valvulas": [
+     "1105-HV-09",
+     "1105-HV-10"
+    ],
+    "fuera_de_servicio": [],
+    "ramas_abiertas": []
+   },
+   "permisos_requeridos": [
+    "Permiso de trabajo en frío",
+    "Aislamiento de proceso (2 válvulas, bloqueo y etiquetado)",
+    "Aislamiento eléctrico del motor (LOTO)",
+    "Drenaje, despresurización y prueba de atmósfera (gas y glicol)"
+   ],
+   "cuadrilla": "mecánica + eléctrica (desenergizar motor)",
+   "duracion_estimada_h": 8.1,
+   "historial": [
+    {
+     "orden": "OT-2024-00092",
+     "fecha": "2024-03-04",
+     "modo": "NOI",
+     "descripcion": "BBA 1105-P-01 - RUIDO ANORMAL EN RODAMIENTO",
+     "accion": "SE CAMBIA RODAMIENTO",
+     "horas": 4.7
+    },
+    {
+     "orden": "OT-2025-00141",
+     "fecha": "2025-06-03",
+     "modo": "BRD",
+     "descripcion": "BBA 1105-p-1 - FALLA DE ACOPLE, EQUIPO FUERA DE SERVICIO",
+     "accion": "SE REEMPLAZA ACOPLE",
+     "horas": 37.3
+    },
+    {
+     "orden": "OT-2025-00166",
+     "fecha": "2025-12-02",
+     "modo": "ELP",
+     "descripcion": "BBA 1105-P-01 - FUGA DE GLICOL POR SELLO MECÁNICO",
+     "accion": "SE AJUSTA SELLO MECÁNICO Y SE PRUEBA SIN FUGA",
+     "horas": 6.3
+    },
+    {
+     "orden": "OT-2026-00186",
+     "fecha": "2026-06-29",
+     "modo": "VIB",
+     "descripcion": "BBA 1105-P-01 - VIBRACION FUERA DE LIMITE EN RODAMIENTO",
+     "accion": "SE ALINEA Y SE CAMBIA RODAMIENTO",
+     "horas": 12.4
+    },
+    {
+     "orden": "OT-2026-00193",
+     "fecha": "2026-08-12",
+     "modo": "FTS",
+     "descripcion": "BBA 1105-P-01 - NO ARRANCA, DISPARO EN ARRANQUE",
+     "accion": "SE REVISA ACOPLE Y ARRANQUE, SE NORMALIZA",
+     "horas": 4.1
+    }
+   ],
+   "fallas_similares": {
+    "clase": "Bomba centrífuga",
+    "modo": "ELP",
+    "total": 15,
+    "casos": [
+     {
+      "tag": "1405-P-03",
+      "orden": "OT-2026-00196",
+      "fecha": "2026-08-26",
+      "accion": "SE CAMBIA SELLO MECÁNICO",
+      "horas": 6.4
+     },
+     {
+      "tag": "1405-P-03",
+      "orden": "OT-2025-00168",
+      "fecha": "2025-12-08",
+      "accion": "SE CAMBIA SELLO MECÁNICO",
+      "horas": 9.5
+     },
+     {
+      "tag": "1405-P-02",
+      "orden": "OT-2025-00167",
+      "fecha": "2025-12-06",
+      "accion": "SE CAMBIA SELLO MECÁNICO",
+      "horas": 8.1
+     },
+     {
+      "tag": "1105-P-01",
+      "orden": "OT-2025-00166",
+      "fecha": "2025-12-02",
+      "accion": "SE AJUSTA SELLO MECÁNICO Y SE PRUEBA SIN FUGA",
+      "horas": 6.3
+     },
+     {
+      "tag": "1405-P-02",
+      "orden": "OT-2025-00153",
+      "fecha": "2025-08-13",
+      "accion": "SE CAMBIA SELLO MECÁNICO",
+      "horas": 5.8
+     }
+    ],
+    "accion_mas_frecuente": "SE CAMBIA SELLO MECÁNICO",
+    "horas_mediana": 8.1
+   },
+   "citas": [
+    "OT-2024-00092",
+    "OT-2025-00141",
+    "OT-2025-00166",
+    "OT-2026-00186",
+    "OT-2026-00193",
+    "DS-1105-P-01",
+    "MAN-BCA-50-200",
+    "OT-2026-00196",
+    "OT-2025-00168",
+    "OT-2025-00167",
+    "OT-2025-00166",
+    "OT-2025-00153"
+   ],
+   "advertencias": [],
+   "llamadas": [
+    "buscar_equipo('1105-P-01')",
+    "historial('1105-P-01')",
+    "fallas_similares('Bomba centrífuga', 'ELP')",
+    "aislamientos('1105-P-01')"
+   ],
+   "aprobacion": null,
+   "grafo": {
+    "nodos": [
+     {
+      "id": "1105-HV-12",
+      "x": 64.4,
+      "y": 30.0,
+      "tipo": "HV",
+      "rol": "otro"
+     },
+     {
+      "id": "1105-HV-04",
+      "x": 535.6,
+      "y": 330.0,
+      "tipo": "HV",
+      "rol": "otro"
+     },
+     {
+      "id": "HDR-1105-SUC",
+      "x": 488.9,
+      "y": 217.2,
+      "tipo": "HDR",
+      "rol": "cabezal"
+     },
+     {
+      "id": "1105-E-02",
+      "x": 40.0,
+      "y": 232.3,
+      "tipo": "E",
+      "rol": "otro"
+     },
+     {
+      "id": "1105-P-01",
+      "x": 300.0,
+      "y": 180.0,
+      "tipo": "P",
+      "rol": "equipo"
+     },
+     {
+      "id": "HDR-1105-DES",
+      "x": 111.1,
+      "y": 142.8,
+      "tipo": "HDR",
+      "rol": "cabezal"
+     },
+     {
+      "id": "1105-HV-09",
+      "x": 392.6,
+      "y": 198.2,
+      "tipo": "HV",
+      "rol": "valvula_aisla"
+     },
+     {
+      "id": "1105-HV-10",
+      "x": 207.4,
+      "y": 161.8,
+      "tipo": "HV",
+      "rol": "valvula_aisla"
+     },
+     {
+      "id": "1105-HV-11",
+      "x": 560.0,
+      "y": 127.7,
+      "tipo": "HV",
+      "rol": "otro"
+     }
+    ],
+    "aristas": [
+     [
+      "1105-HV-12",
+      "HDR-1105-DES"
+     ],
+     [
+      "1105-HV-04",
+      "HDR-1105-SUC"
+     ],
+     [
+      "HDR-1105-SUC",
+      "1105-HV-09"
+     ],
+     [
+      "HDR-1105-SUC",
+      "1105-HV-11"
+     ],
+     [
+      "1105-E-02",
+      "HDR-1105-DES"
+     ],
+     [
+      "1105-P-01",
+      "1105-HV-10"
+     ],
+     [
+      "1105-P-01",
+      "1105-HV-09"
+     ],
+     [
+      "HDR-1105-DES",
+      "1105-HV-10"
+     ]
+    ]
+   }
+  },
+  {
+   "reporte": "El compresor 1205-C-02 se dispara solo, parece el sensor de vibración",
+   "estado": "BORRADOR",
+   "equipo": {
+    "tag": "1205-C-02",
+    "descripcion": "Compresor reciprocante B",
+    "clase": "Compresor",
+    "sistema": "Compresión de gas",
+    "area": "Compresión de gas",
+    "critico": true
+   },
+   "sintoma": {
+    "modo": "UST",
+    "nombre": "Parada espuria"
+   },
+   "intervencion_propuesta": "SE CAMBIA SENSOR DE VIBRACIÓN Y SE PRUEBA DISPARO",
+   "aislamientos": {
+    "equipo": "1205-C-02",
+    "valvulas": [
+     "1205-HV-04",
+     "1205-HV-05"
+    ],
+    "fuera_de_servicio": [],
+    "ramas_abiertas": []
+   },
+   "permisos_requeridos": [
+    "Permiso de trabajo en frío",
+    "Aislamiento de proceso (2 válvulas, bloqueo y etiquetado)",
+    "Aislamiento eléctrico del motor (LOTO)",
+    "Drenaje, despresurización y prueba de atmósfera (gas)"
+   ],
+   "cuadrilla": "mecánica + eléctrica (desenergizar motor)",
+   "duracion_estimada_h": 3.4,
+   "historial": [
+    {
+     "orden": "OT-2025-00150",
+     "fecha": "2025-07-27",
+     "modo": "FTS",
+     "descripcion": "COMP 1205 C 02 - FALLA AL ARRANCAR, REVISAR BOMBA DE ACEITE",
+     "accion": "SE REVISA BOMBA DE ACEITE Y ARRANQUE, SE NORMALIZA",
+     "horas": 4.7
+    },
+    {
+     "orden": "OT-2026-00177",
+     "fecha": "2026-02-21",
+     "modo": "UST",
+     "descripcion": "COMP 1205-C-02 - PARADA ESPURIA POR SENSOR DE VIBRACIÓN",
+     "accion": "SE CAMBIA SENSOR DE VIBRACIÓN Y SE PRUEBA DISPARO",
+     "horas": 2.1
+    },
+    {
+     "orden": "OT-2026-00178",
+     "fecha": "2026-04-13",
+     "modo": "OHE",
+     "descripcion": "COMP 1205-C-02 - SOBRECALENTAMIENTO VÁLVULA DE DESCARGA",
+     "accion": "SE CAMBIA VÁLVULA DE DESCARGA Y SE LUBRICA",
+     "horas": 7.0
+    },
+    {
+     "orden": "OT-2026-00184",
+     "fecha": "2026-06-19",
+     "modo": "ELU",
+     "descripcion": "COMP 1205-C-02 - FUGA DE ACEITE EN FILTRO DE ACEITE",
+     "accion": "SE AJUSTA FILTRO DE ACEITE",
+     "horas": 5.6
+    },
+    {
+     "orden": "OT-2026-00200",
+     "fecha": "2026-09-13",
+     "modo": "NOI",
+     "descripcion": "COMP 1205-C-02 - RUIDO ANORMAL EN ANILLOS DE PISTÓN",
+     "accion": "SE CAMBIA ANILLOS DE PISTÓN",
+     "horas": 4.6
+    }
+   ],
+   "fallas_similares": {
+    "clase": "Compresor",
+    "modo": "UST",
+    "total": 12,
+    "casos": [
+     {
+      "tag": "1205-C-01",
+      "orden": "OT-2026-00201",
+      "fecha": "2026-09-20",
+      "accion": "SE CAMBIA SENSOR DE VIBRACIÓN Y SE PRUEBA DISPARO",
+      "horas": 4.5
+     },
+     {
+      "tag": "1205-C-02",
+      "orden": "OT-2026-00177",
+      "fecha": "2026-02-21",
+      "accion": "SE CAMBIA SENSOR DE VIBRACIÓN Y SE PRUEBA DISPARO",
+      "horas": 2.1
+     },
+     {
+      "tag": "1305-C-02",
+      "orden": "OT-2025-00134",
+      "fecha": "2025-03-14",
+      "accion": "SE CAMBIA SENSOR DE VIBRACIÓN Y SE PRUEBA DISPARO",
+      "horas": 5.3
+     },
+     {
+      "tag": "1305-C-01",
+      "orden": "OT-2024-00128",
+      "fecha": "2024-12-25",
+      "accion": "SE CAMBIA SENSOR DE VIBRACIÓN Y SE PRUEBA DISPARO",
+      "horas": 2.7
+     },
+     {
+      "tag": "1205-C-01",
+      "orden": "OT-2024-00104",
+      "fecha": "2024-06-22",
+      "accion": "SE CAMBIA SENSOR DE VIBRACIÓN Y SE PRUEBA DISPARO",
+      "horas": 3.0
+     }
+    ],
+    "accion_mas_frecuente": "SE CAMBIA SENSOR DE VIBRACIÓN Y SE PRUEBA DISPARO",
+    "horas_mediana": 3.4
+   },
+   "citas": [
+    "OT-2025-00150",
+    "OT-2026-00177",
+    "OT-2026-00178",
+    "OT-2026-00184",
+    "OT-2026-00200",
+    "DS-1205-C-02",
+    "MAN-RC-2400",
+    "OT-2026-00201",
+    "OT-2026-00177",
+    "OT-2025-00134",
+    "OT-2024-00128",
+    "OT-2024-00104"
+   ],
+   "advertencias": [],
+   "llamadas": [
+    "buscar_equipo('1205-C-02')",
+    "historial('1205-C-02')",
+    "fallas_similares('Compresor', 'UST')",
+    "aislamientos('1205-C-02')"
+   ],
+   "aprobacion": null,
+   "grafo": {
+    "nodos": [
+     {
+      "id": "1205-HV-05",
+      "x": 79.2,
+      "y": 233.0,
+      "tipo": "HV",
+      "rol": "valvula_aisla"
+     },
+     {
+      "id": "1205-V-01",
+      "x": 560.0,
+      "y": 65.6,
+      "tipo": "V",
+      "rol": "otro"
+     },
+     {
+      "id": "1205-HV-07",
+      "x": 465.0,
+      "y": 162.2,
+      "tipo": "HV",
+      "rol": "otro"
+     },
+     {
+      "id": "HDR-1205-DES",
+      "x": 253.6,
+      "y": 274.5,
+      "tipo": "HDR",
+      "rol": "cabezal"
+     },
+     {
+      "id": "1205-E-01",
+      "x": 126.0,
+      "y": 329.0,
+      "tipo": "E",
+      "rol": "otro"
+     },
+     {
+      "id": "1205-C-02",
+      "x": 40.0,
+      "y": 165.3,
+      "tipo": "C",
+      "rol": "equipo"
+     },
+     {
+      "id": "HDR-1205-SUC",
+      "x": 374.2,
+      "y": 97.5,
+      "tipo": "HDR",
+      "rol": "cabezal"
+     },
+     {
+      "id": "1205-PCV-01",
+      "x": 419.4,
+      "y": 229.2,
+      "tipo": "PCV",
+      "rol": "otro"
+     },
+     {
+      "id": "1205-HV-04",
+      "x": 163.1,
+      "y": 109.8,
+      "tipo": "HV",
+      "rol": "valvula_aisla"
+     },
+     {
+      "id": "1205-HV-02",
+      "x": 329.7,
+      "y": 30.0,
+      "tipo": "HV",
+      "rol": "otro"
+     },
+     {
+      "id": "1205-HV-03",
+      "x": 379.9,
+      "y": 330.0,
+      "tipo": "HV",
+      "rol": "otro"
+     }
+    ],
+    "aristas": [
+     [
+      "1205-HV-05",
+      "1205-C-02"
+     ],
+     [
+      "1205-HV-05",
+      "HDR-1205-DES"
+     ],
+     [
+      "1205-V-01",
+      "HDR-1205-SUC"
+     ],
+     [
+      "1205-HV-07",
+      "1205-PCV-01"
+     ],
+     [
+      "1205-HV-07",
+      "HDR-1205-SUC"
+     ],
+     [
+      "HDR-1205-DES",
+      "1205-HV-03"
+     ],
+     [
+      "HDR-1205-DES",
+      "1205-E-01"
+     ],
+     [
+      "HDR-1205-DES",
+      "1205-PCV-01"
+     ],
+     [
+      "1205-C-02",
+      "1205-HV-04"
+     ],
+     [
+      "HDR-1205-SUC",
+      "1205-HV-02"
+     ],
+     [
+      "HDR-1205-SUC",
+      "1205-HV-04"
+     ]
+    ]
+   }
+  },
+  {
+   "reporte": "Alto diferencial en el aeroenfriador 1205 E 01, posible taponamiento",
+   "estado": "BORRADOR",
+   "equipo": {
+    "tag": "1205-E-01",
+    "descripcion": "Aeroenfriador de descarga",
+    "clase": "Intercambiador de calor",
+    "sistema": "Compresión de gas",
+    "area": "Compresión de gas",
+    "critico": true
+   },
+   "sintoma": {
+    "modo": "PLU",
+    "nombre": "Taponamiento"
+   },
+   "intervencion_propuesta": "SE LIMPIA HAZ DE TUBOS",
+   "aislamientos": {
+    "equipo": "1205-E-01",
+    "valvulas": [
+     "1205-HV-03",
+     "1205-HV-05",
+     "1205-HV-06",
+     "1205-HV-07"
+    ],
+    "fuera_de_servicio": [
+     "1205-PCV-01",
+     "1205-V-02"
+    ],
+    "ramas_abiertas": []
+   },
+   "permisos_requeridos": [
+    "Permiso de trabajo en frío",
+    "Aislamiento de proceso (4 válvulas, bloqueo y etiquetado)",
+    "Drenaje, despresurización y prueba de atmósfera (gas)"
+   ],
+   "cuadrilla": "mecánica",
+   "duracion_estimada_h": 11.6,
+   "historial": [
+    {
+     "orden": "OT-2024-00107",
+     "fecha": "2024-07-03",
+     "modo": "PLU",
+     "descripcion": "INTERC 1205-E-01 - TAPONAMIENTO EN HAZ DE TUBOS, ALTO DIFERENCIAL",
+     "accion": "SE LIMPIA HAZ DE TUBOS",
+     "horas": 8.5
+    },
+    {
+     "orden": "OT-2024-00113",
+     "fecha": "2024-09-16",
+     "modo": "INL",
+     "descripcion": "INTERC 1205-E-01 - FUGA INTERNA POR HAZ DE TUBOS",
+     "accion": "SE TAPONAN TUBOS, SE PROGRAMA CAMBIO DE HAZ DE TUBOS",
+     "horas": 30.7
+    },
+    {
+     "orden": "OT-2025-00163",
+     "fecha": "2025-11-16",
+     "modo": "ELP",
+     "descripcion": "INTERC 1205-E-01 - GOTEO CONTINUO EN EMPAQUES",
+     "accion": "SE AJUSTA EMPAQUES Y SE PRUEBA SIN FUGA",
+     "horas": 16.6
+    },
+    {
+     "orden": "OT-2026-00176",
+     "fecha": "2026-02-11",
+     "modo": "ELP",
+     "descripcion": "INTERC 1205-E-01 - GOTEO CONTINUO EN EMPAQUES",
+     "accion": "SE CAMBIA EMPAQUES",
+     "horas": 10.4
+    },
+    {
+     "orden": "OT-2026-00188",
+     "fecha": "2026-07-02",
+     "modo": "INL",
+     "descripcion": "INTERC 1205-E-01 - FUGA INTERNA POR HAZ DE TUBOS",
+     "accion": "SE TAPONAN TUBOS, SE PROGRAMA CAMBIO DE HAZ DE TUBOS",
+     "horas": 32.7
+    }
+   ],
+   "fallas_similares": {
+    "clase": "Intercambiador de calor",
+    "modo": "PLU",
+    "total": 10,
+    "casos": [
+     {
+      "tag": "1105-E-01",
+      "orden": "OT-2025-00160",
+      "fecha": "2025-09-29",
+      "accion": "SE LIMPIA HAZ DE TUBOS",
+      "horas": 4.8
+     },
+     {
+      "tag": "1105-E-01",
+      "orden": "OT-2024-00122",
+      "fecha": "2024-11-07",
+      "accion": "SE LIMPIA HAZ DE TUBOS",
+      "horas": 12.8
+     },
+     {
+      "tag": "1205-E-01",
+      "orden": "OT-2024-00107",
+      "fecha": "2024-07-03",
+      "accion": "SE LIMPIA HAZ DE TUBOS",
+      "horas": 8.5
+     },
+     {
+      "tag": "1105-E-01",
+      "orden": "OT-2023-00065",
+      "fecha": "2023-05-31",
+      "accion": "SE LIMPIA HAZ DE TUBOS",
+      "horas": 12.3
+     },
+     {
+      "tag": "1205-E-01",
+      "orden": "OT-2023-00066",
+      "fecha": "2023-05-31",
+      "accion": "SE LIMPIA HAZ DE TUBOS",
+      "horas": 25.6
+     }
+    ],
+    "accion_mas_frecuente": "SE LIMPIA HAZ DE TUBOS",
+    "horas_mediana": 11.649999999999999
+   },
+   "citas": [
+    "OT-2024-00107",
+    "OT-2024-00113",
+    "OT-2025-00163",
+    "OT-2026-00176",
+    "OT-2026-00188",
+    "MAN-AC-D90",
+    "OT-2025-00160",
+    "OT-2024-00122",
+    "OT-2024-00107",
+    "OT-2023-00065",
+    "OT-2023-00066"
+   ],
+   "advertencias": [],
+   "llamadas": [
+    "buscar_equipo('1205-E-01')",
+    "historial('1205-E-01')",
+    "fallas_similares('Intercambiador de calor', 'PLU')",
+    "aislamientos('1205-E-01')"
+   ],
+   "aprobacion": null,
+   "grafo": {
+    "nodos": [
+     {
+      "id": "1205-HV-05",
+      "x": 314.1,
+      "y": 79.8,
+      "tipo": "HV",
+      "rol": "valvula_aisla"
+     },
+     {
+      "id": "1205-HV-06",
+      "x": 234.4,
+      "y": 282.8,
+      "tipo": "HV",
+      "rol": "valvula_aisla"
+     },
+     {
+      "id": "1205-HV-07",
+      "x": 560.0,
+      "y": 131.6,
+      "tipo": "HV",
+      "rol": "valvula_aisla"
+     },
+     {
+      "id": "HDR-1205-DES",
+      "x": 293.5,
+      "y": 132.3,
+      "tipo": "HDR",
+      "rol": "cabezal"
+     },
+     {
+      "id": "LIM-GAS-EXPORTACION",
+      "x": 215.9,
+      "y": 330.0,
+      "tipo": "LIM",
+      "rol": "limite"
+     },
+     {
+      "id": "1205-E-01",
+      "x": 272.6,
+      "y": 185.4,
+      "tipo": "E",
+      "rol": "equipo"
+     },
+     {
+      "id": "1205-C-01",
+      "x": 40.0,
+      "y": 99.6,
+      "tipo": "C",
+      "rol": "otro"
+     },
+     {
+      "id": "1205-C-02",
+      "x": 333.6,
+      "y": 30.0,
+      "tipo": "C",
+      "rol": "otro"
+     },
+     {
+      "id": "1205-PCV-01",
+      "x": 431.7,
+      "y": 134.7,
+      "tipo": "PCV",
+      "rol": "fuera_servicio"
+     },
+     {
+      "id": "1205-V-02",
+      "x": 253.2,
+      "y": 234.9,
+      "tipo": "V",
+      "rol": "fuera_servicio"
+     },
+     {
+      "id": "1205-HV-03",
+      "x": 159.9,
+      "y": 118.0,
+      "tipo": "HV",
+      "rol": "valvula_aisla"
+     }
+    ],
+    "aristas": [
+     [
+      "1205-HV-05",
+      "1205-C-02"
+     ],
+     [
+      "1205-HV-05",
+      "HDR-1205-DES"
+     ],
+     [
+      "1205-HV-06",
+      "1205-V-02"
+     ],
+     [
+      "1205-HV-06",
+      "LIM-GAS-EXPORTACION"
+     ],
+     [
+      "1205-HV-07",
+      "1205-PCV-01"
+     ],
+     [
+      "HDR-1205-DES",
+      "1205-HV-03"
+     ],
+     [
+      "HDR-1205-DES",
+      "1205-E-01"
+     ],
+     [
+      "HDR-1205-DES",
+      "1205-PCV-01"
+     ],
+     [
+      "1205-E-01",
+      "1205-V-02"
+     ],
+     [
+      "1205-C-01",
+      "1205-HV-03"
+     ]
+    ]
+   }
+  },
+  {
+   "reporte": "La torre secadora 1305-V-02 tiene una fuga por una boquilla",
+   "estado": "BORRADOR",
+   "equipo": {
+    "tag": "1305-V-02",
+    "descripcion": "Torre secadora A",
+    "clase": "Recipiente",
+    "sistema": "Secado de aire",
+    "area": "Aire de instrumentos",
+    "critico": true
+   },
+   "sintoma": {
+    "modo": "ELP",
+    "nombre": "Fuga externa de fluido de proceso"
+   },
+   "intervencion_propuesta": "SE CAMBIA BOQUILLA",
+   "aislamientos": {
+    "equipo": "1305-V-02",
+    "valvulas": [
+     "1305-HV-04",
+     "1305-HV-05",
+     "1305-HV-10"
+    ],
+    "fuera_de_servicio": [],
+    "ramas_abiertas": []
+   },
+   "permisos_requeridos": [
+    "Permiso de trabajo en frío",
+    "Aislamiento de proceso (3 válvulas, bloqueo y etiquetado)"
+   ],
+   "cuadrilla": "mecánica",
+   "duracion_estimada_h": 8.6,
+   "historial": [
+    {
+     "orden": "OT-2024-00094",
+     "fecha": "2024-03-17",
+     "modo": "STD",
+     "descripcion": "REC 1305-V-02 - CORROSION EXTERNA EN CUERPO",
+     "accion": "SE LIMPIA Y SE PINTA CUERPO, SE PROGRAMA UT",
+     "horas": 10.6
+    },
+    {
+     "orden": "OT-2024-00119",
+     "fecha": "2024-10-24",
+     "modo": "ELP",
+     "descripcion": "REC 1305-V-02 - FUGA DE AIRE POR BOQUILLA",
+     "accion": "SE AJUSTA BOQUILLA Y SE PRUEBA SIN FUGA",
+     "horas": 8.0
+    },
+    {
+     "orden": "OT-2025-00133",
+     "fecha": "2025-03-11",
+     "modo": "ELP",
+     "descripcion": "REC 1305-V-02 - GOTEO CONTINUO EN BOQUILLA",
+     "accion": "SE AJUSTA BOQUILLA Y SE PRUEBA SIN FUGA",
+     "horas": 8.1
+    },
+    {
+     "orden": "OT-2025-00162",
+     "fecha": "2025-10-27",
+     "modo": "ELP",
+     "descripcion": "REC 1305-V-02 - FUGA DE AIRE POR BOQUILLA",
+     "accion": "SE AJUSTA BOQUILLA Y SE PRUEBA SIN FUGA",
+     "horas": 8.7
+    },
+    {
+     "orden": "OT-2026-00171",
+     "fecha": "2026-01-19",
+     "modo": "PLU",
+     "descripcion": "REC 1305-V-02 - TAPONAMIENTO EN DEMISTER, ALTO DIFERENCIAL",
+     "accion": "SE LIMPIA DEMISTER",
+     "horas": 9.1
+    }
+   ],
+   "fallas_similares": {
+    "clase": "Recipiente",
+    "modo": "ELP",
+    "total": 19,
+    "casos": [
+     {
+      "tag": "1105-V-02",
+      "orden": "OT-2026-00195",
+      "fecha": "2026-08-17",
+      "accion": "SE CAMBIA BOQUILLA",
+      "horas": 9.7
+     },
+     {
+      "tag": "1105-V-01",
+      "orden": "OT-2026-00194",
+      "fecha": "2026-08-16",
+      "accion": "SE CAMBIA BOQUILLA",
+      "horas": 14.3
+     },
+     {
+      "tag": "1105-V-01",
+      "orden": "OT-2026-00181",
+      "fecha": "2026-05-28",
+      "accion": "SE AJUSTA BOQUILLA Y SE PRUEBA SIN FUGA",
+      "horas": 7.0
+     },
+     {
+      "tag": "1305-V-02",
+      "orden": "OT-2025-00162",
+      "fecha": "2025-10-27",
+      "accion": "SE AJUSTA BOQUILLA Y SE PRUEBA SIN FUGA",
+      "horas": 8.7
+     },
+     {
+      "tag": "1205-V-02",
+      "orden": "OT-2025-00161",
+      "fecha": "2025-10-25",
+      "accion": "SE AJUSTA BOQUILLA Y SE PRUEBA SIN FUGA",
+      "horas": 9.4
+     }
+    ],
+    "accion_mas_frecuente": "SE CAMBIA BOQUILLA",
+    "horas_mediana": 8.6
+   },
+   "citas": [
+    "OT-2024-00094",
+    "OT-2024-00119",
+    "OT-2025-00133",
+    "OT-2025-00162",
+    "OT-2026-00171",
+    "DS-1305-V-02",
+    "MAN-DS-400",
+    "OT-2026-00195",
+    "OT-2026-00194",
+    "OT-2026-00181",
+    "OT-2025-00162",
+    "OT-2025-00161"
+   ],
+   "advertencias": [],
+   "llamadas": [
+    "buscar_equipo('1305-V-02')",
+    "historial('1305-V-02')",
+    "fallas_similares('Recipiente', 'ELP')",
+    "aislamientos('1305-V-02')"
+   ],
+   "aprobacion": null,
+   "grafo": {
+    "nodos": [
+     {
+      "id": "1305-HV-03",
+      "x": 487.7,
+      "y": 330.0,
+      "tipo": "HV",
+      "rol": "otro"
+     },
+     {
+      "id": "1305-HV-11",
+      "x": 101.6,
+      "y": 318.4,
+      "tipo": "HV",
+      "rol": "otro"
+     },
+     {
+      "id": "1305-HV-05",
+      "x": 307.9,
+      "y": 137.5,
+      "tipo": "HV",
+      "rol": "valvula_aisla"
+     },
+     {
+      "id": "HDR-1305-SECO",
+      "x": 312.3,
+      "y": 75.4,
+      "tipo": "HDR",
+      "rol": "cabezal"
+     },
+     {
+      "id": "HDR-1305-REG",
+      "x": 130.2,
+      "y": 259.9,
+      "tipo": "HDR",
+      "rol": "cabezal"
+     },
+     {
+      "id": "HDR-1305-SEC",
+      "x": 467.5,
+      "y": 270.0,
+      "tipo": "HDR",
+      "rol": "cabezal"
+     },
+     {
+      "id": "1305-HV-04",
+      "x": 386.8,
+      "y": 236.4,
+      "tipo": "HV",
+      "rol": "valvula_aisla"
+     },
+     {
+      "id": "1305-HV-09",
+      "x": 40.0,
+      "y": 241.2,
+      "tipo": "HV",
+      "rol": "otro"
+     },
+     {
+      "id": "1305-V-02",
+      "x": 303.4,
+      "y": 201.7,
+      "tipo": "V",
+      "rol": "equipo"
+     },
+     {
+      "id": "1305-HV-07",
+      "x": 248.5,
+      "y": 30.0,
+      "tipo": "HV",
+      "rol": "otro"
+     },
+     {
+      "id": "1305-HV-10",
+      "x": 215.3,
+      "y": 231.3,
+      "tipo": "HV",
+      "rol": "valvula_aisla"
+     },
+     {
+      "id": "1305-HV-06",
+      "x": 560.0,
+      "y": 256.8,
+      "tipo": "HV",
+      "rol": "otro"
+     },
+     {
+      "id": "1305-V-04",
+      "x": 382.4,
+      "y": 34.0,
+      "tipo": "V",
+      "rol": "otro"
+     }
+    ],
+    "aristas": [
+     [
+      "1305-HV-03",
+      "HDR-1305-SEC"
+     ],
+     [
+      "1305-HV-11",
+      "HDR-1305-REG"
+     ],
+     [
+      "1305-HV-05",
+      "1305-V-02"
+     ],
+     [
+      "1305-HV-05",
+      "HDR-1305-SECO"
+     ],
+     [
+      "HDR-1305-SECO",
+      "1305-HV-07"
+     ],
+     [
+      "HDR-1305-SECO",
+      "1305-V-04"
+     ],
+     [
+      "HDR-1305-REG",
+      "1305-HV-09"
+     ],
+     [
+      "HDR-1305-REG",
+      "1305-HV-10"
+     ],
+     [
+      "HDR-1305-SEC",
+      "1305-HV-04"
+     ],
+     [
+      "HDR-1305-SEC",
+      "1305-HV-06"
+     ],
+     [
+      "1305-HV-04",
+      "1305-V-02"
+     ],
+     [
+      "1305-V-02",
+      "1305-HV-10"
+     ]
+    ]
+   }
+  },
+  {
+   "reporte": "La bomba jockey 1405_P_03 hace ruido al arrancar",
+   "estado": "BORRADOR",
+   "equipo": {
+    "tag": "1405-P-03",
+    "descripcion": "Bomba jockey",
+    "clase": "Bomba centrífuga",
+    "sistema": "Bombeo contra incendio",
+    "area": "Agua contra incendio",
+    "critico": true
+   },
+   "sintoma": {
+    "modo": "NOI",
+    "nombre": "Ruido"
+   },
+   "intervencion_propuesta": "SE CAMBIA RODAMIENTO",
+   "aislamientos": {
+    "equipo": "1405-P-03",
+    "valvulas": [
+     "1405-HV-05",
+     "1405-HV-06"
+    ],
+    "fuera_de_servicio": [],
+    "ramas_abiertas": []
+   },
+   "permisos_requeridos": [
+    "Permiso de trabajo en frío",
+    "Aislamiento de proceso (2 válvulas, bloqueo y etiquetado)",
+    "Aislamiento eléctrico del motor (LOTO)",
+    "Notificación de sistema contra incendio fuera de servicio y vigilancia compensatoria"
+   ],
+   "cuadrilla": "mecánica + eléctrica (desenergizar motor)",
+   "duracion_estimada_h": 5.7,
+   "historial": [
+    {
+     "orden": "OT-2025-00135",
+     "fecha": "2025-03-15",
+     "modo": "OHE",
+     "descripcion": "BBA 1405-P-03 - ALTA TEMPERATURA EN RODAMIENTO",
+     "accion": "SE LIMPIA Y SE CAMBIA RODAMIENTO",
+     "horas": 18.5
+    },
+    {
+     "orden": "OT-2025-00143",
+     "fecha": "2025-06-07",
+     "modo": "LOO",
+     "descripcion": "BBA 1405-P-O3 - BAJO CAUDAL, BAJA PRESION DE DESCARGA",
+     "accion": "SE DESARMA, SE CAMBIA IMPULSOR",
+     "horas": 13.8
+    },
+    {
+     "orden": "OT-2025-00168",
+     "fecha": "2025-12-08",
+     "modo": "ELP",
+     "descripcion": "BBA 1405-P-03 - GOTEO CONTINUO EN SELLO MECÁNICO",
+     "accion": "SE CAMBIA SELLO MECÁNICO",
+     "horas": 9.5
+    },
+    {
+     "orden": "OT-2026-00196",
+     "fecha": "2026-08-26",
+     "modo": "ELP",
+     "descripcion": "BBA 1405-P-03 - FUGA DE AGUA POR SELLO MECÁNICO",
+     "accion": "SE CAMBIA SELLO MECÁNICO",
+     "horas": 6.4
+    },
+    {
+     "orden": "OT-2026-00199",
+     "fecha": "2026-09-04",
+     "modo": "OHE",
+     "descripcion": "BBA 1405-P-03 - ALTA TEMPERATURA EN RODAMIENTO",
+     "accion": "SE LIMPIA Y SE CAMBIA RODAMIENTO",
+     "horas": 6.6
+    }
+   ],
+   "fallas_similares": {
+    "clase": "Bomba centrífuga",
+    "modo": "NOI",
+    "total": 3,
+    "casos": [
+     {
+      "tag": "1405-P-03",
+      "orden": "OT-2024-00121",
+      "fecha": "2024-11-05",
+      "accion": "SE CAMBIA RODAMIENTO",
+      "horas": 5.7
+     },
+     {
+      "tag": "1405-P-02",
+      "orden": "OT-2024-00108",
+      "fecha": "2024-08-08",
+      "accion": "SE CAMBIA RODAMIENTO",
+      "horas": 9.4
+     },
+     {
+      "tag": "1105-P-01",
+      "orden": "OT-2024-00092",
+      "fecha": "2024-03-04",
+      "accion": "SE CAMBIA RODAMIENTO",
+      "horas": 4.7
+     }
+    ],
+    "accion_mas_frecuente": "SE CAMBIA RODAMIENTO",
+    "horas_mediana": 5.7
+   },
+   "citas": [
+    "OT-2025-00135",
+    "OT-2025-00143",
+    "OT-2025-00168",
+    "OT-2026-00196",
+    "OT-2026-00199",
+    "DS-1405-P-03",
+    "MAN-BJ-10",
+    "OT-2024-00121",
+    "OT-2024-00108",
+    "OT-2024-00092"
+   ],
+   "advertencias": [],
+   "llamadas": [
+    "buscar_equipo('1405-P-03')",
+    "historial('1405-P-03')",
+    "fallas_similares('Bomba centrífuga', 'NOI')",
+    "aislamientos('1405-P-03')"
+   ],
+   "aprobacion": null,
+   "grafo": {
+    "nodos": [
+     {
+      "id": "1405-HV-03",
+      "x": 558.5,
+      "y": 154.5,
+      "tipo": "HV",
+      "rol": "otro"
+     },
+     {
+      "id": "1405-PCV-01",
+      "x": 193.8,
+      "y": 330.0,
+      "tipo": "PCV",
+      "rol": "otro"
+     },
+     {
+      "id": "1405-HV-06",
+      "x": 229.8,
+      "y": 220.9,
+      "tipo": "HV",
+      "rol": "valvula_aisla"
+     },
+     {
+      "id": "HDR-1405-DES",
+      "x": 142.6,
+      "y": 261.7,
+      "tipo": "HDR",
+      "rol": "cabezal"
+     },
+     {
+      "id": "HDR-1405-SUC",
+      "x": 476.9,
+      "y": 105.4,
+      "tipo": "HDR",
+      "rol": "cabezal"
+     },
+     {
+      "id": "1405-HV-02",
+      "x": 97.4,
+      "y": 329.6,
+      "tipo": "HV",
+      "rol": "otro"
+     },
+     {
+      "id": "1405-HV-05",
+      "x": 392.2,
+      "y": 145.0,
+      "tipo": "HV",
+      "rol": "valvula_aisla"
+     },
+     {
+      "id": "1405-HV-07",
+      "x": 40.0,
+      "y": 262.8,
+      "tipo": "HV",
+      "rol": "otro"
+     },
+     {
+      "id": "1405-HV-04",
+      "x": 80.7,
+      "y": 198.4,
+      "tipo": "HV",
+      "rol": "otro"
+     },
+     {
+      "id": "1405-P-03",
+      "x": 311.3,
+      "y": 182.8,
+      "tipo": "P",
+      "rol": "equipo"
+     },
+     {
+      "id": "1405-HV-01",
+      "x": 451.6,
+      "y": 30.0,
+      "tipo": "HV",
+      "rol": "otro"
+     },
+     {
+      "id": "1405-V-01",
+      "x": 560.0,
+      "y": 66.6,
+      "tipo": "V",
+      "rol": "otro"
+     }
+    ],
+    "aristas": [
+     [
+      "1405-HV-03",
+      "HDR-1405-SUC"
+     ],
+     [
+      "1405-PCV-01",
+      "HDR-1405-DES"
+     ],
+     [
+      "1405-HV-06",
+      "1405-P-03"
+     ],
+     [
+      "1405-HV-06",
+      "HDR-1405-DES"
+     ],
+     [
+      "HDR-1405-DES",
+      "1405-HV-02"
+     ],
+     [
+      "HDR-1405-DES",
+      "1405-HV-04"
+     ],
+     [
+      "HDR-1405-DES",
+      "1405-HV-07"
+     ],
+     [
+      "HDR-1405-SUC",
+      "1405-V-01"
+     ],
+     [
+      "HDR-1405-SUC",
+      "1405-HV-01"
+     ],
+     [
+      "HDR-1405-SUC",
+      "1405-HV-05"
+     ],
+     [
+      "1405-HV-05",
+      "1405-P-03"
+     ]
+    ]
+   }
+  },
+  {
+   "reporte": "Hay una bomba que vibra mucho en glicol",
+   "estado": "NO_RESUELTA",
+   "equipo": null,
+   "sintoma": null,
+   "intervencion_propuesta": null,
+   "aislamientos": null,
+   "permisos_requeridos": [],
+   "cuadrilla": null,
+   "duracion_estimada_h": null,
+   "historial": [],
+   "fallas_similares": null,
+   "citas": [],
+   "advertencias": [
+    "No se identificó el tag del equipo. Candidatos: 1105-P-01, 1105-P-02, 1405-P-03. Pida al reportante el tag de la placa; el sistema no elige por él."
+   ],
+   "llamadas": [],
+   "aprobacion": null,
+   "grafo": null
+  }
+ ]
+}

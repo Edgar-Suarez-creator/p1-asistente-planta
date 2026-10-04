@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Asistente de planta · demo</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f8f7;--card:#fff;--ink:#111b21;--dim:#54655d;--line:rgba(17,27,33,.09);--acc:#00a884;--acc2:#0f766e;--warn:#b45309;--bad:#b42318}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1417;--card:#131d21;--ink:#e6efec;--dim:#93a7a0;--line:rgba(230,239,236,.1)}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 Manrope,system-ui,sans-serif}
+header{padding:20px 24px;border-bottom:1px solid var(--line);display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
+header b{font-size:18px}header span{color:var(--dim);font:12px 'IBM Plex Mono',monospace}
+main{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:16px;padding:16px 24px;max-width:1400px;margin:auto}
+@media(max-width:900px){main{grid-template-columns:1fr;padding:16px}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.k{font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--acc2);margin-bottom:8px}
+textarea{width:100%;min-height:64px;border:1px solid var(--line);border-radius:8px;padding:10px;font:inherit;background:var(--bg);color:var(--ink)}
+button{font:600 13px Manrope;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:6px 12px;cursor:pointer}
+button.pri{background:var(--acc);border-color:var(--acc);color:#fff}button:disabled{opacity:.5;cursor:default}
+.ej{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}.ej button{font-weight:500;font-size:12px}
+svg{width:100%;height:auto;display:block}
+.leg{display:flex;flex-wrap:wrap;gap:10px;font:11px 'IBM Plex Mono',monospace;color:var(--dim);margin-top:6px}
+.leg i{display:inline-block;width:9px;height:9px;border-radius:5px;margin-right:4px;vertical-align:middle}
+table{width:100%;border-collapse:collapse;font-size:13px}td,th{text-align:left;padding:4px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--dim);font-weight:600}.mono{font-family:'IBM Plex Mono',monospace;font-size:12px}
+.col{display:grid;gap:12px}.warn{color:var(--warn)}.estado{font:600 12px 'IBM Plex Mono';padding:2px 8px;border-radius:999px;border:1px solid currentColor}
+.cita{color:var(--dim);font:11px 'IBM Plex Mono'}ul{margin:4px 0;padding-left:18px}
+</style>
+</head>
+<body>
+<header><b>Asistente de planta</b><span>P1 · grafo de conocimiento · datos sintéticos · sin credenciales</span><span id="modo"></span></header>
+<main>
+  <section class="col">
+    <div class="card">
+      <div class="k">Reporte de falla</div>
+      <textarea id="rep" placeholder="Ej.: La bomba 1105p01 está botando glicol por el sello"></textarea>
+      <div class="ej" id="ejemplos"></div>
+      <button class="pri" id="enviar">Analizar reporte</button>
+    </div>
+    <div class="card">
+      <div class="k">Vecindario en el grafo de proceso</div>
+      <svg id="g" viewBox="0 0 600 360" role="img" aria-label="Grafo del vecindario del equipo"></svg>
+      <div class="leg"><span><i style="background:var(--acc)"></i>equipo</span><span><i style="background:var(--bad)"></i>válvula que aísla</span>
+        <span><i style="background:var(--warn)"></i>queda fuera de servicio</span><span><i style="background:#94a3a0"></i>otros</span></div>
+    </div>
+  </section>
+  <section class="col" id="der"><div class="card" style="color:var(--dim)">Escriba un reporte o elija un ejemplo.</div></section>
+</main>
+<script>
+let DEMO = null, SERVIDOR = false, ACTUAL = null;
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '—').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+async function init() {
+  try { const r = await fetch('api/reporte', {method:'POST', body:'{"reporte":""}'}); SERVIDOR = r.ok; } catch(e) {}
+  try { DEMO = await (await fetch('demo.json')).json(); } catch(e) {}
+  $('#modo').textContent = SERVIDOR ? '· servidor local en vivo' : '· modo estático (ejemplos precalculados)';
+  (DEMO?.ejemplos || []).forEach(e => {
+    const b = document.createElement('button'); b.textContent = e.reporte.slice(0, 48) + (e.reporte.length > 48 ? '…' : '');
+    b.onclick = () => { $('#rep').value = e.reporte; analizar(); }; $('#ejemplos').appendChild(b);
+  });
+  $('#rep').readOnly = !SERVIDOR;
+  if (!SERVIDOR) $('#rep').placeholder = 'En modo estático elija uno de los ejemplos. Con `make demo` puede escribir su propio reporte.';
+}
+
+async function analizar() {
+  const rep = $('#rep').value.trim(); if (!rep) return;
+  let s;
+  if (SERVIDOR) s = await (await fetch('api/reporte', {method:'POST', body: JSON.stringify({reporte: rep})})).json();
+  else s = DEMO.ejemplos.find(e => e.reporte === rep);
+  ACTUAL = s; pintar(s);
+}
+
+function grafo(gr) {
+  const svg = $('#g'); if (!gr) { svg.innerHTML = '<text x="300" y="180" text-anchor="middle" fill="currentColor" opacity=".5">sin equipo identificado</text>'; return; }
+  const P = Object.fromEntries(gr.nodos.map(n => [n.id, n]));
+  const col = {equipo:'var(--acc)', valvula_aisla:'var(--bad)', fuera_servicio:'var(--warn)'};
+  let h = gr.aristas.map(([a,b]) => `<line x1="${P[a].x}" y1="${P[a].y}" x2="${P[b].x}" y2="${P[b].y}" stroke="#94a3a0" stroke-width="1.4"/>`).join('');
+  h += gr.nodos.map(n => {
+    const r = n.rol === 'equipo' ? 10 : (n.tipo === 'HDR' || n.tipo === 'LIM') ? 4 : 7;
+    const c = col[n.rol] || '#94a3a0';
+    const lbl = n.tipo === 'HDR' ? '' : n.id.replace(/^LIM-/, '');
+    return `<g><circle cx="${n.x}" cy="${n.y}" r="${r}" fill="${c}" ${n.tipo==='HV'?'stroke="var(--card)" stroke-width="2"':''}/>`
+      + `<text x="${n.x}" y="${n.y + r + 11}" font-family="IBM Plex Mono" font-size="9.5" text-anchor="middle" fill="currentColor" opacity="${n.rol==='otro'?.55:1}">${esc(lbl)}</text></g>`;
+  }).join('');
+  svg.innerHTML = h;
+}
+
+function pintar(s) {
+  grafo(s.grafo);
+  const adv = s.advertencias.length ? `<div class="card warn"><div class="k" style="color:var(--warn)">Advertencias</div><ul>${s.advertencias.map(a => `<li>${esc(a)}</li>`).join('')}</ul></div>` : '';
+  if (!s.equipo) { $('#der').innerHTML = adv; return; }
+  const e = s.equipo, a = s.aislamientos, sim = s.fallas_similares;
+  $('#der').innerHTML = `
+  <div class="card"><div class="k">Ficha · buscar_equipo</div>
+    <b class="mono">${esc(e.tag)}</b> · ${esc(e.descripcion)}<br><span class="cita">${esc(e.clase)} · ${esc(e.sistema)} · ${esc(e.area)}${e.critico ? ' · crítico' : ''}</span></div>
+  <div class="card"><div class="k">Historial · últimas órdenes</div>
+    <table><tr><th>Orden</th><th>Fecha</th><th>Modo</th><th>Acción</th></tr>
+    ${s.historial.map(h => `<tr><td class="mono">${h.orden}</td><td class="mono">${h.fecha}</td><td class="mono">${h.modo}</td><td>${esc(h.accion)}</td></tr>`).join('')}</table></div>
+  ${sim ? `<div class="card"><div class="k">Fallas similares · ${esc(sim.clase)} · ${esc(sim.modo)}</div>
+    ${sim.total} antecedentes en la clase. Acción más frecuente: <b>${esc(sim.accion_mas_frecuente)}</b> · mediana ${esc(s.duracion_estimada_h)} h
+    <div class="cita">${sim.casos.map(c => `${c.tag} ${c.orden}`).join(' · ')}</div></div>` : ''}
+  ${adv}
+  <div class="card"><div class="k">Solicitud de entrega a operaciones <span class="estado" id="est" style="margin-left:6px">${esc(s.estado)}</span></div>
+    <table>
+      <tr><th>Equipo</th><td class="mono">${esc(e.tag)} · ${esc(e.descripcion)}</td></tr>
+      <tr><th>Síntoma</th><td>${s.sintoma ? `${esc(s.sintoma.nombre)} (${s.sintoma.modo})` : '—'}</td></tr>
+      <tr><th>Intervención propuesta</th><td>${esc(s.intervencion_propuesta)}</td></tr>
+      <tr><th>Aislamientos</th><td class="mono">${a.valvulas.join(', ')}${a.fuera_de_servicio.length ? `<br>fuera de servicio: ${a.fuera_de_servicio.join(', ')}` : ''}${a.ramas_abiertas.length ? `<br><span class="warn">rama abierta: ${a.ramas_abiertas.join(', ')}</span>` : ''}</td></tr>
+      <tr><th>Permisos requeridos</th><td><ul>${s.permisos_requeridos.map(p => `<li>${esc(p)}</li>`).join('')}</ul></td></tr>
+      <tr><th>Cuadrilla</th><td>${esc(s.cuadrilla)}</td></tr>
+      <tr><th>Duración estimada</th><td>${esc(s.duracion_estimada_h)} h</td></tr>
+    </table>
+    <div class="cita" style="margin:8px 0">Herramientas llamadas: ${s.llamadas.map(esc).join(' → ')}</div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+      <input id="aprob" placeholder="Nombre de quien aprueba" style="flex:1;min-width:160px;padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)">
+      <button class="pri" id="btnap">Aprobar y emitir</button></div>
+    <div id="res" class="cita" style="margin-top:6px"></div></div>`;
+  $('#btnap').onclick = aprobar;
+}
+
+async function aprobar() {
+  const quien = $('#aprob').value.trim();
+  if (!quien) { $('#res').textContent = 'La aprobación exige el nombre de quien aprueba.'; return; }
+  if (SERVIDOR) {
+    const r = await (await fetch('api/aprobar', {method:'POST', body: JSON.stringify({reporte: ACTUAL.reporte, aprobador: quien})})).json();
+    $('#res').textContent = r.error ? r.error : `Aprobada por ${r.aprobacion.aprobador} el ${r.aprobacion.fecha} · registrada en app/aprobaciones.jsonl`;
+  } else {
+    $('#res').textContent = `Aprobada por ${quien} en esta sesión (modo estático: no se registra; con make demo queda en app/aprobaciones.jsonl).`;
+  }
+  $('#est').textContent = 'APROBADA'; $('#btnap').disabled = true;
+}
+$('#enviar').onclick = analizar;
+init();
+</script>
+</body>
+</html>

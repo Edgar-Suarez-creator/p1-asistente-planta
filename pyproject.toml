@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "p1-asistente-planta"
+version = "0.1.0"
+description = "Asistente de planta sobre grafo de conocimiento: reporte de falla → ficha, historial, fallas similares, aislamientos y solicitud de entrega"
+requires-python = ">=3.11"
+dependencies = ["networkx>=3.2", "scikit-learn>=1.4", "pydantic>=2.6"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+neo4j = ["neo4j>=5.20"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "."]
+testpaths = ["tests"]

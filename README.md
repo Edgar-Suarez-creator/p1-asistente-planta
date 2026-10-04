@@ -5,7 +5,7 @@ historial, las fallas similares en equipos de la misma clase y el **borrador** d
 operaciones con los aislamientos que se derivan de la topología. El ingeniero aprueba antes de emitir.
 
 Primer proyecto del portafolio de planeación y control sobre la planta de referencia común
-([`planta-core`](../planta-core)): estación de compresión de gas con cuatro unidades (1105 deshidratación con
+([`planta-core`](https://github.com/Edgar-Suarez-creator/planta-core)): estación de compresión de gas con cuatro unidades (1105 deshidratación con
 TEG, 1205 compresión, 1305 aire de instrumentos, 1405 agua contra incendio) y tags ISA 5.1 `AREA-TIPO-NN`.
 
 ## Cifra industrial de referencia
@@ -59,7 +59,14 @@ make demo    # http://127.0.0.1:8001, sin credenciales
 ```
 
 En Windows sin `make`: `python tareas.py setup|test|eval|demo|cypher`. Se espera `planta-core` como
-carpeta hermana (`../planta-core`).
+carpeta hermana (`../planta-core`); para eso, clone los dos repositorios en la misma carpeta:
+
+```bash
+git clone https://github.com/Edgar-Suarez-creator/planta-core.git
+git clone https://github.com/Edgar-Suarez-creator/p1-asistente-planta.git
+```
+
+Autor: Edgar R. Suárez Macías · planeador e ingeniero de sistemas · portafolio: https://edgar-suarez-creator.github.io/portafolio/
 
 Desde la terminal, un reporte de punta a punta (imprime el borrador; no aprueba ni emite):
 
